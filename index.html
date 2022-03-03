@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CityHub - Home</title>
+    <!-- bootstrap::begin -->
+    <link rel="stylesheet" href="scss/bootstrap/bootstrap.min.css">
+    <!-- bootstrap::end -->
+    <!-- fontawesome::begin -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+        integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ=="
+        crossorigin="anonymous" />
+    <!-- fontawesome::end -->
+    <!-- global fonts::begin -->
+    <link rel="stylesheet" href="scss/fonts/BarlowSemiCondensed-Regular.ttf">
+    <link rel="stylesheet" href="scss/fonts/Satisfy-Regular.ttf">
+    <!-- global fonts::end -->
+    <!-- slick css::behin -->
+    <link rel="stylesheet" href="scss/slick.css">
+    <link rel="stylesheet" href="scss/slick-theme.css">
+    <!-- slick css::end -->
+    <!-- custom css::begin -->
+    <link rel="stylesheet" href="scss/custom-styles.css">
+    <!-- custom css::end -->
+</head>
+
+<body>
+    <section class="cityhub-master-section">
+        <!-- main navigation::begin -->
+        <section class="main-navigation-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-xl-12 col-lg-12 col-sm-12">
+                        <div class="main-navigation-parent">
+                            <div class="main-navigation-childs">
+                                <div class="logo">
+                                    <h1>City<span>Hub</span></h1>
+                                </div>
+                            </div>
+                            <div class="main-navigation-childs">
+                                <div class="action-btns">
+                                    <ul>
+                                        <li>
+                                            <a href="pages/auth/register.html">Register</a>
+                                        </li>
+                                        <li>
+                                            <a href="pages/auth/login.html">Sign In</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- main navigation::end -->
+        <!-- banner-section::begin -->
+        <section class="banner-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xl-12 col-lg-12">
+                        <div class="banner-parent-wrapper">
+                            <div class="banner-childs-wrapper">
+                                <div class="banner-deco-circle-parent">
+                                    <div class="banner-deco-circle-childs"></div>
+                                    <div class="banner-deco-circle-childs"></div>
+                                    <div class="banner-deco-circle-childs"></div>
+                                </div>
+                                <div class="cityhub-banner-intro-wrapper">
+                                    <span>We Are Here</span>
+                                    <h3>Book Your <i>Need</i> With Us</h3>
+                                    <p>A computer booking system is a system whereby publicly accessible computers can
+                                        be reserved for a period of time. These systems are commonly used in facilities
+                                        such as public libraries to ensure equitable use of limited numbers of
+                                        computers.</p>
+                                    <div class="banner-action-btns">
+                                        <ul>
+                                            <li><a href="/#">Be Affilated</a></li>
+                                            <li><a href="/#">Know More <i class="fa fa-arrow-right"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="banner-childs-wrapper">
+                                <div class="banner-deco"></div>
+                                <div class="cityhub-featured-image">
+                                    <img src="images/banner-img.png" alt="geaturedImg" draggable="false" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="banner-social-media-wrapper">
+                <div class="banner-social-media-inner-wrapper">
+                    <a href="/#">
+                        <div class="social-media-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </div>
+                    </a>
+                    <a href="/#">
+                        <div class="social-media-icon">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                    </a>
+                    <a href="/#">
+                        <div class="social-media-icon">
+                            <i class="fab fa-twitter"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="banner-bg-deco"></div>
+        </section>
+        <!-- banner-section::end -->
+        <!-- search-section::begin -->
+        <section class="search-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-xl-12 col-sm-12 col-lg-12">
+                        <div class="search-wrapper">
+                            <div class="bg-image-wrapper">
+                                <img src="images/restau.png" id="cityhib-search-bg-image">
+                            </div>
+                            <div class="bg-image-overlay"></div>
+                            <div class="search-categories">
+                                <ul class="search-slider">
+                                    <div class="search-category">
+                                        <button onclick="updateStateRestaurant('Restaurant')">
+                                            <span><i class="fa fa-pizza-slice"></i></span>
+                                            <p>Restaurant</p>
+                                        </button>
+                                    </div>
+                                    <div class="search-category">
+                                        <button onclick="updateStateCafe('Cafe')">
+                                            <span><i class="fa fa-mug-hot"></i></span>
+                                            <p>Cafe</p>
+                                        </button>
+                                    </div>
+                                    <div class="search-category">
+                                        <button onclick="updateStateHotel('Hotel')">
+                                            <span><i class="fa fa-hotel"></i></span>
+                                            <p>Hotel</p>
+                                        </button>
+                                    </div>
+                                    <div class="search-category">
+                                        <button onclick="updateStateParlour('Parlour')">
+                                            <span><i class="fa fa-shopping-bag"></i></span>
+                                            <p>Parlour</p>
+                                        </button>
+                                    </div>
+                                    <div class="search-category">
+                                        <button onclick="updateStateDentist('Dentist')">
+                                            <span><i class="fa fa-tooth"></i></span>
+                                            <p>Dentist</p>
+                                        </button>
+                                    </div>
+                                    <div class="search-category">
+                                        <button onclick="updateStateFashoin('Fashion')">
+                                            <span><i class="fa fa-tshirt"></i></span>
+                                            <p>Fashion</p>
+                                        </button>
+                                    </div>
+                                </ul>
+                                <div class="search-master-wrapper">
+                                    <div class="search-category-name">
+                                        <h3>Category: <span id="catSelected"></span></h3>
+                                    </div>
+                                    <div class="search-form">
+                                        <form action="">
+                                            <div class="row">
+                                                <div class="col-md-12 col-xl-12 col-sm-12 col-lg-12">
+                                                    <div class="form-group">
+                                                        <span><i class="fa fa-question-circle"></i></span>
+                                                        <input type="text" class="form-control"
+                                                            placeholder="What Are You Looking For?"
+                                                            id="lookingForTarget" />
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <span><i class="fa fa-map-marked-alt"></i></span>
+                                                        <input type="text" class="form-control"
+                                                            placeholder="Your Location?" id="locationForTarget" />
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <div class="search-btn">
+                                                            <a href="/pages/subpages/search.html">Search <i
+                                                                    class="fa fa-search"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="suggestion-wrapper">
+                                        <div class="suggestion-parent-wrapper">
+                                            <div class="suggestion-childs-wrapper">
+                                                <span><i class="fa fa-question"></i></span>
+                                            </div>
+                                            <div class="suggestion-childs-wrapper">
+                                                <ul>
+                                                    <li>
+                                                        <button onclick="changeLookingVal('Pizza')">Pizza</button>
+                                                    </li>
+                                                    <li>
+                                                        <button onclick="changeLookingVal('Mo:Mo')">Mo:Mo</button>
+                                                    </li>
+                                                    <li>
+                                                        <button onclick="changeLookingVal('Chowmin')">Chowmin</button>
+                                                    </li>
+                                                    <li>
+                                                        <button onclick="changeLookingVal('Ramen')">Ramen</button>
+                                                    </li>
+                                                    <li>
+                                                        <button onclick="changeLookingVal('Thuppa')">Thuppa</button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="suggestion-parent-wrapper">
+                                            <div class="suggestion-childs-wrapper">
+                                                <span><i class="fa fa-map-marker-alt"></i></span>
+                                            </div>
+                                            <div class="suggestion-childs-wrapper">
+                                                <ul>
+                                                    <li>
+                                                        <button onclick="changeLocationVal('Thamel')">Thamel</button>
+                                                    </li>
+                                                    <li>
+                                                        <button onclick="changeLocationVal('Balaju')">Balaju</button>
+                                                    </li>
+                                                    <li>
+                                                        <button
+                                                            onclick="changeLocationVal('Baneshwor')">Baneshwor</button>
+                                                    </li>
+                                                    <li>
+                                                        <button onclick="changeLocationVal('Thankot')">Thankot</button>
+                                                    </li>
+                                                    <li>
+                                                        <button
+                                                            onclick="changeLocationVal('Nagarkot')">Nagarkot</button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="search-deco">
+                                <img src="images/svg/search.svg" alt="search-deco" draggable="false" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="search-deco-only"></div>
+        <!-- search-section::end -->
+        <!-- visit map::begin -->
+        <section class="visit-map-section">
+            <div class="container">
+                <!-- section heading::begin -->
+                <div class="section-heading">
+                    <h4>What is your location</h4>
+                    <h2>Are You Visiting From?</h2>
+                    <p>Please select the location so that we can help you to get nearest check points arround you.</p>
+                </div>
+                <!-- section heading::end -->
+                <div class="row">
+                    <div class="col-md-8 col-lg-8 col-xl-8">
+                        <div class="map-wrapper">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56516.27689225436!2d85.29111337616109!3d27.709031933186697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb198a307baabf%3A0xb5137c1bf18db1ea!2sKathmandu%2044600!5e0!3m2!1sen!2snp!4v1629863364389!5m2!1sen!2snp"
+                                title="visitMap"></iframe>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-4 col-xl-4">
+                        <div class="map-featured-image">
+                            <img src="images/indicateImg.png" alt="mapFeatured" draggable="false" />
+                            <div class="map-featured-img-deco"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="visit-map-deco">
+                <img src="images/svg/deco-primary.svg" alt="visitMapDeco" />
+                <img src="images/svg/deco-dark.svg" alt="visitMapDeco" />
+            </div>
+        </section>
+        <!-- visit map::end -->
+        <!-- search by brand chain::begin -->
+        <section class="search-by-brand-chain-section">
+            <div class="container">
+                <!-- section heading::begin  -->
+                <div class="section-heading">
+                    <h4>Find Via Brand Chain</h4>
+                    <h2>Search By Brand Chain</h2>
+                    <p>With the help of this section, you are able to search the different places via brand chains.</p>
+                </div>
+                <!-- section heading::end  -->
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-lg-12 col-xl-12">
+                        <div class="search-by-brand-chain-wrapper">
+                            <div class="search-by-brand-chain-tabs">
+                                <ul>
+                                    <li><button>Recommended</button></li>
+                                    <li><button>Gourmet</button></li>
+                                    <li><button>The Mall</button></li>
+                                    <li><button>Pharmecy</button></li>
+                                    <li><button>Living</button></li>
+                                    <li><button>Cake</button></li>
+                                </ul>
+                            </div>
+                            <div class="search-by-brand-chain-view-wrapper">
+                                <div class="row">
+                                    <div class="col-md-3 col-lg-3 col-xl-3">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <div class="search-by-brand-chain-view-images">
+                                                    <img src="images/coffee.jpg" alt="searchByBrandChain" />
+                                                </div>
+                                            </div>
+                                            <div class="card-body">
+                                                <h2>Hello Coffee Shop</h2>
+                                                <p>A coffee shop is a kind of restaurant that sells coffee, tea, cakes,
+                                                    and sometimes sandwiches and light meals.</p>
+                                                <div class="know-more-btn">
+                                                    <a href="/#">More <i class="fa fa-arrow-right"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-lg-3 col-xl-3">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <div class="search-by-brand-chain-view-images">
+                                                    <img src="images/mall.jpg" alt="searchByBrandChain" />
+                                                </div>
+                                            </div>
+                                            <div class="card-body">
+                                                <h2>Kathmandu Mall</h2>
+                                                <p>A shopping mall is a North American term for a large indoor shopping
+                                                    center, usually anchored by department stores.</p>
+                                                <div class="know-more-btn">
+                                                    <a href="/#">More <i class="fa fa-arrow-right"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-lg-3 col-xl-3">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <div class="search-by-brand-chain-view-images">
+                                                    <img src="images/ph.jpg" alt="searchByBrandChain" />
+                                                </div>
+                                            </div>
+                                            <div class="card-body">
+                                                <h2>Pasupati Pharmacy</h2>
+                                                <p>Pharmacy is the clinical health science that links medical science
+                                                    with chemistry and it is charged with the discovery, production,
+                                                    disposal, safe and effective use, and control of medications and
+                                                    drugs.</p>
+                                                <div class="know-more-btn">
+                                                    <a href="/#">More <i class="fa fa-arrow-right"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-lg-3 col-xl-3">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <div class="search-by-brand-chain-view-images">
+                                                    <img src="images/cake.jfif" alt="searchByBrandChain" />
+                                                </div>
+                                            </div>
+                                            <div class="card-body">
+                                                <h2>Sweet Bakery</h2>
+                                                <p>A bakery is an establishment that produces and sells flour-based food
+                                                    baked in an oven such as bread, cookies, cakes, pastries, and pies.
+                                                </p>
+                                                <div class="know-more-btn">
+                                                    <a href="/#">More <i class="fa fa-arrow-right"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 col-lg-12 col-xl-12">
+                                        <div class="view-all-btn">
+                                            <a href="/#">View All</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- search by brand chain::end -->
+        <!-- top hotels::begin -->
+        <section class="search-by-brand-chain-section">
+            <div class="container">
+                <!-- section heading::begin  -->
+                <div class="section-heading">
+                    <h4>Top Hotels</h4>
+                    <h2>Here are some Mile Merchant, New Hotel etc</h2>
+                </div>
+                <!-- section heading::end  -->
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-lg-12 col-xl-12">
+                        <div class="search-by-brand-chain-wrapper">
+                            <div class="search-by-brand-chain-tabs">
+                                <ul>
+                                    <li><button>Mile Merchant</button></li>
+                                    <li><button>New Hotel</button></li>
+                                    <li><button>New Opening</button></li>
+                                </ul>
+                            </div>
+                            <div class="search-by-brand-chain-view-wrapper">
+                                <div class="row">
+                                    <div class="col-md-3 col-lg-3 col-xl-3">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <div class="search-by-brand-chain-view-images">
+                                                    <img src="images/yellow-pagoda-hotel.jpg"
+                                                        alt="searchByBrandChain" />
+                                                </div>
+                                            </div>
+                                            <div class="card-body">
+                                                <h2>Hotel Yello Pagoda</h2>
+                                                <p>A coffee shop is a kind of restaurant that sells coffee, tea, cakes,
+                                                    and sometimes sandwiches and light meals.</p>
+                                                <div class="know-more-btn">
+                                                    <a href="/#">More <i class="fa fa-arrow-right"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-lg-3 col-xl-3">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <div class="search-by-brand-chain-view-images">
+                                                    <img src="images/hotel-sneha.jpg" alt="searchByBrandChain" />
+                                                </div>
+                                            </div>
+                                            <div class="card-body">
+                                                <h2>Hotel Sneha</h2>
+                                                <p>A shopping mall is a North American term for a large indoor shopping
+                                                    center, usually anchored by department stores.</p>
+                                                <div class="know-more-btn">
+                                                    <a href="/#">More <i class="fa fa-arrow-right"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-lg-3 col-xl-3">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <div class="search-by-brand-chain-view-images">
+                                                    <img src="images/lhotel.jpg" alt="searchByBrandChain" />
+                                                </div>
+                                            </div>
+                                            <div class="card-body">
+                                                <h2>L hotel</h2>
+                                                <p>Pharmacy is the clinical health science that links medical science
+                                                    with chemistry and it is charged with the discovery, production,
+                                                    disposal, safe and effective use, and control of medications and
+                                                    drugs.</p>
+                                                <div class="know-more-btn">
+                                                    <a href="/#">More <i class="fa fa-arrow-right"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-lg-3 col-xl-3">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <div class="search-by-brand-chain-view-images">
+                                                    <img src="images/radisson-hotel.jpg" alt="searchByBrandChain" />
+                                                </div>
+                                            </div>
+                                            <div class="card-body">
+                                                <h2>Radisson Hotel</h2>
+                                                <p>A bakery is an establishment that produces and sells flour-based food
+                                                    baked in an oven such as bread, cookies, cakes, pastries, and pies.
+                                                </p>
+                                                <div class="know-more-btn">
+                                                    <a href="/#">More <i class="fa fa-arrow-right"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 col-lg-12 col-xl-12">
+                                        <div class="view-all-btn">
+                                            <a href="/#">View All</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- top hotels::end -->
+        <!-- how to use section::begin -->
+        <section class="how-to-use-section">
+            <div class="container">
+                <div class="row">
+                    <div class="how-to-use-heading">
+                        <h3>How to use</h3>
+                        <p>How to use menu</p>
+                        <div class="section-divider"></div>
+                        <p>Easy order for takeout and delevery</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="delevery-title">
+                        <h3>Delevery</h3>
+                    </div>
+                </div>
+                <div class="row delevery-row">
+                    <div class="delevery-row-deco"></div>
+                    <div class="delevery-row-deco-circle"></div>
+                    <div class="col-md-4 col-lg-4 col-xl-4 add-indicator-after">
+                        <div class="how-to-use-wrapper">
+                            <div class="how-to-use-inner-wrapper">
+                                <div class="how-to-use-inner-childs">
+                                    <i class="fa fa-search-location"></i>
+                                </div>
+                                <div class="how-to-use-inner-childs">
+                                    <h3>Step 1</h3>
+                                    <p>Choose your favorite store</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-4 col-xl-4 add-indicator-after">
+                        <div class="how-to-use-wrapper">
+                            <div class="how-to-use-inner-wrapper">
+                                <div class="how-to-use-inner-childs">
+                                    <i class="fa fa-shopping-cart"></i>
+                                </div>
+                                <div class="how-to-use-inner-childs">
+                                    <h3>Step 2</h3>
+                                    <p>Order and payment</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-4 col-xl-4">
+                        <div class="how-to-use-wrapper">
+                            <div class="how-to-use-inner-wrapper">
+                                <div class="how-to-use-inner-childs">
+                                    <i class="fa fa-shipping-fast"></i>
+                                </div>
+                                <div class="how-to-use-inner-childs">
+                                    <h3>Step 3</h3>
+                                    <p>Get delivered</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="delevery-title">
+                        <h3>Take Out</h3>
+                    </div>
+                </div>
+                <div class="row delevery-row">
+                    <div class="delevery-row-deco"></div>
+                    <div class="delevery-row-deco-circle"></div>
+                    <div class="col-md-4 col-lg-4 col-xl-4 add-indicator-after">
+                        <div class="how-to-use-wrapper">
+                            <div class="how-to-use-inner-wrapper">
+                                <div class="how-to-use-inner-childs">
+                                    <i class="fa fa-store"></i>
+                                </div>
+                                <div class="how-to-use-inner-childs">
+                                    <h3>Step 1</h3>
+                                    <p>Choose store near you</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-4 col-xl-4 add-indicator-after">
+                        <div class="how-to-use-wrapper">
+                            <div class="how-to-use-inner-wrapper">
+                                <div class="how-to-use-inner-childs">
+                                    <i class="fa fa-shopping-cart"></i>
+                                </div>
+                                <div class="how-to-use-inner-childs">
+                                    <h3>Step 2</h3>
+                                    <p>Order and payment</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-4 col-xl-4">
+                        <div class="how-to-use-wrapper">
+                            <div class="how-to-use-inner-wrapper">
+                                <div class="how-to-use-inner-childs">
+                                    <i class="fa fa-truck-loading"></i>
+                                </div>
+                                <div class="how-to-use-inner-childs">
+                                    <h3>Step 3</h3>
+                                    <p>In the shop receives</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- how to use section::end -->
+        <!-- about us::begin -->
+        <section class="about-us-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-lg-6 col-xl-6">
+                        <div class="about-us-info-wrapper">
+                            <!-- section heading::begin -->
+                            <div class="section-heading">
+                                <h4>Know About Us</h4>
+                                <h2>About Us</h2>
+                                <p>Cityhub is newly establish platform. Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Officiis illum cum reprehenderit ipsum eum, amet nam quod laborum
+                                    facilis? Praesentium minima ipsam qui iusto optio, consequatur adipisci non ex?
+                                    Excepturi.</p>
+                            </div>
+                            <!-- section heading::end -->
+                            <div class="about-us-contact-info">
+                                <div class="about-us-contact-parent">
+                                    <div class="about-us-contact-childs">
+                                        <div class="contact-icon">
+                                            <i class="fa fa-envelope"></i>
+                                        </div>
+                                    </div>
+                                    <div class="about-us-contact-childs">
+                                        <p>Mail Us At</p>
+                                        <h1>cityhub@gmail.com</h1>
+                                    </div>
+                                </div>
+                                <div class="about-us-contact-parent">
+                                    <div class="about-us-contact-childs">
+                                        <div class="contact-icon">
+                                            <i class="fa fa-phone"></i>
+                                        </div>
+                                    </div>
+                                    <div class="about-us-contact-childs">
+                                        <p>Call Us On</p>
+                                        <h1>986587555, 06766655</h1>
+                                    </div>
+                                </div>
+                                <div class="about-us-contact-parent">
+                                    <div class="about-us-contact-childs">
+                                        <div class="contact-icon">
+                                            <i class="fa fa-map-marker-alt"></i>
+                                        </div>
+                                    </div>
+                                    <div class="about-us-contact-childs">
+                                        <p>Meet Us At</p>
+                                        <h1>Kathmandu, Nepal</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="become-affilate-btn">
+                                <a href="/#">Become An Affilate <i class="fa fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-lg-6 col-xl-6">
+                        <div class="about-us-featured-image-wrapper">
+                            <img src="images/about-img.png" draggable="false" alt="aboutus-featured" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- about us::end -->
+        <!-- why choose us::begin -->
+        <section class="why-choose-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-lg-3 col-xl-3">
+                        <div class="why-choose-wrapper">
+                            <div class="why-choose-icon">
+                                <i class="fa fa-headphones"></i>
+                            </div>
+                            <div class="why-choose-info">
+                                <h3>Customer Support</h3>
+                                <p>Vestibulum tortor risus, rutrum at congue sed ultricies finibus.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-lg-3 col-xl-3">
+                        <div class="why-choose-wrapper">
+                            <div class="why-choose-icon">
+                                <i class="fa fa-lock"></i>
+                            </div>
+                            <div class="why-choose-info">
+                                <h3>Reliable System</h3>
+                                <p>Vestibulum tortor risus, rutrum at congue sed ultricies finibus.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-lg-3 col-xl-3">
+                        <div class="why-choose-wrapper">
+                            <div class="why-choose-icon">
+                                <i class="fa fa-user-shield"></i>
+                            </div>
+                            <div class="why-choose-info">
+                                <h3>Security</h3>
+                                <p>Vestibulum tortor risus, rutrum at congue sed ultricies finibus.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-lg-3 col-xl-3">
+                        <div class="why-choose-wrapper">
+                            <div class="why-choose-icon">
+                                <i class="fa fa-handshake"></i>
+                            </div>
+                            <div class="why-choose-info">
+                                <h3>Easy To Use</h3>
+                                <p>Vestibulum tortor risus, rutrum at congue sed ultricies finibus.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- why choose us::end -->
+        <!-- clients::begin -->
+        <div class="client-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-lg-12 col-xl-12 col-sm-12">
+                        <div class="clients-wrapper">
+                            <ul>
+                                <div class="our-clients">
+                                    <a href="/#">
+                                        <img src="images/clients/cl1.png" alt="client" draggable="false" />
+                                    </a>
+                                </div>
+                                <div class="our-clients">
+                                    <a href="/#">
+                                        <img src="images/clients/cl2.png" alt="client" draggable="false" />
+                                    </a>
+                                </div>
+                                <div class="our-clients">
+                                    <a href="/#">
+                                        <img src="images/clients/cl3.png" alt="client" draggable="false" />
+                                    </a>
+                                </div>
+                                <div class="our-clients">
+                                    <a href="/#">
+                                        <img src="images/clients/cl4.png" alt="client" draggable="false" />
+                                    </a>
+                                </div>
+                                <div class="our-clients">
+                                    <a href="/#">
+                                        <img src="images/clients/cl5.png" alt="client" draggable="false" />
+                                    </a>
+                                </div>
+                                <div class="our-clients">
+                                    <a href="/#">
+                                        <img src="images/clients/cl6.png" alt="client" draggable="false" />
+                                    </a>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- clients::end -->
+        <!-- footer::begin -->
+        <section class="cityhub-footer-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-lg-3 col-xl-3">
+                        <div class="footer-brand-logo-wrapper">
+                            <div class="footer-brand-logo">
+                                <h1>CityHub</h1>
+                            </div>
+                            <div class="footer-brand-logo-explain">
+                                <p>Cityhub is newly establish platform. Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Officiis illum cum reprehenderit ipsum eum, amet nam quod laborum
+                                    facilis? Praesentium minima ipsam qui iusto optio, consequatur adipisci non ex?
+                                    Excepturi.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-lg-3 col-xl-3">
+                        <div class="footer-headings">
+                            <h2>Quick Links</h2>
+                        </div>
+                        <div class="quick-links-wrapper">
+                            <div class="quick-links">
+                                <a href="index.html">Home</a>
+                            </div>
+                            <div class="quick-links">
+                                <a href="pages/subpages/pricing.html">Pricing</a>
+                            </div>
+                            <div class="quick-links">
+                                <a href="pages/subpages/review.html">Reviews</a>
+                            </div>
+                            <div class="quick-links">
+                                <a href="pages/subpages/aboutUs.html">About Us</a>
+                            </div>
+                            <div class="quick-links">
+                                <a href="pages/subpages/contactUs.html">Contact Us</a>
+                            </div>
+                            <div class="quick-links">
+                                <a href="/register">Become An Affilated</a>
+                            </div>
+                            <div class="quick-links">
+                                <a href="/login">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-lg-3 col-xl-3">
+                        <div class="footer-headings">
+                            <h2>Accounts</h2>
+                        </div>
+                        <div class="accounts-wrapper">
+                            <ul>
+                                <li>
+                                    <a href="/login">Login</a>
+                                </li>
+                                <li>
+                                    <a href="/register">Register</a>
+                                </li>
+                                <li>
+                                    <a href="/register">Become An Affilate</a>
+                                </li>
+                                <li>
+                                    <a href="/#">Inquiry</a>
+                                </li>
+                                <li>
+                                    <a href="/#">Support</a>
+                                </li>
+                                <li>
+                                    <a href="/#">Report</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-lg-3 col-xl-3">
+                        <div class="footer-headings">
+                            <h2>Subscribe</h2>
+                            <h3>Save Time, Save Money!</h3>
+                            <p>Sign up and we'll send the best deals to you</p>
+                        </div>
+                        <div class="subscribe-wrapper">
+                            <div class="subscribe-inner-wrapper">
+                                <input class="form-control" type="text" placeholder="Email Address" />
+                                <button>Subscribe</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="copy-right-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-xl-12 col-lg-12 col-sm-12">
+                            <div class="copy-right-parent-wrapper">
+                                <div class="copy-right-childs-wrapper">
+                                    <p>Copyright © 2021 CityHub</p>
+                                </div>
+                                <div class="copy-right-childs-wrapper">
+                                    <p>Designed & Develop By <a href="https://naksalabs.com/" target="_blank">Naksa
+                                            Labs</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <!-- footer::end -->
+    </section>
+</body>
+<!-- jquery:begin -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<!-- jquery:end -->
+<!-- slick js::begin -->
+<script src="js/slick.js"></script>
+<script src="js/sliders.js"></script>
+<!-- slick js::end -->
+<script src="js/bgChange.js"></script>
+
+</html>

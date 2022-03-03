@@ -1,0 +1,352 @@
+@mixin sectionPadding {
+    padding: 3rem 0rem 3rem 0rem;
+}
+
+@mixin allHeightWidth {
+    height: 100%;
+    width: 100%;
+}
+
+@mixin sectionPaddingCustom($val) {
+    padding: $val;
+}
+
+@mixin noMarginPadding {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin noListStyle {
+    list-style-type: none;
+}
+
+@mixin noWhiteSpace {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+@mixin objFitProperty($position) {
+    object-fit: cover;
+    object-position: $position;
+}
+
+@mixin lineHeight($height, $line-height) {
+    height: $height;
+    line-height: $line-height;
+}
+
+@mixin flexPropertyCentered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexPropertyCenteredPara($position) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $position;
+}
+
+@mixin gridPropertyCentered {
+    display: grid;
+    place-items: center;
+}
+
+@mixin absoluteCentered {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin usePseudoElement {
+    content: "";
+    position: absolute;
+}
+
+@mixin countColumn($count) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $count;
+    -webkit-box-orient: vertical;
+}
+
+@mixin cityhibSubmitBtn($val) {
+    border-radius: 2rem;
+    background-color: $val;
+    padding: 0.3rem 0.8rem;
+    @include globalESmFont;
+    color: $cityhub-global-color-dark;
+    font-weight: $fw-600;
+    color: $cityhub-global-white;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    &:hover {
+        background: $cityhub-global-color-Edark;
+        color: $cityhub-global-white;
+    }
+}
+
+@mixin cityHubBtnWithA($val) {
+    background: $val;
+    color: $cityhub-global-white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 1rem;
+}
+
+@mixin onHoverEffectOnBtn {
+    background: #757575;
+}
+
+@mixin onHoverEffectOnBtnTranslate {
+    transform: translateY(-0.2rem);
+}
+
+@mixin cityhubGlobalBorderedBtn {
+    border: 0.13rem solid $cityhub-global-primary-color;
+    border-radius: 2rem;
+    padding: 0.1rem 0.8rem;
+    @include globalESmFont;
+    color: $cityhub-global-color-dark;
+    font-weight: $fw-600;
+    &:hover {
+        background: $cityhub-global-primary-color;
+        color: $cityhub-global-white;
+    }
+}                               
+
+@mixin cityhubGlobalBtn {
+    a {
+        padding: 0.3rem 1.2rem;
+        background: $cityhub-global-color-dark;
+        color: white;
+        border-radius: 2rem;
+        @include globalSmFont;
+        i {
+            @include globalESmFont;
+        }
+        &:hover {
+            @include onHoverEffectOnBtn;
+        }
+    }
+}
+
+@mixin sectionHeading {
+    .section-heading {
+        margin: 1rem 0;
+        h4 {
+            color: $cityhub-global-primary-color;
+            @include globalMdFont;
+            font-weight: $fw-600;
+            display: inline-block;
+            position: relative;
+            &::after {
+                @include usePseudoElement;
+                top: 50%;
+                right: -65%;
+                height: 0.15rem;
+                width: 60%;
+                background: $cityhub-global-primary-gradient;
+                border-radius: 1rem;
+            }
+        }
+        h2 {
+            @include globalXXlFont;
+            color: $cityhub-global-color-dark;
+            padding: 0.6rem 0rem
+        }
+        p {
+            @include globalSmFont;
+            color: $cityhub-global-color-dark;
+            font-weight: $fw-600;
+        }
+    }
+}
+
+@mixin cityhubInput {
+    padding: 0.2rem 0.4rem !important;
+    border-radius: 0 !important;
+}
+
+@mixin inputFocus {
+    &:focus {
+        box-shadow: 0 0 0.1rem 0 rgba(0, 0, 0, 0.329);
+        border: 0.1rem solid transparent;
+    }
+    &::placeholder {
+        color: rgb(141, 141, 141);
+        @include globalSmFont;
+    }
+}
+
+@mixin globalCard {
+    background: white;
+    padding: 1rem;
+    margin: 1rem 0rem;
+    border: 1px solid #00000015;
+}
+
+@mixin fragmentHeading {
+    h3 {
+        @include globalMdFont;
+        color: $cityhub-global-color-Edark;
+        margin: 0.5rem 0;
+    }
+}
+
+// fonts
+@mixin globalESmFont {
+    font-size: 0.9rem;
+}
+
+@mixin globalSmFont {
+    font-size: 1rem;
+}
+
+@mixin globalMdFont {
+    font-size: 1.2rem;
+}
+
+@mixin globalLgFont {
+    font-size: 1.4rem;
+}
+
+@mixin globalXlFont {
+    font-size: 1.6rem;
+}
+
+@mixin globalXXlFont {
+    font-size: 1.8rem;
+}
+
+@mixin globalXXXlFont {
+    font-size: 2rem;
+}
+
+// table
+@mixin tableStyle {
+    table {
+        thead {
+            th {
+                @include globalSmFont;
+                white-space: nowrap;
+            }
+        }
+        tbody {
+            td {
+                @include globalSmFont;
+                vertical-align: middle;
+                border-top: none;
+                white-space: nowrap;
+            }
+        }
+    }
+}
+
+@mixin actionBtns {
+    .my-action-btns {
+        display: flex;
+        a {
+            cursor: pointer;
+            &:first-child {
+                .action-btns {
+                    i {
+                        color: #00b0c0;
+                    }
+                }
+            }
+            &:nth-child(2) {
+                .action-btns {
+                    i {
+                        color: #2f2f2f;
+                    }
+                }
+            }
+            &:last-child {
+                .action-btns {
+                    i {
+                        color: #eb0000;
+                    }
+                }
+            }
+            .action-btns {
+                height: 1.8rem;
+                width: 1.8rem;
+                @include flexPropertyCentered;
+                box-shadow: $global-shadow;
+                background-color: $cityhub-global-white;
+                margin-right: 0.3rem;
+                i {
+                    @include flexPropertyCentered;
+                }
+            }
+        }
+    }
+}
+
+@mixin searchViewHeading {
+    .search-view-heading {
+        margin-top: 1rem;
+        h2 {
+            @include globalMdFont;
+            color: $cityhub-global-color-Edark;
+            font-weight: $fw-500;
+            position: relative;
+            display: inline-flex;
+            &::after {
+                @include usePseudoElement;
+                top: 50%;
+                left: 160%;
+                transform: translate(-50%, -50%);
+                height: 0.2rem;
+                width: 2.4rem;
+                border-radius: 2rem;
+                background: linear-gradient(to left, #e81c2d3d, #e81c2e)
+            }
+        }
+    }
+}
+
+@mixin globalInput {
+    padding: 0.2rem 0.6rem;
+    &:focus {
+        box-shadow: 0 0 0.2rem 0 $cityhub-global-primary-color;
+        border: $cityhub-global-primary-color;
+    }
+}
+
+@mixin globalGradientBtn {
+    outline: none;
+    border: none;
+    display: block;
+    width: 100%;
+    @include globalESmFont;
+    color: $cityhub-global-white;
+    padding: 0.2rem 0;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    background: linear-gradient(to right, $cityhub-global-color-dark, $cityhub-global-color-Edark);
+    &:hover {
+        background: $cityhub-global-primary-color;
+    }
+}
+
+@mixin overflowScroll {
+    &::-webkit-scrollbar {
+        width: 0.5rem;
+        height: 0.5rem;
+        background: $cityhub-global-white;
+    }
+    &::-webkit-scrollbar-track {
+        border-radius: 0.2rem;
+        background: transparent;
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    }
+    &::-webkit-scrollbar-thumb {
+        background: $cityhub-global-color-dark;
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    }
+}

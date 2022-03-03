@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CityHub - Registration</title>
+    <!-- bootstrap::begin -->
+    <link rel="stylesheet" href="../../scss/bootstrap/bootstrap.min.css">
+    <!-- bootstrap::end -->
+    <!-- fontawesome::begin -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+        integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ=="
+        crossorigin="anonymous" />
+    <!-- fontawesome::end -->
+    <!-- global fonts::begin -->
+    <link rel="stylesheet" href="../../scss/fonts/BarlowSemiCondensed-Regular.ttf">
+    <link rel="stylesheet" href="../../scss/fonts/Satisfy-Regular.ttf">
+    <!-- global fonts::end -->
+    <!-- slick css::behin -->
+    <link rel="stylesheet" href="../../scss/slick.css">
+    <link rel="stylesheet" href="../../scss/slick-theme.css">
+    <!-- slick css::end -->
+    <!-- custom css::begin -->
+    <link rel="stylesheet" href="../../scss/custom-styles.css">
+    <!-- custom css::end -->
+</head>
+
+<body>
+    <section class="cityhub-master-section">
+        <!-- main navigation::begin -->
+        <section class="main-navigation-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-xl-12 col-lg-12 col-sm-12">
+                        <div class="main-navigation-parent">
+                            <div class="main-navigation-childs">
+                                <div class="logo">
+                                    <h1>City<span>Hub</span></h1>
+                                </div>
+                            </div>
+                            <div class="main-navigation-childs">
+                                <div class="action-btns">
+                                    <ul>
+                                        <li>
+                                            <a href="register.html">Register</a>
+                                        </li>
+                                        <li>
+                                            <a href="login.html">Sign In</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- main navigation::end -->
+        <!-- breadcrumb::begin -->
+        <section class="cityhub-global-breadcrumb-section">
+            <div class="breadcrumb-overlay"></div>
+            <div class="deco-bumb-bottom"></div>
+            <div class="breadcrumb-info-wrapper">
+                <div class="global-page-name">
+                    <h2>Registration</h2>
+                </div>
+                <div class="breadcrumb-path">
+                    <p><span><a href="/">CityHub</a></span> <i class="fa fa-angle-double-right"></i>
+                        <span>Registration</span></p>
+                </div>
+            </div>
+        </section>
+        <!-- breadcrumb::end -->
+        <!-- registration::begin -->
+        <section class="registration-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-xl-12 col-lg-12">
+                        <div class="registration-wrapper">
+                            <div class="registration-parent-wrapper">
+                                <div class="registration-childs">
+                                    <img src="../../images/about-img.png" draggable="false">
+                                </div>
+                                <div class="registration-childs">
+                                    <div class="tab-btns">
+                                        <ul>
+                                            <li>
+                                                <button class="tablinks active" onclick="openCity(event, 'user-one')">User One</button>
+                                            </li>
+                                            <li>
+                                                <button class="tablinks" onclick="openCity(event, 'user-two')">User One</button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div id="user-one" class="tabcontent">
+                                        <div class="registration-heading">
+                                            <h3>Signup As</h3>
+                                            <h1>User One</h1>
+                                        </div>
+                                        <div class="section-divider"></div>
+                                        <div class="registration-form">
+                                            <form action="">
+                                                <div class="row">
+                                                    <div class="col-md-6 col-xl-6 col-lg-6">
+                                                        <div class="form-group">
+                                                            <label><i class="fa fa-user"></i>Enter Full Name</label>
+                                                            <input type="email"
+                                                                class="form-control cituhub-global-input"
+                                                                placeholder="Enter Your Email Address" required />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-xl-6 col-lg-6">
+                                                        <div class="form-group">
+                                                            <label><i class="fa fa-envelope"></i>Enter Email</label>
+                                                            <input type="email"
+                                                                class="form-control cituhub-global-input"
+                                                                placeholder="Enter Your Email Address" required />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6 col-xl-6 col-lg-6">
+                                                        <div class="form-group">
+                                                            <label><i class="fa fa-phone"></i>Enter Phone</label>
+                                                            <input type="email"
+                                                                class="form-control cituhub-global-input"
+                                                                placeholder="Enter Your Email Address" required />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-xl-6 col-lg-6">
+                                                        <div class="form-group">
+                                                            <label><i class="fa fa-map-marker-alt"></i>Enter
+                                                                Address</label>
+                                                            <input type="email"
+                                                                class="form-control cituhub-global-input"
+                                                                placeholder="Enter Your Email Address" required />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12 col-xl-12 col-lg-12">
+                                                        <div class="form-group">
+                                                            <label><i class="fa fa-server"></i>Registration Type</label>
+                                                            <input type="email"
+                                                                class="form-control cituhub-global-input"
+                                                                placeholder="Enter Your Email Address" required />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 col-xl-12 col-lg-12">
+                                                        <div class="login-submit-btn">
+                                                            <button>Register</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div id="user-two" class="tabcontent" style="display: none;">
+                                        <div class="registration-heading">
+                                            <h3>Signup As</h3>
+                                            <h1>User Two</h1>
+                                        </div>
+                                        <div class="section-divider"></div>
+                                        <div class="registration-form">
+                                            <form action="">
+                                                <div class="row">
+                                                    <div class="col-md-6 col-xl-6 col-lg-6">
+                                                        <div class="form-group">
+                                                            <label><i class="fa fa-user"></i>Enter Full Name</label>
+                                                            <input type="email"
+                                                                class="form-control cituhub-global-input"
+                                                                placeholder="Enter Your Email Address" required />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-xl-6 col-lg-6">
+                                                        <div class="form-group">
+                                                            <label><i class="fa fa-envelope"></i>Enter Email</label>
+                                                            <input type="email"
+                                                                class="form-control cituhub-global-input"
+                                                                placeholder="Enter Your Email Address" required />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6 col-xl-6 col-lg-6">
+                                                        <div class="form-group">
+                                                            <label><i class="fa fa-phone"></i>Enter Phone</label>
+                                                            <input type="email"
+                                                                class="form-control cituhub-global-input"
+                                                                placeholder="Enter Your Email Address" required />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-xl-6 col-lg-6">
+                                                        <div class="form-group">
+                                                            <label><i class="fa fa-map-marker-alt"></i>Enter
+                                                                Address</label>
+                                                            <input type="email"
+                                                                class="form-control cituhub-global-input"
+                                                                placeholder="Enter Your Email Address" required />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12 col-xl-12 col-lg-12">
+                                                        <div class="form-group">
+                                                            <label><i class="fa fa-server"></i>Registration Type</label>
+                                                            <input type="email"
+                                                                class="form-control cituhub-global-input"
+                                                                placeholder="Enter Your Email Address" required />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 col-xl-12 col-lg-12">
+                                                        <div class="login-submit-btn">
+                                                            <button>Register</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- registration::end -->
+        <!-- footer::begin -->
+        <section class="cityhub-footer-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-lg-3 col-xl-3">
+                        <div class="footer-brand-logo-wrapper">
+                            <div class="footer-brand-logo">
+                                <h1>CityHub</h1>
+                            </div>
+                            <div class="footer-brand-logo-explain">
+                                <p>Cityhub is newly establish platform. Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Officiis illum cum reprehenderit ipsum eum, amet nam quod laborum
+                                    facilis? Praesentium minima ipsam qui iusto optio, consequatur adipisci non ex?
+                                    Excepturi.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-lg-3 col-xl-3">
+                        <div class="footer-headings">
+                            <h2>Quick Links</h2>
+                        </div>
+                        <div class="quick-links-wrapper">
+                            <div class="quick-links">
+                                <a href="index.html">Home</a>
+                            </div>
+                            <div class="quick-links">
+                                <a href="/pricing">Pricing</a>
+                            </div>
+                            <div class="quick-links">
+                                <a href="/review">Reviews</a>
+                            </div>
+                            <div class="quick-links">
+                                <a href="/about">About Us</a>
+                            </div>
+                            <div class="quick-links">
+                                <a href="/contact">Contact Us</a>
+                            </div>
+                            <div class="quick-links">
+                                <a href="/register">Become An Affilated</a>
+                            </div>
+                            <div class="quick-links">
+                                <a href="/login">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-lg-3 col-xl-3">
+                        <div class="footer-headings">
+                            <h2>Accounts</h2>
+                        </div>
+                        <div class="accounts-wrapper">
+                            <ul>
+                                <li>
+                                    <a href="/login">Login</a>
+                                </li>
+                                <li>
+                                    <a href="/register">Register</a>
+                                </li>
+                                <li>
+                                    <a href="/register">Become An Affilate</a>
+                                </li>
+                                <li>
+                                    <a href="/#">Inquiry</a>
+                                </li>
+                                <li>
+                                    <a href="/#">Support</a>
+                                </li>
+                                <li>
+                                    <a href="/#">Report</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-lg-3 col-xl-3">
+                        <div class="footer-headings">
+                            <h2>Subscribe</h2>
+                            <h3>Save Time, Save Money!</h3>
+                            <p>Sign up and we'll send the best deals to you</p>
+                        </div>
+                        <div class="subscribe-wrapper">
+                            <div class="subscribe-inner-wrapper">
+                                <input class="form-control" type="text" placeholder="Email Address" />
+                                <button>Subscribe</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="copy-right-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-xl-12 col-lg-12 col-sm-12">
+                            <div class="copy-right-parent-wrapper">
+                                <div class="copy-right-childs-wrapper">
+                                    <p>Copyright © 2021 CityHub</p>
+                                </div>
+                                <div class="copy-right-childs-wrapper">
+                                    <p>Designed & Develop By <a href="https://naksalabs.com/" target="_blank">Naksa
+                                            Labs</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <!-- footer::end -->
+    </section>
+</body>
+<!-- jquery:begin -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<!-- jquery:end -->
+<!-- slick js::begin -->
+<script src="../../js/slick.js"></script>
+<script src="../../js/sliders.js"></script>
+<script src="../../js/registrationTab.js"></script>
+<!-- slick js::end -->
+
+</html>

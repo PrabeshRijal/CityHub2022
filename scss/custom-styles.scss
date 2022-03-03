@@ -1,0 +1,4121 @@
+// preset files::begin
+@import "./globalVariables.scss";
+@import "./globalMixins.scss";
+
+// preset files::end
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    &::-webkit-scrollbar {
+        width: 0.5rem;
+        background: $cityhub-global-white;
+    }
+
+    &::-webkit-scrollbar-track {
+        border-radius: 0.2rem;
+        background: transparent;
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $cityhub-global-color-dark;
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    }
+
+    scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    @include noMarginPadding;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+mark,
+small,
+del,
+ins,
+sub,
+sup {
+    font-family: $cityhub-global-primary-font;
+}
+
+p,
+a,
+ul,
+li,
+ol,
+span,
+strong {
+    font-family: $cityhub-global-primary-font;
+}
+
+i {
+    vertical-align: middle;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+ol {
+    @include noMarginPadding;
+}
+
+a {
+    text-decoration: $no-text-decoration !important;
+}
+
+::selection {
+    color: $cityhub-global-white;
+    background: $cityhub-global-primary-color;
+}
+
+.dispalyAsNone {
+    display: none !important;
+}
+
+.cituhub-global-input {
+    @include cityhubInput;
+}
+
+.left100 {
+    left: -100% !important;
+}
+
+.padding1 {
+    padding-left: 1rem !important;
+}
+
+.dash-card-outer-container {
+    background: $cityhub-global-white;
+    padding: 0.2rem;
+    margin-top: 1rem;
+    border: 1px solid #00000015;
+}
+
+.noBorderTop {
+    border-top: none !important;
+}
+
+.view-details {
+    a {
+        color: $cityhub-global-green-color;
+        font-weight: $fw-600;
+        @include globalSmFont;
+    }
+}
+
+.add-section {
+    background: #f8f8f8;
+    @include allHeightWidth;
+    @include flexPropertyCentered;
+    h3 {
+        color: #3535355b;
+        font-weight: $fw-700;
+    }
+}
+
+.sub-pages-headings-parent-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+    .sub-pages-headings-childs {
+        &:first-child {
+            h3 {
+                @include globalMdFont;
+                color: $cityhub-global-color-Edark;
+                font-weight: $fw-600;
+            }
+        }
+        &:last-child {
+            a {
+                @include cityHubBtnWithA($cityhub-global-color-dark);
+            }
+        }
+    }
+}
+
+.review-parent-wrapper {
+    display: flex;
+    background: #f8f8f8;
+    border: 1px solid #3b3b3b13;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+    .review-childs-wrapper {
+        &:first-child {
+            img {
+                height: 3rem;
+                width: 3rem;
+                border: 0.15rem solid #f8f8f8;
+                border-radius: 100%;
+                @include objFitProperty(center);
+                box-shadow: $global-shadow;
+            }
+        }
+        &:last-child {
+            margin-left: 1rem;
+            h3 {
+                @include globalSmFont;
+                font-weight: $fw-600;
+                color: $cityhub-global-primary-color;
+                .review-post-date {
+                    margin-left: 1.2rem;
+                }
+                .reviewer-name {
+                   color: $cityhub-global-color-Edark;
+                }
+            }
+            p {
+                @include globalSmFont;
+            }
+        }
+    }
+}
+
+.client-review-form {
+    label {
+        font-weight: $fw-600;
+        @include globalSmFont;
+    }
+    button {
+        @include cityhibSubmitBtn($cityhub-global-primary-color);
+        margin-top: 0.8rem;
+    }
+}
+
+.send-private-review-form {
+    box-shadow: $global-shadow;
+    background: #f8f8f8;
+    border-top: 0.15rem solid $cityhub-global-primary-color;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    h3 {
+        @include globalMdFont;
+        font-weight: $fw-600;
+        margin-bottom: 1rem;
+    }
+    button {
+        @include cityhibSubmitBtn($cityhub-global-primary-color);
+    }
+}
+
+.clients-map {
+    iframe {
+        width: 100%;
+        height: 18rem;
+        border: none;
+        box-shadow: $global-shadow;
+        border-radius: 0.4rem;
+        margin: 1rem 0;
+    }
+    text-align: center;
+    a {
+        @include cityHubBtnWithA($cityhub-global-primary-color);
+    }
+}
+
+.client-coupon-wrapper {
+    .coupon-codes {
+        .addFlexProp {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .show-coupon-code {
+            background: $cityhub-global-primary-color;
+            padding: 0.6rem;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            .show-coupon-code-inner {
+                &:first-child {
+                    span {
+                        color: $cityhub-global-white;
+                        @include globalMdFont;
+                        font-weight: $fw-600;
+                        i {
+                            margin-right: 0.5rem;
+                            margin-top: -0.2rem;
+                        }
+                    }
+                }
+                &:last-child {
+                    background: $cityhub-global-white;
+                    h3 {
+                        padding: 0rem 1rem;
+                        @include globalMdFont;
+                        font-weight: $fw-600;
+                    }
+
+                }
+            }
+        }
+        .coupon-dates {
+            .date-indicate {
+                background-color: #007883;
+                color: $cityhub-global-white;
+                padding: 0.5rem 0.8rem;
+                border-radius: 1rem;
+                margin-right: 1rem;
+            }
+            .coupon-date {
+                font-weight: $fw-600;
+                i {
+                    height: auto;
+                    width: 1rem;
+                    color: $cityhub-global-color-dark;
+                }
+            }
+        }
+    }
+    .coupon-benifits {
+        margin: 1.8rem 0;
+        h4 {
+            @include globalSmFont;
+            color: $cityhub-global-color-Edark;
+            font-weight: $fw-700;
+        }
+    }
+    .benifit-lists {
+        ul {
+            li {
+                @include noListStyle;
+                border-bottom: 0.12rem solid #a7a7a759;
+                margin-bottom: 1.8rem;
+                h3 {
+                    @include globalSmFont;
+                    font-weight: $fw-600;
+                    color: rgb(0, 87, 0);
+                    span {
+                        background-color: $cityhub-global-primary-color;
+                        font-weight: $fw-600;
+                        color: $cityhub-global-white;
+                        padding: 0.6rem;
+                        border-radius: 0.3rem;
+                        margin-right: 0.6rem;
+                    }
+                }
+                p {
+                    margin: 1rem 0;
+                }
+            }
+        }
+    }
+}
+
+.dashboard-edit-page {
+    .edit-wrapper {
+        border: 1px solid #dfdfdf;
+        border-radius: 0.2rem;
+        background: $cityhub-global-white;
+        margin: 1.2rem 0 0 0;
+        padding: 1.2rem;
+
+        h3 {
+            @include globalMdFont;
+            color: $cityhub-global-primary-color;
+            font-weight: $fw-600;
+
+            span {
+                padding: 0 0.4rem;
+            }
+
+            a {
+                color: $cityhub-global-color-dark;
+                @include globalESmFont;
+
+                &:hover {
+                    color: $cityhub-global-green-color;
+                }
+            }
+        }
+
+        form {
+            .form-group {
+                margin-top: 0.6rem;
+
+                .forgot-pass {
+                    margin-top: 0.6rem;
+
+                    span {
+                        a {
+                            text-decoration: none;
+                            @include globalESmFont;
+                            color: $cityhub-global-color-dark;
+
+                            &:hover {
+                                color: $cityhub-global-primary-color;
+                            }
+                        }
+                    }
+                }
+
+                label {
+                    @include globalSmFont;
+                    color: $cityhub-global-color-dark;
+
+                    i {
+                        margin-right: 0.5rem;
+                        @include globalSmFont;
+                    }
+                }
+
+                input {
+                    @include inputFocus;
+                }
+            }
+
+            .edit-submit-btn {
+                margin-top: 0.5rem;
+
+                button {
+                    background: $cityhub-global-green-color;
+                    color: $cityhub-global-white;
+                    outline: none;
+                    border: none;
+                    padding: 0.2rem 1rem;
+                    cursor: pointer;
+                    border-radius: 0.5rem;
+                    @include globalSmFont;
+
+                    &:hover {
+                        @include onHoverEffectOnBtn;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.number-of-people-calc-wrapper {
+    border: 1px solid #0000001f;
+    border-top: 0.2rem solid #00000027;
+    padding: 1rem;
+    label {
+        font-weight: $fw-600;
+        @include globalSmFont;
+    }
+    button {
+        @include globalGradientBtn();
+        @include globalSmFont;
+    }
+}
+
+.reservation-title {
+    margin-bottom: 1rem;
+    h3 {
+        text-align: center;
+        @include globalSmFont;
+        color: $cityhub-global-color-Edark;
+        font-weight: $fw-600;
+        padding: 0.5rem 0rem;
+    }
+}
+
+.online-reservation-title {
+    margin-bottom: 1rem;
+    h3 {
+        text-align: center;
+        @include globalSmFont;
+        color: $cityhub-global-white;
+        font-weight: $fw-600;
+        padding: 0.5rem 0rem;
+        background-color: $cityhub-global-color-dark;
+    }
+}
+
+.global-calender {
+    @include flexPropertyCentered;
+    #calender {
+        & table tr:nth-child(1) td {
+            background-color: $cityhub-global-primary-color;
+            color: white;
+        }
+        .dycalendar-body {
+            tbody {
+                tr {
+                    td {
+                        font-weight: $fw-600;
+                        padding: 0.4rem 1rem;
+                    }
+                }
+            }
+        }
+        .dycalendar-span-month-year {
+            color: $cityhub-global-primary-color;
+            font-weight: $fw-600;
+        }
+    }
+}
+
+.dashboard-detail-page {
+    .details-wrapper-parent {
+        display: flex;
+        border: 1px solid #dfdfdf;
+        border-radius: 0.2rem;
+        background: $cityhub-global-white;
+        margin: 1.2rem 0 0 0;
+
+        .details-wrapper-childs {
+            &:first-child {
+                background: $cityhub-global-white;
+                margin-right: 1.2rem;
+
+                .details-profile {
+                    img {
+                        height: 12rem;
+                        width: 12rem;
+                        @include objFitProperty(top);
+                        border-radius: 0.2rem;
+                        box-shadow: $global-shadow;
+                        border-right: 0.2rem solid $cityhub-global-color-dark;
+                    }
+                }
+
+                .dashboard-detail-page-actions {
+                    @include flexPropertyCentered;
+                    margin: 1rem 0;
+
+                    ul {
+                        display: flex;
+
+                        .edit-btn {
+                            a {
+                                color: $cityhub-global-green-color;
+                            }
+                        }
+
+                        .delete-btn {
+                            a {
+                                color: $cityhub-global-primary-color;
+                            }
+                        }
+
+                        li {
+                            @include noListStyle;
+                            margin: 0rem 0.6rem;
+
+                            a {
+                                font-weight: $fw-600;
+                                @include globalESmFont;
+
+                                &:hover {
+                                    color: $cityhub-global-color-dark;
+                                }
+
+                                i {
+                                    margin-left: 0.2rem;
+                                    height: auto;
+                                    width: 1rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &:last-child {
+                padding: 1rem 0;
+
+                .section-divider {
+                    background-color: $cityhub-global-primary-color;
+                    width: 12%;
+                    height: 0.14rem;
+                    margin: 0.4rem 0rem;
+                    opacity: 0.5;
+                }
+
+                h3 {
+                    @include globalMdFont;
+                    color: $cityhub-global-primary-color;
+                    font-weight: $fw-600;
+
+                    span {
+                        padding: 0 0.4rem;
+                    }
+
+                    a {
+                        color: $cityhub-global-color-dark;
+                        @include globalESmFont;
+
+                        &:hover {
+                            color: $cityhub-global-green-color;
+                        }
+                    }
+                }
+
+                p {
+                    color: $cityhub-global-color-Edark;
+                    margin: 0.4rem;
+                    @include globalSmFont;
+
+                    span {
+                        font-weight: $fw-600;
+                        margin-right: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// -----------------cityhub css-----------------------
+.cityhub-master-section {
+    position: relative;
+    overflow: hidden;
+
+    // main navigation::begin
+    .main-navigation-section {
+        padding: 0.8rem 0rem;
+        border-top: 0.3rem solid $cityhub-global-primary-color;
+
+        .main-navigation-parent {
+            display: flex;
+            justify-content: space-between;
+
+            .main-navigation-childs {
+                &:first-child {
+                    @include flexPropertyCentered;
+
+                    .logo {
+                        h1 {
+                            font-size: 1.8rem;
+                            color: $cityhub-global-color-dark;
+                            font-weight: $fw-700;
+
+                            span {
+                                color: $cityhub-global-primary-color;
+                            }
+                        }
+                    }
+                }
+
+                &:last-child {
+                    @include flexPropertyCentered;
+
+                    ul {
+                        @include noMarginPadding;
+                        display: flex;
+                        align-items: center;
+
+                        li {
+                            list-style-type: none;
+                            transition: $global-transition;
+
+                            a {
+                                @include globalSmFont;
+                                padding: 0.2rem 0.7rem;
+                                border-radius: 1rem;
+                            }
+
+                            &:first-child {
+                                margin-right: 0.5rem;
+
+                                &:hover {
+                                    @include onHoverEffectOnBtnTranslate;
+                                }
+
+                                a {
+                                    border: 0.15rem solid transparent;
+                                    background: $cityhub-global-primary-gradient;
+                                    color: $cityhub-global-white;
+                                }
+                            }
+
+                            &:nth-child(2) {
+                                &:hover {
+                                    @include onHoverEffectOnBtnTranslate;
+                                }
+
+                                a {
+                                    border: 0.15rem solid $cityhub-global-primary-color;
+                                    color: $cityhub-global-primary-color;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .auth-user-details-wrapper {
+                    margin-left: 1rem;
+                    position: relative;
+
+                    .auth-user-details {
+                        &:hover .auth-user-dropdown {
+                            visibility: visible;
+                            transition: $global-transition;
+                        }
+
+                        img {
+                            height: 2.4rem;
+                            width: 2.4rem;
+                            @include objFitProperty(top);
+                            border-radius: 100%;
+                            border: 0.14rem solid #dfdfdf;
+                            cursor: pointer;
+                        }
+
+                        .auth-user-dropdown {
+                            position: absolute;
+                            top: 320%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            height: auto;
+                            width: 12rem;
+                            background-color: $cityhub-global-white;
+                            border: 1px solid #00000015;
+                            padding: 1rem;
+                            z-index: 5;
+                            box-shadow: $global-shadow;
+                            visibility: hidden;
+                            transition: $global-transition;
+
+                            h2 {
+                                @include globalSmFont;
+                                color: $cityhub-global-color-Edark;
+                                white-space: normal;
+                                font-weight: $fw-600;
+                                text-align: center
+                            }
+
+                            h5 {
+                                @include globalESmFont;
+                                color: $cityhub-global-primary-color;
+                                white-space: normal;
+                                text-align: center
+                            }
+
+                            ul {
+                                border-top: 0.15rem solid #e7e7e7;
+                                margin-top: 0.5rem;
+                                padding-top: 0.5rem;
+
+                                ol {
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    flex-direction: column;
+
+                                    a {
+                                        color: $cityhub-global-color-dark;
+
+                                        &:hover {
+                                            color: $cityhub-global-primary-color;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // main navigation::end
+    // banner section::begin
+    .banner-section {
+        @include sectionPaddingCustom(1rem 0rem 3rem 0);
+        position: relative;
+
+        .banner-bg-deco {
+            position: absolute;
+            bottom: -60%;
+            right: -40%;
+            width: 140%;
+            height: 160%;
+            background: radial-gradient(#cfcfcf, #e6e6e6);
+            transform: rotate(-35deg);
+            z-index: -1;
+            opacity: 0.3;
+        }
+
+        .banner-social-media-wrapper {
+            position: absolute;
+            top: 2rem;
+            right: 0;
+
+            .banner-social-media-inner-wrapper {
+                a {
+                    .social-media-icon {
+                        margin: 1rem 0rem;
+                        background: $cityhub-global-color-dark-gradient;
+                        @include flexPropertyCentered;
+                        border-radius: 2rem 0 0 2rem;
+                        @include globalSmFont;
+
+                        i {
+                            color: $cityhub-global-white;
+                            padding: 0.5rem 1rem;
+                            @include flexPropertyCentered;
+                        }
+                    }
+                }
+            }
+        }
+
+        .banner-parent-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 2rem;
+
+            .banner-childs-wrapper {
+                flex: 1;
+
+                &:first-child {
+                    position: relative;
+
+                    .banner-deco-circle-parent {
+                        .banner-deco-circle-childs {
+                            &:first-child {
+                                position: absolute;
+                                top: -2rem;
+                                right: 0;
+                                height: 3rem;
+                                width: 3rem;
+                                background: $cityhub-global-primary-gradient;
+                                border-radius: 100%;
+                                opacity: 0.2;
+                                animation: animateCircle 8s linear infinite;
+                            }
+
+                            &:nth-child(2) {
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                height: 1.2rem;
+                                width: 1.2rem;
+                                background: $cityhub-global-color-dark;
+                                border-radius: 100%;
+                                opacity: 0.2;
+                                animation: animateCircle 12s linear infinite;
+                            }
+
+                            &:nth-child(3) {
+                                position: absolute;
+                                top: -2rem;
+                                left: -2rem;
+                                height: 12rem;
+                                width: 12rem;
+                                background: $cityhub-global-color-dark;
+                                border-radius: 100%;
+                                opacity: 0.06;
+                                animation: animateCircle 6s linear infinite;
+                            }
+
+                            @keyframes animateCircle {
+                                0% {
+                                    transform: translateY(0rem);
+                                }
+
+                                50% {
+                                    transform: translateY(4rem);
+                                }
+
+                                100% {
+                                    transform: translateY(0rem);
+                                }
+                            }
+                        }
+                    }
+
+                    .cityhub-banner-intro-wrapper {
+                        span {
+                            color: $cityhub-global-primary-color;
+                            @include globalLgFont;
+                            font-weight: $fw-600;
+                            position: relative;
+
+                            &::after {
+                                @include usePseudoElement;
+                                top: 50%;
+                                right: -90%;
+                                height: 0.15rem;
+                                width: 80%;
+                                background: $cityhub-global-primary-gradient;
+                                border-radius: 1rem;
+                            }
+                        }
+
+                        h3 {
+                            color: $cityhub-global-color-dark;
+                            font-size: 3.4rem;
+                            font-weight: $fw-600;
+
+                            i {
+                                font-family: 'Satisfy', cursive;
+                                font-size: inherit;
+                                color: $cityhub-global-primary-color;
+                                margin: 0rem 0.6rem 0 0.4rem;
+                            }
+                        }
+
+                        p {
+                            @include globalMdFont;
+                            color: $cityhub-global-color-dark;
+                            font-weight: $fw-500;
+                            margin: 1.6rem 0 2.6rem 0;
+                        }
+
+                        .banner-action-btns {
+                            ul {
+                                display: flex;
+
+                                li {
+                                    @include noListStyle;
+                                    transition: linear $global-transition;
+
+                                    &:first-child {
+                                        margin-right: 0.8rem;
+
+                                        a {
+                                            background: $cityhub-global-primary-gradient;
+                                            color: $cityhub-global-white;
+                                        }
+
+                                        &:hover {
+                                            @include onHoverEffectOnBtnTranslate;
+                                        }
+                                    }
+
+                                    &:last-child {
+                                        margin-right: 0.5rem;
+
+                                        a {
+                                            background: $cityhub-global-color-dark;
+                                            color: $cityhub-global-white;
+
+                                            i {
+                                                font-size: 0.8rem;
+                                            }
+                                        }
+
+                                        &:hover {
+                                            @include onHoverEffectOnBtnTranslate;
+                                        }
+                                    }
+
+                                    a {
+                                        @include globalSmFont;
+                                        padding: 0.5rem 0.8rem;
+                                        border-radius: 2rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &:last-child {
+                    position: relative;
+
+                    .banner-deco {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        height: 34rem;
+                        width: 34rem;
+                        background: $cityhub-global-color-Edark;
+                        border-radius: 100%;
+                        border: 1rem solid $cityhub-global-primary-color;
+                        z-index: 1;
+                        box-shadow: $global-shadow;
+                        opacity: 0.8;
+                    }
+
+                    .cityhub-featured-image {
+                        position: relative;
+                        z-index: 2;
+
+                        img {
+                            margin-left: 5rem;
+                            height: auto;
+                            width: 80%;
+                            transform: translateY(2rem);
+                            opacity: 0;
+                            animation: animateFeaturedImage 2s linear forwards;
+                        }
+
+                        @keyframes animateFeaturedImage {
+                            from {}
+
+                            to {
+                                transform: translateY(0rem);
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // banner section::end
+    // search section::begin
+    .search-section {
+        @include sectionPaddingCustom(2rem 0);
+
+        .search-wrapper {
+            box-shadow: $global-shadow;
+            border-radius: 0.5rem;
+            padding: 2rem 2rem 2rem 2rem;
+            position: relative;
+            overflow: hidden;
+            background: $cityhub-global-white;
+
+            .bg-image-overlay {
+                background-color: #47474781;
+                position: absolute;
+                top: 0;
+                left: 0;
+                @include allHeightWidth;
+            }
+
+            .bg-image-wrapper {
+                position: absolute;
+                top: 0;
+                left: 0;
+                @include allHeightWidth;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    @include objFitProperty(70% 40%)
+                }
+            }
+
+            // slick slider css::begin
+            .slick-slider {
+                button {
+                    &::before {
+                        color: $cityhub-global-primary-color !important;
+                    }
+
+                    &::after {
+                        color: $cityhub-global-primary-color !important;
+                    }
+                }
+            }
+
+            // slick slider css::end
+            .search-deco {
+                img {
+                    height: auto;
+                    width: 16rem;
+                    position: absolute;
+                    bottom: -2rem;
+                    right: -2rem;
+                    opacity: 0.6;
+                }
+            }
+
+            .search-categories {
+                ul {
+                    width: 100%;
+
+                    .search-category {
+                        text-align: center;
+                        width: 100%;
+                        @include noListStyle;
+                        border-bottom: 0.14rem solid #c5c5c5;
+                        margin: 0rem 0.2rem !important;
+
+                        button {
+                            @include globalSmFont;
+                            color: $cityhub-global-white;
+                            font-weight: $fw-700;
+                            width: 100%;
+                            outline: none;
+                            background: transparent;
+                            border: none;
+                            cursor: pointer;
+
+                            span {
+                                @include globalMdFont;
+
+                                i {
+                                    @include flexPropertyCentered;
+                                    margin-bottom: 0.5rem;
+                                }
+                            }
+
+                            p {
+                                margin-bottom: 0.2rem;
+                                white-space: nowrap;
+                                text-overflow: ellipsis;
+                                overflow: hidden;
+                            }
+
+                            &:hover {
+                                color: $cityhub-global-primary-color;
+                            }
+                        }
+                    }
+                }
+
+                .search-master-wrapper {
+                    padding: 0rem 16rem;
+                }
+
+                .search-category-name {
+                    margin: 1.8rem 0;
+                    position: relative;
+
+                    h3 {
+                        display: inline;
+                        background: $cityhub-global-primary-color;
+                        @include globalSmFont;
+                        padding: 0.5rem 0.6rem;
+                        color: $cityhub-global-white;
+                    }
+                }
+
+                .search-form {
+                    form {
+                        .form-group {
+                            display: flex;
+                            margin-top: 1rem;
+
+                            &:first-child {
+                                margin-top: 0;
+                            }
+
+                            span {
+                                height: $search-input-height-width;
+                                background: $cityhub-global-primary-color;
+                                padding: 0rem 0.8rem;
+                                @include flexPropertyCentered;
+
+                                i {
+                                    @include globalSmFont;
+                                    color: $cityhub-global-white;
+                                    width: 1rem;
+                                    @include flexPropertyCentered;
+                                }
+                            }
+
+                            input {
+                                height: $search-input-height-width;
+                                background: #f8f8f8c7;
+                                @include inputFocus;
+                                border-radius: 0;
+                            }
+
+                            .search-btn {
+                                margin: 0.4rem 0;
+                                text-align: center;
+                                width: 100%;
+
+                                a {
+                                    background: $cityhub-global-color-dark;
+                                    color: $cityhub-global-white;
+                                    @include globalSmFont;
+                                    padding: 0.4rem 0.6rem;
+
+                                    i {
+                                        @include globalESmFont;
+                                    }
+
+                                    &:hover {
+                                        background: $cityhub-global-primary-gradient;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .suggestion-wrapper {
+                    margin: 1rem 0 0 0;
+                    position: relative;
+                    z-index: 5;
+
+                    .suggestion-parent-wrapper {
+                        display: flex;
+                        margin-top: 1rem;
+
+                        .suggestion-childs-wrapper {
+                            &:first-child {
+                                margin-right: 0.6rem;
+                                border-right: 0.15rem solid $cityhub-global-white;
+                                @include flexPropertyCentered;
+
+                                span {
+                                    padding: 0rem 0.8rem;
+                                    @include globalSmFont;
+
+                                    i {
+                                        width: 1rem;
+                                        color: $cityhub-global-white;
+                                        @include flexPropertyCentered;
+                                    }
+                                }
+                            }
+
+                            &:last-child {
+                                @include flexPropertyCentered;
+
+                                ul {
+                                    @include noMarginPadding;
+
+                                    li {
+                                        margin: 0.2rem 0.2rem;
+                                        border-bottom: none;
+                                        list-style-type: none;
+                                        display: inline-flex;
+
+                                        button {
+                                            background: #08080893;
+                                            border: 0.13rem solid $cityhub-global-white;
+                                            padding: 0.1rem 0.8rem;
+                                            border-radius: 2rem;
+                                            @include globalESmFont;
+                                            color: $cityhub-global-white;
+                                            font-weight: $fw-600;
+                                            cursor: pointer;
+                                            outline: none;
+
+                                            &:hover {
+                                                background: $cityhub-global-primary-color;
+                                                color: $cityhub-global-white;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .search-deco-only {
+        background-color: $cityhub-global-color-Edark;
+        background-image: url("../images/carbon_BG.png");
+        padding: 12rem 0;
+        margin-top: -22rem;
+    }
+
+    // search section::end
+    // search-result-section::begin
+    .search-result-section {
+        @include sectionPaddingCustom(1rem 0);
+
+        .search-result-wrapper {
+            display: flex;
+            width: 100%;
+
+            .search-result-childs-wrapper {
+                width: 100%;
+                border-top: $soft-border;
+
+                &:first-child {
+                    flex: 2;
+                    padding: 1rem 0;
+                    background: #f8f8f8;
+
+                    .search-res-heading {
+                        h3 {
+                            color: $cityhub-global-primary-color;
+                            font-weight: $fw-600;
+                            @include globalMdFont;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                    }
+
+                    ul {
+                        li {
+                            @include noListStyle;
+                            margin: 0.6rem 0;
+
+                            input {
+                                accent-color: $cityhub-global-primary-color;
+                                padding: 0.6rem;
+                            }
+
+                            span {
+                                margin-left: 0.5rem;
+                                color: $cityhub-global-color-dark;
+                                @include globalSmFont;
+                                font-weight: $fw-500;
+                            }
+                        }
+                    }
+                }
+
+                &:nth-child(2) {
+                    flex: 8;
+                    padding: 1rem;
+                    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+
+                    .search-result-search-bar {
+                        margin-bottom: 0.6rem;
+
+                        .search-result-search-bar-childs {
+
+                            input,
+                            button {
+                                padding: 0.356rem 0.6rem;
+                            }
+
+                            input {
+                                width: 80%;
+                                outline: none;
+                                border: $soft-border;
+                                background-color: #f3f3f3;
+                            }
+
+                            button {
+                                background-color: $cityhub-global-primary-color;
+                                outline: none;
+                                border: none;
+                                color: $cityhub-global-white;
+                                cursor: pointer;
+
+                                &:hover {
+                                    background-color: $cityhub-global-color-dark;
+                                }
+
+                                i {
+                                    margin-left: 0.6rem;
+                                }
+                            }
+                        }
+                    }
+
+                    .search-breadcrumb {
+
+                        p,
+                        a {
+                            color: $cityhub-global-color-dark;
+                            font-weight: $fw-600;
+                            @include globalESmFont;
+
+                            i {
+                                margin: 0rem 0.6rem;
+                                color: $cityhub-global-primary-color;
+                            }
+                        }
+                    }
+
+                    .result-title {
+                        h3 {
+                            color: $cityhub-global-color-dark;
+                            font-weight: $fw-700;
+                            @include globalLgFont;
+                        }
+
+                        p {
+                            color: $cityhub-global-color-dark;
+                            font-weight: $fw-400;
+                            @include globalESmFont;
+                        }
+                    }
+
+                    .show-results {
+                        .col-md-12 {
+                            margin: 1rem 0;
+                        }
+
+                        .show-result {
+                            display: flex;
+                            border: $soft-border;
+                            border-radius: 0.4rem;
+                            padding: 1rem;
+                            background: #f8f8f8;
+
+                            .show-result-childs {
+                                &:first-child {
+                                    display: flex;
+                                    flex-direction: column;
+
+                                    img {
+                                        height: 10rem;
+                                        width: 12rem;
+                                        @include objFitProperty(center);
+                                        border-radius: 0.4rem;
+                                    }
+
+                                    a {
+                                        color: $cityhub-global-white;
+                                        margin-top: 0.4rem;
+                                        background-color: $cityhub-global-color-dark;
+                                        text-align: center;
+                                        border-radius: 0.4rem;
+                                        @include globalESmFont;
+                                        padding: 0.2rem 0;
+
+                                        &:hover {
+                                            background-color: $cityhub-global-primary-color
+                                        }
+                                    }
+                                }
+
+                                &:last-child {
+                                    padding-left: 1rem;
+                                    width: 100%;
+
+                                    .all-info {
+                                        h3 {
+                                            a {
+                                                color: $cityhub-global-color-Edark;
+                                                @include globalSmFont;
+                                                font-weight: $fw-600;
+                                            }
+                                        }
+
+                                        h2 {
+                                            color: $cityhub-global-color-Edark;
+                                            @include globalSmFont;
+                                            font-weight: $fw-400;
+                                        }
+
+                                        p {
+                                            color: $cityhub-global-color-Edark;
+                                            @include globalSmFont;
+                                            font-weight: $fw-400;
+
+                                            i {
+                                                color: $cityhub-global-primary-color;
+                                                @include globalESmFont;
+                                            }
+                                        }
+
+                                        ul {
+                                            display: flex;
+
+                                            li {
+                                                @include noListStyle;
+                                                margin: 0 0.2rem;
+
+                                                &:first-child {
+                                                    margin: 0 0;
+                                                }
+
+                                                i {
+                                                    color: $cityhub-global-primary-color;
+                                                    @include globalESmFont;
+                                                }
+                                            }
+                                        }
+
+                                        .relevant-linkes {
+                                            border-top: 0.15rem solid rgb(221, 221, 221);
+                                            margin-top: 1rem;
+                                            padding-top: 1rem;
+
+                                            ul {
+                                                li {
+                                                    margin: 0rem 0.6rem;
+
+                                                    &:first-child {
+                                                        margin: 0rem 0rem;
+                                                    }
+
+                                                    a {
+                                                        @include globalSmFont;
+                                                        color: $cityhub-global-color-dark;
+
+                                                        &:hover {
+                                                            color: $cityhub-global-primary-color;
+                                                        }
+
+                                                        i {
+                                                            @include globalSmFont;
+                                                            width: 1rem;
+                                                            margin-right: 0.3rem;
+                                                            margin-top: -0.2rem;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &:last-child {
+                    flex: 3;
+
+                    iframe {
+                        @include allHeightWidth;
+                        outline: none;
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+
+    // search-result-section::end
+    // search view::begin
+    .search-view-section {
+        @include sectionPaddingCustom(2rem 0rem 2rem 0rem);
+        background: $cityhub-global-color-gray;
+
+        .search-view-outer-wrapper {
+            box-shadow: $global-shadow-light;
+            padding: 1rem;
+            border-radius: 0.2rem;
+            border: 1px solid #00000011;
+            background-color: $cityhub-global-white;
+            width: 100%;
+        }
+
+        .side-search-panel-wrapper {
+            .search-weapper {
+                @include searchViewHeading;
+
+                .form {
+                    input {
+                        @include globalInput;
+                    }
+
+                    .search-btn {
+                        text-align: center;
+                        margin: 1rem 4rem;
+
+                        button {
+                            @include globalGradientBtn;
+                        }
+                    }
+
+                    .back-to-home-btn {
+                        text-align: center;
+                        margin: 1rem 4rem;
+
+                        a {
+                            display: block;
+                            width: 100%;
+                            @include globalESmFont;
+                            color: $cityhub-global-white;
+                            padding: 0.2rem 0;
+                            border-radius: 0.4rem;
+                            cursor: pointer;
+                            background: $cityhub-global-primary-color;
+
+                            &:hover {
+                                background: $cityhub-global-color-dark;
+                            }
+                        }
+                    }
+
+                    .categories-wrapper {
+                        ul {
+                            @include noMarginPadding;
+
+                            li {
+                                @include noListStyle;
+                                padding: 0.6rem 0;
+                                border-bottom: 0.1rem solid #0000002d;
+
+                                a {
+                                    &:hover {
+                                        .category-parent {
+                                            .category-childs {
+                                                &:nth-child(2) {
+                                                    h3 {
+                                                        color: $cityhub-global-primary-color;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .category-parent {
+                                        display: flex;
+                                        justify-content: space-between;
+                                        align-items: center;
+
+                                        .category-childs {
+                                            &:first-child {
+                                                @include flexPropertyCentered;
+                                                margin-right: 0.8rem;
+
+                                                input {
+                                                    height: 1.2rem;
+                                                    width: 1.2rem;
+                                                }
+                                            }
+
+                                            &:nth-child(2) {
+                                                flex: 6;
+
+                                                h3 {
+                                                    @include globalSmFont;
+                                                    color: $cityhub-global-color-dark;
+                                                    font-weight: $fw-600;
+                                                    @include noMarginPadding;
+                                                }
+                                            }
+
+                                            &:nth-child(3) {
+                                                flex: 1;
+
+                                                p {
+                                                    @include globalSmFont;
+                                                    color: $cityhub-global-primary-color;
+                                                    font-weight: $fw-600;
+                                                    @include noMarginPadding;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .search-res-wrapper {
+            box-shadow: $global-shadow-light;
+            padding: 1rem;
+            border-radius: 0.2rem;
+            border: 1px solid #00000011;
+            background-color: $cityhub-global-white;
+
+            ul {
+                @include noMarginPadding;
+
+                h2 {
+                    color: $cityhub-global-color-Edark;
+                    @include globalLgFont;
+                    @include noMarginPadding;
+                    font-weight: $fw-500;
+
+                    span {
+                        color: $cityhub-global-primary-color
+                    }
+                }
+
+                li {
+                    @include noListStyle;
+                    padding: 0.6rem 0;
+                    border-bottom: 0.1rem solid #0000002d;
+
+                    &:hover {
+                        .search-res-parent {
+                            .search-res-childs {
+                                &:first-child {
+                                    .search-brand-img {
+                                        img {
+                                            transform: scale(1.06);
+                                        }
+                                    }
+                                }
+
+                                &:last-child {
+                                    h1 {
+                                        color: $cityhub-global-color-Edark;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .search-res-parent {
+                        display: flex;
+                        margin: 0.5rem 0;
+
+                        .search-res-childs {
+                            &:first-child {
+                                margin-right: 0.6rem;
+
+                                .search-brand-img {
+                                    img {
+                                        height: 6rem;
+                                        width: 6rem;
+                                        @include objFitProperty(50% 50%);
+                                        border-radius: 0.2rem;
+                                        transition: $global-transition;
+                                    }
+                                }
+                            }
+
+                            &:last-child {
+                                h1 {
+                                    @include noMarginPadding;
+                                    color: $cityhub-global-color-dark;
+                                    @include globalSmFont;
+                                    font-weight: $fw-700;
+                                }
+
+                                span {
+                                    @include noMarginPadding;
+                                    color: $cityhub-global-primary-color;
+                                    font-weight: $fw-600;
+                                    @include globalESmFont;
+
+                                    i {
+                                        font-style: normal;
+                                    }
+                                }
+
+                                p {
+                                    @include noMarginPadding;
+                                    color: $cityhub-global-color-dark;
+                                    @include globalSmFont;
+                                    @include countColumn(1);
+                                }
+
+                                .search-res-rating {
+                                    ul {
+                                        @include noMarginPadding;
+                                        display: flex;
+
+                                        li {
+                                            @include noListStyle;
+                                            margin-right: 0.3rem;
+                                            color: #f07503;
+                                            border-bottom: none;
+                                            padding: 0;
+                                            @include globalESmFont;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // search view::end
+    // booking::begin
+    .booking-section {
+        .client-profile-slider-parent {
+            display: flex;
+
+            .client-profile-slider-childs {
+                &:first-child {
+                    flex: 2;
+
+                    .profile-slider-wrapper {
+                        .profile-slider-list {
+                            img {
+                                height: 12rem;
+                                width: 100%;
+                                border-radius: 0.4rem;
+                            }
+                        }
+                    }
+                }
+
+                &:last-child {
+                    flex: 3;
+                    padding: 0rem 1rem;
+
+                    .all-info {
+                        h3 {
+                            a {
+                                color: $cityhub-global-color-Edark;
+                                @include globalMdFont;
+                                font-weight: $fw-600;
+                            }
+                        }
+
+                        h2 {
+                            color: $cityhub-global-color-Edark;
+                            @include globalSmFont;
+                            font-weight: $fw-400;
+                        }
+
+                        p {
+                            color: $cityhub-global-color-Edark;
+                            @include globalSmFont;
+                            font-weight: $fw-400;
+
+                            i {
+                                color: $cityhub-global-primary-color;
+                                @include globalESmFont;
+                            }
+                        }
+
+                        ul {
+                            display: flex;
+
+                            li {
+                                @include noListStyle;
+                                margin: 0 0.2rem;
+
+                                &:first-child {
+                                    margin: 0 0;
+                                }
+
+                                i {
+                                    color: $cityhub-global-primary-color;
+                                    @include globalESmFont;
+                                }
+                            }
+                        }
+
+                        .relevant-linkes {
+                            border-top: 0.15rem solid rgb(221, 221, 221);
+                            margin-top: 1rem;
+                            padding-top: 1rem;
+
+                            ul {
+                                li {
+                                    margin: 0rem 0.6rem;
+
+                                    &:first-child {
+                                        margin: 0rem 0rem;
+                                    }
+
+                                    a {
+                                        @include globalSmFont;
+                                        color: $cityhub-global-color-dark;
+
+                                        &:hover {
+                                            color: $cityhub-global-primary-color;
+                                        }
+
+                                        i {
+                                            @include globalSmFont;
+                                            width: 1rem;
+                                            margin-right: 0.3rem;
+                                            margin-top: -0.2rem;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .slider-menu-wrapper {
+            margin: 0.6rem 0;
+            .container {
+                border-bottom: 0.2rem solid #c3c3c344;
+                padding-bottom: 1rem;
+                a:hover {
+                    .page-actions {
+                        background: #e7e7e7;
+                    }
+                }
+            }
+            .page-actions {
+                padding: 1rem;
+                p {
+                    text-align: center;
+                    i {
+                        color: $cityhub-global-primary-color;
+                    }
+                }
+                h3 {
+                    text-align: center;
+                    color: $cityhub-global-color-dark;
+                    @include globalSmFont;
+                    font-weight: $fw-600;
+                }
+            }
+        }
+        .booking-info-form {
+            background: $cityhub-global-white;
+            box-shadow: $global-shadow;
+            border-radius: 0.4rem;
+            padding: 1rem;
+            form {
+                .form-group {
+                    label {
+                        color: $cityhub-global-color-dark;
+                        font-weight: $fw-600;
+                        @include globalSmFont;
+                    }
+                    span {
+                        color: $cityhub-global-primary-color;
+                        font-weight: $fw-600;
+                        @include globalSmFont;
+                        margin-right: 0.5rem
+                    }
+                }
+                .form-footer {
+                    .success {
+                        @include cityhibSubmitBtn(green);
+                        margin-right: 0.5rem
+                    }
+                    .danger {
+                        @include cityhibSubmitBtn($cityhub-global-primary-color);
+                    }
+                }
+            }
+        }
+    }
+    .menu-wrapper {
+        .menu-search {
+            display: flex;
+            input {
+                width: 100%;
+                outline: none;
+            }
+            button {
+                white-space: nowrap;
+                @include cityhibSubmitBtn($cityhub-global-primary-color);
+                border-radius: 0;
+            }
+        }
+        .show-menu-wrapper {
+            margin: 1rem 0;
+            background-color: #f8f8f8;
+            border: 1px solid #0000001c;
+            padding: 1rem;
+            ul {
+                li {
+                    @include noListStyle;
+                    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.103);
+                    padding-bottom: 0.5rem;
+                    margin-top: 1rem;
+                    a {
+                        .show-menu-parent {
+                            display: flex;
+                            .show-menu-childs {
+                                &:first-child {
+                                    img {
+                                        height: 8rem;
+                                        width: 8rem;
+                                        border-radius: 0.5rem;
+                                        @include objFitProperty(center);
+                                        box-shadow: $global-shadow;
+                                    }
+                                }
+                                &:last-child {
+                                    padding: 0 1rem;
+                                    h3 {
+                                        @include globalSmFont;
+                                        font-weight: $fw-600;
+                                        color: $cityhub-global-color-Edark;
+                                    }
+                                    .menu-desc {
+                                        padding-left: 2rem;
+                                        li {
+                                            list-style-type: disc;
+                                            color: $cityhub-global-color-Edark;
+                                            border-bottom: none;
+                                            margin-top: 0rem;
+                                            p {
+                                                @include globalSmFont;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // booking::end
+    // add section::begin
+    .add-demo-section {
+        background: rgb(241, 241, 241);
+        @include sectionPaddingCustom(3rem 0rem);
+
+        .add-demo {
+            @include flexPropertyCentered;
+
+            h1 {
+                color: $cityhub-global-color-dark;
+                @include globalXXlFont;
+                animation: animateAdd 2s linear infinite;
+            }
+
+            @keyframes animateAdd {
+                0% {
+                    opacity: 0;
+                }
+
+                50% {
+                    opacity: 1;
+                }
+
+                100% {
+                    opacity: 0;
+                }
+            }
+        }
+    }
+
+    // add section::end
+    // visit map section::begin
+    .visit-map-section {
+        @include sectionPaddingCustom(2rem 0rem 2rem 0rem);
+        @include sectionHeading;
+        background: $cityhub-global-white;
+        position: relative;
+
+        .visit-map-deco {
+            z-index: 1;
+
+            img {
+                position: absolute;
+                height: auto;
+                width: 18%;
+                opacity: 0.1;
+
+                &:first-child {
+                    top: 0;
+                    right: -1rem;
+                }
+
+                &:last-child {
+                    bottom: 0;
+                    left: -1rem;
+                    transform: rotate(180deg);
+                }
+            }
+        }
+
+        .map-wrapper {
+            position: relative;
+            z-index: 2;
+
+            iframe {
+                height: 24rem;
+                width: 100%;
+                border-radius: 0.5rem;
+                box-shadow: $global-shadow;
+                border: none;
+                outline: none;
+            }
+        }
+
+        .map-featured-image {
+            position: relative;
+            z-index: 2;
+
+            img {
+                height: auto;
+                width: 100%;
+                position: relative;
+                z-index: 2;
+                filter: drop-shadow(0 0 1rem rgba(0, 0, 0, 0.144));
+            }
+
+            .map-featured-img-deco {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                height: 24rem;
+                width: 24rem;
+                border-radius: 100%;
+                background: $cityhub-global-primary-gradient;
+                border: 1rem solid $cityhub-global-color-Edark;
+                ;
+                z-index: 1;
+                opacity: 1;
+            }
+        }
+    }
+
+    // visit map section::end
+    // search-by-brand-chain-section::begin
+    .search-by-brand-chain-section {
+        @include sectionPaddingCustom(2rem 0rem 2rem 0rem);
+        @include sectionHeading;
+        background: $cityhub-global-color-gray;
+
+        .search-by-brand-chain-wrapper {
+            .search-by-brand-chain-tabs {
+                ul {
+                    display: flex;
+                    justify-content: space-between;
+
+                    li {
+                        @include noListStyle;
+                        width: 100%;
+
+                        button {
+                            width: 100%;
+                            border: none;
+                            outline: none;
+                            @include globalSmFont;
+                            background: $cityhub-global-color-dark;
+                            color: $cityhub-global-white;
+                            padding: 0.5rem 0rem;
+                            border-bottom: 0.2rem solid transparent;
+
+                            &:hover {
+                                border-bottom: 0.2rem solid $cityhub-global-primary-color;
+                                background: rgb(90, 90, 90);
+                            }
+
+                            &:focus {
+                                border-bottom: 0.2rem solid $cityhub-global-primary-color;
+                                background: rgb(126, 126, 126);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .search-by-brand-chain-view-wrapper {
+                .card {
+                    border: none;
+                    box-shadow: $global-shadow;
+                    margin-top: 1.4rem;
+
+                    &:hover {
+                        .card-header {
+                            img {
+                                transform: scale(1.1);
+                            }
+                        }
+                    }
+
+                    .card-header {
+                        padding: 0;
+                        overflow: hidden;
+
+                        img {
+                            height: 12rem;
+                            width: 100%;
+                            @include objFitProperty(center);
+                            transition: $global-transition;
+                        }
+                    }
+
+                    .card-body {
+                        padding: 1rem;
+                        position: relative;
+
+                        &::after {
+                            @include usePseudoElement;
+                            top: 0;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            height: 0.3rem;
+                            width: 50%;
+                            background: $cityhub-global-primary-gradient;
+                            border-radius: 1rem;
+                            box-shadow: $global-shadow;
+                        }
+
+                        h2 {
+                            @include globalMdFont;
+                            color: $cityhub-global-primary-color;
+                            font-weight: $fw-600;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+
+                        p {
+                            @include globalESmFont;
+                            color: $cityhub-global-color-dark;
+                            font-weight: $fw-600;
+                            margin: 0.5rem 0;
+                            @include countColumn(3);
+                        }
+
+                        .know-more-btn {
+                            a {
+                                color: $cityhub-global-primary-color;
+                                @include globalSmFont;
+
+                                i {
+                                    @include globalESmFont;
+                                }
+
+                                &:hover {
+                                    color: $cityhub-global-color-dark;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .view-all-btn {
+                    text-align: center;
+                    margin: 2rem 0 0 0;
+                    @include cityhubGlobalBtn;
+                }
+            }
+        }
+    }
+
+    // search-by-brand-chain-section::end
+    // how-to-use-section::begin
+    .how-to-use-section {
+        @include sectionPaddingCustom(3rem 0);
+
+        .how-to-use-heading {
+            width: 100%;
+
+            h3,
+            span,
+            p {
+                text-align: center;
+            }
+
+            h3 {
+                @include globalXXXlFont;
+                color: $cityhub-global-color-dark;
+            }
+
+            p {
+                @include globalMdFont;
+                margin: 0.2rem 0;
+                color: $cityhub-global-primary-color;
+            }
+
+            .section-divider {
+                height: 0.3rem;
+                width: 6rem;
+                background: $cityhub-global-primary-color;
+                border-radius: 0.5rem;
+                margin: auto;
+            }
+        }
+
+        .delevery-title {
+            h3 {
+                color: $cityhub-global-color-dark;
+                @include globalLgFont;
+                font-weight: $fw-600;
+                margin-left: 0.6rem;
+            }
+        }
+
+        .add-indicator-after {
+            position: relative;
+
+            &::after {
+                content: "\f101";
+                position: absolute;
+                top: 50%;
+                left: 96%;
+                transform: translate(-50%, -50%);
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                color: green;
+                font-size: 2rem;
+            }
+        }
+
+        .delevery-row {
+            margin-top: 1rem;
+            border-radius: 0.3rem;
+            box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+            background: #f8f8f8;
+            position: relative;
+
+            .delevery-row-deco {
+                position: absolute;
+                top: -2rem;
+                left: -1rem;
+                height: 120%;
+                width: 0.6rem;
+                background-color: $cityhub-global-color-dark;
+                border-radius: 0.6rem;
+            }
+
+            .delevery-row-deco-circle {
+                position: absolute;
+                top: -2.6rem;
+                left: -1.4rem;
+                height: 1.4rem;
+                width: 1.4rem;
+                background-color: $cityhub-global-primary-color;
+                border-radius: 100%;
+                border: 0.2rem solid #e6e6e6;
+                box-sizing: $global-shadow;
+            }
+
+            .how-to-use-wrapper {
+                padding: 1.4rem 1rem;
+
+                .how-to-use-inner-wrapper {
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+
+                    .how-to-use-inner-childs {
+                        &:first-child {
+                            flex: 1;
+
+                            i {
+                                color: $cityhub-global-color-dark;
+                                font-size: 3rem;
+                            }
+                        }
+
+                        &:last-child {
+                            flex: 3;
+
+                            h3 {
+                                @include globalSmFont;
+                                color: $cityhub-global-primary-color;
+                                font-weight: $fw-600;
+                            }
+
+                            p {
+                                @include globalMdFont;
+                                color: $cityhub-global-color-dark;
+                                font-weight: $fw-600;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // how-to-use-section::end
+    // about-us-section::begin 
+    .about-us-section {
+        @include sectionPaddingCustom(2rem 0 2rem 0);
+
+        .about-us-info-wrapper {
+            @include sectionHeading;
+
+            .about-us-contact-info {
+                display: flex;
+                justify-content: space-between;
+
+                .about-us-contact-parent {
+                    margin-top: 1rem;
+
+                    .about-us-contact-childs {
+                        &:first-child {
+                            @include flexPropertyCentered;
+
+                            .contact-icon {
+                                height: $about-us-height-width;
+                                width: $about-us-height-width;
+                                background: $cityhub-global-primary-gradient;
+                                @include flexPropertyCentered;
+                                border-radius: 0.4rem;
+
+                                i {
+                                    color: $cityhub-global-white;
+                                    @include globalMdFont;
+                                    @include flexPropertyCentered;
+                                }
+                            }
+                        }
+
+                        &:last-child {
+                            p {
+                                @include globalSmFont;
+                                color: $cityhub-global-primary-color;
+                                font-weight: $fw-700;
+                                text-align: center;
+                                margin: 0.5rem;
+                            }
+
+                            h1 {
+                                @include globalMdFont;
+                                color: $cityhub-global-color-dark;
+                                font-weight: $fw-700;
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .become-affilate-btn {
+                text-align: start;
+                margin: 2rem 0 0 0;
+                @include cityhubGlobalBtn;
+            }
+        }
+
+        .about-us-featured-image-wrapper {
+            @include allHeightWidth;
+            @include flexPropertyCentered;
+
+            img {
+                height: auto;
+                width: 80%;
+                margin-top: -3rem;
+            }
+        }
+    }
+
+    // about-us-section::end
+    // why-choose-section::begin
+    .why-choose-section {
+        background-color: $cityhub-global-color-Edark;
+        background-image: url("../images/carbon_BG.png");
+        @include sectionPaddingCustom(3rem 0 3rem 0);
+
+        .why-choose-wrapper {
+            .why-choose-icon {
+                i {
+                    color: $cityhub-global-white;
+                    font-size: 3rem;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-content: center;
+                }
+            }
+
+            .why-choose-info {
+
+                h3,
+                p {
+                    color: $cityhub-global-white;
+                }
+
+                h3 {
+                    @include globalLgFont;
+                    margin: 1rem 0 1rem 0
+                }
+
+                p {
+                    @include globalSmFont;
+                }
+            }
+        }
+    }
+
+    // why-choose-section::end
+    // client-section::begin
+    .client-section {
+        @include sectionPaddingCustom(3rem 0 3rem 0);
+        background: $cityhub-global-color-gray;
+
+        .clients-wrapper {
+            ul {
+                width: 100%;
+                display: grid;
+                grid-template-rows: auto;
+                grid-template-columns: repeat(auto-fit, minmax(132px, 1fr));
+
+                .our-clients {
+                    @include flexPropertyCentered;
+
+                    a {
+                        img {
+                            height: auto;
+                            width: auto;
+                            transition: $global-transition;
+
+                            &:hover {
+                                transform: scale(1.05);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // client-section::end
+    // cityhub-footer-section::begin
+    .cityhub-footer-section {
+        background-color: $cityhub-global-color-Edark;
+        background-image: url("../images/carbon_BG.png");
+        margin-top: 1rem;
+        @include sectionPaddingCustom(3rem 0rem 0rem 0rem);
+        position: relative;
+
+        &::after {
+            @include usePseudoElement;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 0.5rem;
+            width: 80%;
+            background: $cityhub-global-primary-gradient;
+            border-radius: 2rem;
+        }
+
+        .footer-brand-logo-wrapper {
+            .footer-brand-logo {
+                h1 {
+                    color: $cityhub-global-white;
+                    @include globalXXXlFont;
+                }
+            }
+
+            .footer-brand-logo-explain {
+                p {
+                    color: $cityhub-global-white;
+                    @include globalSmFont;
+                }
+            }
+        }
+
+        .footer-headings {
+            margin-top: 0.5rem;
+
+            h2 {
+                @include globalLgFont;
+                color: $cityhub-global-white;
+            }
+
+            h3 {
+                @include globalLgFont;
+                color: $cityhub-global-primary-color;
+                font-family: 'Satisfy', cursive;
+                margin-top: 1rem;
+            }
+
+            p {
+                @include globalESmFont;
+                color: $cityhub-global-white;
+            }
+        }
+
+        .quick-links-wrapper {
+            .quick-links {
+                display: inline-flex;
+
+                a {
+                    @include globalESmFont;
+                    padding: 0.1rem 0.6rem;
+                    border-radius: 2rem;
+                    background: $cityhub-global-primary-gradient;
+                    border: 0.15rem solid transparent;
+                    white-space: nowrap;
+                    margin: 0.4rem 0.2rem;
+                    color: $cityhub-global-white;
+
+                    &:hover {
+                        border: 0.15rem solid $cityhub-global-white;
+                        background: transparent;
+                    }
+                }
+            }
+        }
+
+        .accounts-wrapper {
+            ul {
+                li {
+                    margin: 0.4rem 0rem;
+                    list-style-type: none;
+
+                    a {
+                        @include globalSmFont;
+                        color: $cityhub-global-white;
+
+                        &:hover {
+                            color: $cityhub-global-primary-color;
+                        }
+                    }
+                }
+            }
+        }
+
+        .subscribe-wrapper {
+            .subscribe-inner-wrapper {
+                margin: 1rem 0;
+                display: flex;
+
+                input,
+                button {
+                    height: 1.8rem;
+                }
+
+                input {
+                    border: none;
+                    padding: 0rem 0rem 0rem 1rem;
+                    outline: none;
+                    border-radius: 0;
+
+                    &:focus {
+                        box-shadow: 0 0 0.5rem 0 #000000;
+                    }
+                }
+
+                button {
+                    border: none;
+                    outline: none;
+                    background: $cityhub-global-primary-gradient;
+                    padding: 0rem 0.6rem;
+                    @include globalSmFont;
+                    color: $cityhub-global-white;
+                    font-weight: $fw-500;
+                    transition: $global-transition;
+
+                    &:hover {
+                        background: $cityhub-global-color-gray;
+                        color: $cityhub-global-primary-color;
+                        transition: $global-transition;
+                    }
+                }
+            }
+        }
+    }
+
+    // cityhub-footer-section::begin
+    // copy-right-section::begin
+    .copy-right-section {
+        @include sectionPaddingCustom(0.2rem 0);
+        background: $cityhub-global-color-Edark;
+
+        .copy-right-parent-wrapper {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.6rem 0rem;
+
+            .copy-right-childs-wrapper {
+                p {
+                    color: $cityhub-global-white;
+                    @include globalESmFont;
+                    @include noMarginPadding;
+
+                    a {
+                        color: #ffffff;
+
+                        &:hover {
+                            color: $cityhub-global-primary-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // copy-right-section::end
+    // *****----------Sub Pages Css----------*********
+    .cityhub-global-breadcrumb-section {
+        @include sectionPaddingCustom(6rem 0rem 6rem 0rem);
+        background-image: url("../images/group.jpg");
+        background-position: center;
+        background-size: cover;
+        position: relative;
+
+        &::after {
+            @include usePseudoElement;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 0.5rem;
+            width: 80%;
+            border-radius: 2rem;
+            background: $cityhub-global-primary-gradient;
+            z-index: 4;
+        }
+
+        .deco-bumb-bottom {
+            position: absolute;
+            bottom: -0.8rem;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 12rem;
+            height: 1.4rem;
+            /* as the half of the width */
+            border-top-left-radius: 110px;
+            /* 100px of height + 10px of border */
+            border-top-right-radius: 110px;
+            /* 100px of height + 10px of border */
+            border-bottom: 0;
+            background-color: $cityhub-global-white;
+            z-index: 5;
+        }
+
+        .breadcrumb-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            @include allHeightWidth;
+            z-index: 2;
+            background: #000000a4;
+        }
+
+        .breadcrumb-info-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            @include allHeightWidth;
+            z-index: 3;
+            padding: 0rem 1rem;
+            @include flexPropertyCentered;
+            flex-direction: column;
+
+            .global-page-name {
+                h2 {
+                    color: $cityhub-global-white;
+                    text-align: center;
+                    @include globalXXXlFont;
+                    text-shadow: $global-text-shadow;
+                }
+            }
+
+            .breadcrumb-path {
+                p {
+                    color: $cityhub-global-white;
+                    text-align: center;
+                    @include globalMdFont;
+                    text-shadow: $global-text-shadow;
+
+                    a {
+                        color: $cityhub-global-white !important;
+                    }
+
+                    i {
+                        svg {
+                            padding-top: 0.4rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .pricing-section {
+        @include sectionHeading;
+        @include sectionPaddingCustom(1.2rem 0 2rem 0);
+        background: $cityhub-global-color-gray;
+
+        .my-plans-container {
+            .col-md-3 {
+                &:last-child {
+                    .pricing-wrapper {
+                        position: relative;
+                        background-image: url("../images/lhotel.jpg");
+                        background-position: center;
+                        background-size: cover;
+
+                        .overlay {
+                            @include allHeightWidth;
+                            background: #000000af;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            z-index: 1;
+                            border-radius: 0.2rem;
+                        }
+
+                        .pricing-heading {
+
+                            h3,
+                            h2,
+                            sup {
+                                position: relative;
+                                color: $cityhub-global-white;
+                                z-index: 2;
+                            }
+                        }
+                    }
+
+                    .cityhub-plans {
+                        ul {
+                            li {
+                                position: relative;
+                                color: $cityhub-global-white;
+                                z-index: 2;
+                            }
+                        }
+                    }
+
+                    .book-plan-btn {
+                        position: relative;
+                        z-index: 2;
+                    }
+                }
+            }
+        }
+
+        .pricing-wrapper {
+            background: $cityhub-global-white;
+            box-shadow: $global-shadow;
+            border-radius: 0.2rem;
+            padding: 1.4rem 1rem;
+            margin-top: 1rem;
+            transition: $global-transition;
+
+            &::after {
+                @include usePseudoElement;
+                bottom: -0.2rem;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                height: 0.2rem;
+                width: 4rem;
+                background: $cityhub-global-primary-gradient;
+                border-radius: 1rem;
+                opacity: 1;
+            }
+
+            &:hover {
+                transform: translateY(-0.5rem);
+            }
+
+            .pricing-heading {
+                h3 {
+                    text-align: center;
+                    @include globalMdFont;
+                    color: $cityhub-global-primary-color;
+                    font-weight: $fw-700;
+                }
+
+                h2 {
+                    text-align: center;
+                    color: $cityhub-global-primary-color;
+                    font-weight: $fw-700;
+                    @include globalXXXlFont;
+
+                    sup {
+                        font-weight: $fw-700;
+                        color: $cityhub-global-color-Edark;
+                        @include globalLgFont;
+                    }
+                }
+            }
+
+            .cityhub-plans {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                ul {
+                    @include noMarginPadding;
+                    overflow: hidden;
+
+                    li {
+                        margin: 0.6rem 0rem;
+                        @include globalSmFont;
+                        font-weight: $fw-500;
+                        @include noWhiteSpace;
+
+                        i {
+                            margin-right: 0.6rem;
+                        }
+
+                        .FaTimes {
+                            color: $cityhub-global-primary-color;
+                        }
+
+                        .FaCheck {
+                            color: green;
+                        }
+                    }
+                }
+            }
+
+            .book-plan-btn {
+                text-align: center;
+
+                a {
+                    @include cityHubBtnWithA($cityhub-global-primary-color);
+
+                    &:hover {
+                        @include onHoverEffectOnBtn;
+                    }
+                }
+            }
+        }
+    }
+
+    // contact us::begin
+    .contact-us-section {
+        @include sectionPaddingCustom(2rem 0 0rem 0);
+
+        .contact-info-wrapper {
+            .contact-us-icon {
+                text-align: center;
+
+                i {
+                    @include globalXXlFont;
+                    color: $cityhub-global-primary-color;
+                }
+            }
+
+            .contact-info {
+                h1 {
+                    @include globalXlFont;
+                    color: $cityhub-global-color-Edark;
+                    text-align: center;
+                }
+
+                p {
+                    @include globalMdFont;
+                    color: $cityhub-global-color-dark;
+                    text-align: center
+                }
+            }
+        }
+
+        .contact-us-map-wrapper {
+            margin-top: 1rem;
+
+            iframe {
+                height: 24rem;
+                width: 100%;
+                border: none;
+                outline: none;
+                box-shadow: $global-shadow;
+            }
+        }
+
+        .contact-form-wrapper {
+            @include sectionPaddingCustom(2rem 0 2rem 0);
+            background-color: $cityhub-global-color-gray;
+
+            form {
+                h2 {
+                    color: $cityhub-global-primary-color;
+                    @include globalXXlFont;
+                }
+
+                P {
+                    color: $cityhub-global-color-dark;
+                    @include globalSmFont;
+                    font-weight: $fw-600;
+                }
+
+                .form-group {
+
+                    input,
+                    textarea {
+                        border-radius: 0;
+                        border: 0.1rem solid $cityhub-global-color-dark;
+
+                        &:focus {
+                            box-shadow: 0 0 0.2rem 0 $cityhub-global-color-dark;
+                        }
+                    }
+                }
+
+                .send-btn {
+                    a {
+                        @include cityHubBtnWithA($cityhub-global-primary-color);
+
+                        &:hover {
+                            @include onHoverEffectOnBtn;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // contact us::end
+    // registration section::begin
+    .registration-section {
+        margin: 1.6rem 0;
+
+        .registration-wrapper {
+            .registration-parent-wrapper {
+                display: flex;
+                box-shadow: $global-shadow;
+                border-radius: 0.5rem;
+
+                .registration-childs {
+                    flex: 1;
+
+                    &:first-child {
+                        background-color: #f8f8f8;
+                        @include flexPropertyCentered;
+                        padding: 1rem;
+
+                        img {
+                            height: auto;
+                            width: 70%;
+                            filter: drop-shadow(6px 6px 6px rgba(0, 0, 0, 0.089));
+                        }
+                    }
+
+                    &:last-child {
+                        padding: 1rem;
+
+                        .tab-btns {
+                            margin: 0.6rem 0;
+
+                            ul {
+                                display: flex;
+
+                                li {
+                                    @include noListStyle;
+
+                                    button {
+                                        position: relative;
+                                        color: $cityhub-global-white;
+                                        background: $cityhub-global-color-dark;
+                                        border: 0.3rem solid $cityhub-global-white;
+                                        outline: none;
+                                        cursor: pointer;
+                                        padding: 0.3rem 0.8rem;
+                                    }
+
+                                    button:hover {
+                                        background: $cityhub-global-green-color;
+                                    }
+
+                                    button.active {
+                                        background: $cityhub-global-green-color;
+                                        border-bottom: 0.2rem solid $cityhub-global-green-color;
+                                    }
+
+                                    .tabcontent {
+                                        display: none;
+                                        padding: 6px 12px;
+                                        border-top: none;
+                                    }
+                                }
+                            }
+                        }
+
+                        .registration-heading {
+                            h3 {
+                                @include globalMdFont;
+                                color: $cityhub-global-color-Edark;
+                                font-weight: $fw-500;
+                            }
+
+                            h1 {
+                                @include globalLgFont;
+                                font-weight: $fw-600;
+                                color: $cityhub-global-primary-color;
+                            }
+                        }
+
+                        .section-divider {
+                            background-color: $cityhub-global-primary-color;
+                            width: 12%;
+                            height: 0.14rem;
+                            margin: 0.4rem 0rem;
+                            opacity: 0.5;
+                        }
+
+                        .registration-form {
+                            form {
+                                .form-group {
+                                    margin-top: 0.6rem;
+
+                                    .forgot-pass {
+                                        margin-top: 0.6rem;
+
+                                        span {
+                                            a {
+                                                text-decoration: none;
+                                                @include globalESmFont;
+                                                color: $cityhub-global-color-dark;
+
+                                                &:hover {
+                                                    color: $cityhub-global-primary-color;
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    label {
+                                        @include globalSmFont;
+                                        color: $cityhub-global-color-dark;
+
+                                        i {
+                                            margin-right: 0.5rem;
+                                            @include globalSmFont;
+                                        }
+                                    }
+
+                                    input {
+                                        @include inputFocus;
+                                    }
+                                }
+
+                                .login-submit-btn {
+                                    margin-top: 0.5rem;
+
+                                    button {
+                                        background: $cityhub-global-green-color;
+                                        color: $cityhub-global-white;
+                                        outline: none;
+                                        border: none;
+                                        padding: 0.2rem 1rem;
+                                        cursor: pointer;
+                                        border-radius: 0.5rem;
+                                        @include globalSmFont;
+
+                                        &:hover {
+                                            @include onHoverEffectOnBtn;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // registration section::end
+    // login section::begin
+    .login-section {
+        height: 100vh;
+        width: 100%;
+        position: relative;
+
+        .login-overlay {
+            position: absolute;
+            z-index: 2;
+            @include allHeightWidth;
+            background: #0000008a;
+        }
+
+        .login-img {
+            position: absolute;
+            z-index: 1;
+            @include allHeightWidth;
+
+            img {
+                height: 100vh;
+                width: 100vw;
+                @include objFitProperty(center);
+            }
+        }
+
+        .login-wrapper {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 3;
+            padding: 1.2rem;
+            border-radius: 0.2rem;
+
+            h3 {
+                text-align: center;
+                color: $cityhub-global-white;
+                @include globalXXlFont;
+                margin-bottom: 0.8rem;
+            }
+
+            .login-form-inner {
+                padding: 2rem 1rem 3rem 1rem;
+                background: rgb(255, 255, 255);
+                border-radius: 0.5rem;
+                position: relative;
+                box-shadow: $global-shadow;
+
+                h2 {
+                    text-align: start;
+                    @include globalXlFont;
+                    color: $cityhub-global-color-dark;
+                    font-weight: $fw-600;
+                }
+
+                .section-divider {
+                    background-color: #0000000c;
+                    width: 100%;
+                    height: 0.14rem;
+                    margin: 0.4rem 0rem;
+                }
+
+                .signup-link {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    background: $cityhub-global-primary-gradient;
+                    padding: 0.6rem;
+                    border-radius: 0 0 0 1rem;
+
+                    a {
+                        text-decoration: none;
+                        color: $cityhub-global-white;
+                        @include globalESmFont;
+
+                        i {
+                            vertical-align: middle;
+                        }
+                    }
+                }
+
+                form {
+                    .form-group {
+                        margin-top: 0.6rem;
+
+                        .forgot-pass {
+                            margin-top: 0.6rem;
+
+                            span {
+                                a {
+                                    text-decoration: none;
+                                    @include globalESmFont;
+                                    color: $cityhub-global-color-dark;
+
+                                    &:hover {
+                                        color: $cityhub-global-primary-color;
+                                    }
+                                }
+                            }
+                        }
+
+                        label {
+                            @include globalSmFont;
+                            color: $cityhub-global-color-dark;
+
+                            i {
+                                margin-right: 0.5rem;
+                                @include globalSmFont;
+                            }
+                        }
+
+                        input {
+                            @include inputFocus;
+                        }
+                    }
+
+                    .login-submit-btn {
+                        margin-top: 0.5rem;
+
+                        button {
+                            width: 100%;
+                            background: $cityhub-global-primary-color;
+                            color: $cityhub-global-white;
+                            outline: none;
+                            border: none;
+                            padding: 0.2rem 0rem;
+                            cursor: pointer;
+                            border-radius: 0.5rem;
+                            @include globalSmFont;
+
+                            &:hover {
+                                @include onHoverEffectOnBtn;
+                            }
+                        }
+                    }
+
+                    .back-to-home-btn {
+                        text-align: start;
+                        margin-top: 0.5rem;
+
+                        a {
+                            text-decoration: none;
+                            @include globalESmFont;
+                            color: $cityhub-global-primary-color;
+
+                            &:hover {
+                                color: $cityhub-global-color-dark;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .auth-form-copy-right {
+            margin-top: 0.5rem;
+
+            p {
+                text-align: center;
+                color: $cityhub-global-white;
+                @include globalSmFont;
+                text-shadow: $global-text-shadow;
+            }
+        }
+    }
+
+    // login section::end
+    // .registration-form {
+    //     padding: 1rem 0;
+    //     background-color: #f8f8f8;
+    //     h1 {
+    //         @include globalLgFont;
+    //         text-align: center;
+    //         color: $cityhub-global-color-dark;
+    //         a {
+    //             @include globalSmFont;
+    //             color: $cityhub-global-primary-color;
+    //         }
+    //     }
+    //     p {
+    //         @include globalSmFont;
+    //         text-align: center;
+    //         color: $cityhub-global-primary-color;
+    //         @include noMarginPadding;
+    //         font-weight: $fw-500;
+    //     }
+    //     .container {
+    //         border: 1px solid #e9e9e9;
+    //         padding: 1rem 1.2rem;
+    //     }
+    //     form {
+    //         .form-group {
+    //             label {
+    //                 @include globalSmFont;
+    //                 color: $cityhub-global-color-dark;
+    //                 font-weight: $fw-500;
+    //                 i {
+    //                     margin-right: 0.5rem;
+    //                     @include globalSmFont;
+    //                 }
+    //             }
+    //             input {
+    //                 @include inputFocus;
+    //             }
+    //         }
+    //     }
+    //     .submit-btn {
+    //         text-align: center;
+    //         button {
+    //             border-radius: 2rem;
+    //             background-color: $cityhub-global-primary-color;
+    //             padding: 0.3rem 8rem;
+    //             @include globalESmFont;
+    //             color: $cityhub-global-color-dark;
+    //             font-weight: $fw-600;
+    //             color: $cityhub-global-white;
+    //             outline: none;
+    //             border: none;
+    //             cursor: pointer;
+    //             &:hover {
+    //                 background: $cityhub-global-color-Edark;
+    //                 color: $cityhub-global-white;
+    //             }
+    //         }
+    //     }
+    // }
+    .data-view-wrapper {
+        padding: 1rem 0rem;
+
+        h3 {
+            @include globalMdFont;
+            color: $cityhub-global-primary-color;
+            padding: 0.6rem 0;
+        }
+
+        a {
+            color: $cityhub-global-color-Edark;
+            font-weight: $fw-500;
+        }
+
+        table {
+            th {
+                width: 30%;
+            }
+        }
+    }
+
+    // review-section::begin
+    .review-section {
+        @include sectionPaddingCustom(2rem 0rem 0rem 0rem);
+
+        // slick slider css::begin
+        .slick-prev,
+        .slick-next {
+            z-index: 5;
+            top: 93% !important;
+            transform: translateY(-50%, -50%) !important;
+        }
+
+        .slick-next {
+            left: 55% !important;
+        }
+
+        .slick-prev {
+            left: 45% !important;
+        }
+
+        .slick-slider {
+            button {
+                &::before {
+                    color: $cityhub-global-primary-color !important;
+                }
+
+                &::after {
+                    color: $cityhub-global-primary-color !important;
+                }
+            }
+        }
+
+        // slick slider css::end
+        .slick-list {
+            margin: 0 -1rem;
+        }
+
+        .slick-slide>div {
+            padding: 0 1rem;
+        }
+
+        .card {
+            margin: 4rem 0rem;
+            border: none;
+            box-shadow: $global-shadow;
+
+            .card-header {
+                padding: 0;
+                @include flexPropertyCentered;
+                background: transparent;
+                overflow: visible;
+                border-bottom: none;
+
+                .review-image-wrapper {
+                    img {
+                        height: 7rem;
+                        width: 7rem;
+                        border-radius: 100%;
+                        @include objFitProperty(center);
+                        box-shadow: $global-shadow;
+                        border: 0.2rem solid $cityhub-global-primary-color;
+                        margin-top: -3rem;
+                    }
+                }
+            }
+
+            .card-body {
+                padding: 0.5rem 0.4rem;
+
+                .review-name {
+                    h3 {
+                        color: $cityhub-global-primary-color;
+                        text-align: center;
+                        @include globalMdFont;
+                        @include noMarginPadding;
+                    }
+
+                    p {
+                        @include noMarginPadding;
+                        text-align: center;
+                        color: $cityhub-global-color-dark;
+                        @include globalSmFont;
+                    }
+                }
+
+                .review-stars {
+                    @include flexPropertyCentered;
+
+                    ul {
+                        @include noMarginPadding;
+                        display: flex;
+
+                        li {
+                            @include noListStyle;
+
+                            i {
+                                color: $cityhub-global-primary-color;
+                                margin-right: 0.2rem;
+                                @include globalSmFont;
+                            }
+                        }
+                    }
+                }
+
+                .review-details {
+                    p {
+                        color: $cityhub-global-color-dark;
+                        text-align: center;
+                        @include globalSmFont;
+
+                        span {
+                            color: $cityhub-global-primary-color;
+                            font-weight: $fw-700;
+                            @include globalMdFont;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // review-section::end
+    // *****----------Sub Pages Css----------*********
+    // *****----------dashboard Css----------*********
+    .auth-bread-crumb-section {
+        .auth-bread-crumb-wrapper {
+            h3 {
+                color: $cityhub-global-color-Edark;
+                @include noMarginPadding;
+                @include globalSmFont;
+            }
+
+            p {
+                color: $cityhub-global-color-dark;
+                @include noMarginPadding;
+                @include globalSmFont
+            }
+        }
+    }
+
+    .cityhub-dashboard-section {
+        background-color: $cityhub-global-color-gray;
+        padding: 1rem 0rem;
+        width: 100%;
+        min-height: 40rem;
+
+        .dashboard-master-wrapper {
+            position: relative;
+
+            .dashboard-side-nav {
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: $cityhub-global-white;
+                width: 22rem;
+                border: 1px solid #00000015;
+                border-radius: 0.2rem;
+                padding: 1rem;
+                transition: 0.3s;
+
+                .profile-picture-wrapper {
+                    margin: 0.5rem 0 1rem 0;
+                    position: relative;
+
+                    .cancel-btn {
+                        position: absolute;
+                        top: 0rem;
+                        right: 0rem;
+                        cursor: pointer;
+
+                        i {
+                            color: $cityhub-global-primary-color;
+                        }
+                    }
+
+                    .profile-img {
+                        position: relative;
+                        height: 8rem;
+                        width: 8rem;
+                        border-radius: 100%;
+                        margin: auto;
+
+                        &::after {
+                            @include usePseudoElement;
+                            bottom: 2rem;
+                            right: 0rem;
+                            background: #008f0c;
+                            height: 1rem;
+                            width: 1rem;
+                            border-radius: 100%;
+                            box-shadow: $global-shadow;
+                            border: 0.16rem solid $cityhub-global-color-gray;
+                        }
+
+                        img {
+                            height: 8rem;
+                            width: 8rem;
+                            border-radius: 100%;
+                            @include objFitProperty(center);
+                            border: 0.3rem solid rgba(0, 0, 0, 0.109);
+                        }
+                    }
+
+                    .profile-short-info {
+                        h3 {
+                            @include globalMdFont;
+                            color: $cityhub-global-primary-color;
+                            text-align: center;
+                            @include noMarginPadding;
+                        }
+
+                        p {
+                            @include globalESmFont;
+                            color: $cityhub-global-color-dark;
+                            text-align: center;
+                            @include noMarginPadding;
+                        }
+                    }
+                }
+
+                ul {
+                    @include noMarginPadding;
+
+                    li {
+                        @include noListStyle;
+                        padding: 0.8rem 0.5rem;
+                        border-top: 1px solid #0000001e;
+                        transition: $global-transition;
+
+                        &:hover {
+                            background: $cityhub-global-color-gray;
+                            transform: translateX(0.6rem)
+                        }
+
+                        a {
+                            @include globalSmFont;
+                            color: $cityhub-global-color-Edark;
+                            font-weight: $fw-600;
+
+                            i {
+                                color: $cityhub-global-primary-color;
+                                margin-right: 0.5rem;
+                                @include globalSmFont;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .dashboard-view-wrapper {
+                // position: absolute;
+                // top: 0;
+                // left: 0;
+                width: 100%;
+                padding-left: 23rem;
+                padding-right: 1rem;
+                transition: 0.2s;
+
+                .dashboard-path-view {
+                    border: 1px solid #00000015;
+                    background: $cityhub-global-white;
+                    border-radius: 0.2rem;
+                    display: flex;
+                    align-items: center;
+                    padding: 0.6rem;
+
+                    .toggle-btn {
+                        margin-right: 1rem;
+
+                        button {
+                            outline: none;
+                            background: none;
+                            border: none;
+                            color: $cityhub-global-primary-color;
+                            @include globalMdFont;
+                            cursor: pointer;
+
+                            &:hover {
+                                color: $cityhub-global-color-dark;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .profile-side-bar {
+                background-color: $cityhub-global-white;
+                padding: 1rem;
+                border-radius: 0.6rem;
+                border: 1px solid #00000015;
+
+                ul {
+                    @include noMarginPadding;
+
+                    li {
+                        @include noListStyle;
+                        padding: 0.8rem 0.5rem;
+                        border-top: 1px solid #0000001e;
+                        transition: $global-transition;
+
+                        &:first-child {
+                            border-top: none;
+                        }
+
+                        &:hover {
+                            background: $cityhub-global-color-gray;
+                            transform: translateX(0.6rem)
+                        }
+
+                        a {
+                            @include globalSmFont;
+                            color: $cityhub-global-color-Edark;
+                            font-weight: $fw-600;
+
+                            i {
+                                color: $cityhub-global-primary-color;
+                                margin-right: 0.5rem;
+                                @include globalSmFont;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // dashboard fragments::begin
+    .dash-client-wrapper {
+        @include globalCard;
+
+        .dash-fragment-headings {
+            @include fragmentHeading;
+        }
+
+        .client-search-wrapper {
+            .client-search-parent {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .client-search-childs {
+                    flex: 1;
+
+                    &:first-child {
+                        margin-right: 3rem;
+                    }
+
+                    &:last-child {
+                        display: flex
+                    }
+
+                    ul {
+                        @include noMarginPadding;
+                        display: inline-flex;
+
+                        li {
+                            @include noListStyle;
+                            margin: 0rem 0.4rem;
+
+                            a {
+                                font-size: 0.8rem;
+                                color: $cityhub-global-white;
+                                background: $cityhub-global-primary-color;
+                                padding: 0.4rem 0.6rem;
+                                border-radius: 2rem;
+                                font-weight: $fw-600;
+
+                                &:hover {
+                                    background-color: $cityhub-global-primary-color;
+                                    color: $cityhub-global-white;
+                                }
+                            }
+                        }
+                    }
+
+                    input {
+                        height: 2.2rem;
+                        width: 70%;
+                        border-radius: 0.4rem 0 0 0.4rem;
+                        padding: 0rem 1rem;
+                        border: 1px solid #c5c5c5;
+                        background: none;
+
+                        &:focus {
+                            border: 1px solid $cityhub-global-primary-color;
+                            background: $cityhub-global-color-gray;
+                            outline: none;
+                            box-shadow: 0 0 0.1rem 0 $cityhub-global-color-dark
+                        }
+                    }
+
+                    button {
+                        height: 2.2rem;
+                        outline: none;
+                        border: none;
+                        padding: 0rem 0.6rem;
+                        background: $cityhub-global-color-Edark;
+                        color: $cityhub-global-white;
+                        cursor: pointer;
+
+                        i {
+                            margin-left: 0.5rem;
+                        }
+
+                        &:hover {
+                            background: $cityhub-global-primary-color;
+                        }
+                    }
+                }
+            }
+        }
+
+        .client-view-table-wrapper {
+            margin-top: 2rem;
+            overflow: scroll;
+            @include tableStyle;
+            @include actionBtns;
+            @include overflowScroll;
+
+            tbody {
+                a {
+                    cursor: pointer;
+                }
+            }
+
+            .client-img-and-name {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+
+                .client-img {
+                    img {
+                        height: 3rem;
+                        width: 3rem;
+                        border-radius: 100%;
+                        @include objFitProperty(50% 50%);
+                        box-shadow: $global-shadow;
+                    }
+                }
+
+                span {
+                    margin-left: 0.5rem;
+                }
+            }
+        }
+
+        .data-view-wrapper {
+            padding: 2rem;
+        }
+    }
+
+    .dashboard-info-master-wrapper {
+        .dashboard-all-info-wrapper {
+            margin-top: 2rem;
+
+            .dashboard-all-info-parent-wrapper {
+                display: flex;
+
+                .dashboard-all-info-childs-wrapper {
+                    &:first-child {
+                        flex: 1;
+                        position: relative;
+
+                        i {
+                            position: absolute;
+                            @include absoluteCentered;
+                            font-size: 1.8rem;
+                            color: $cityhub-global-color-dark;
+                        }
+                    }
+
+                    &:last-child {
+                        flex: 2;
+
+                        h2 {
+                            @include globalLgFont;
+                            color: $cityhub-global-primary-color;
+                            font-weight: $fw-700;
+                            @include noMarginPadding;
+                        }
+
+                        h3 {
+                            @include globalMdFont;
+                            color: $cityhub-global-color-Edark;
+                        }
+
+                        p {
+                            color: $cityhub-global-primary-color;
+                            margin: 0 0 1rem 0;
+
+                            i {
+                                margin: 0 0.3rem 0 0;
+                                color: $cityhub-global-primary-color;
+                                @include globalESmFont;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // dashboard fragments::end
+    // pagination-section::begin
+    .pagination-section {
+        margin: 1.2rem 0;
+
+        ul {
+            display: flex;
+            @include noMarginPadding;
+            justify-content: center;
+            align-items: center;
+
+            li {
+                @include noListStyle;
+                margin: 0rem 0.4rem;
+
+                a {
+                    background: $cityhub-global-primary-color;
+                    color: $cityhub-global-white;
+                    padding: 0.3rem 0.6rem;
+                    border-radius: 0.2rem;
+
+                    &:hover {
+                        background: $cityhub-global-color-dark
+                    }
+                }
+            }
+        }
+    }
+
+    // pagination-section::end
+    // *****----------dashboard Css----------*********
+}
+
+// ---------------------------------------------------------
+// responsiveness::begin
+@media only screen and (max-width: 3000px) {
+    html {
+        font-size: 100%;
+    }
+
+    .container {
+        max-width: 1300px;
+    }
+
+    .cityhub-master-section .cityhub-dashboard-section .dashboard-master-wrapper .dashboard-side-nav .profile-picture-wrapper .cancel-btn {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1452px) {
+    .cityhub-master-section .main-navigation-section .main-navigation-parent .main-navigation-childs .auth-user-details-wrapper .auth-user-details .auth-user-dropdown {
+        left: -110%;
+    }
+}
+
+@media only screen and (max-width: 1194px) {
+    html {
+        font-size: 90%;
+    }
+
+    .cityhub-master-section .dash-client-wrapper .client-search-wrapper .client-search-parent {
+        flex-direction: column;
+    }
+
+    .cityhub-master-section .dash-client-wrapper .client-search-wrapper .client-search-parent .client-search-childs {
+        margin: 0.5rem 0rem;
+    }
+}
+
+@media only screen and (max-width: 1012px) {
+    html {
+        font-size: 80%;
+    }
+
+    .cityhub-master-section .banner-section .banner-parent-wrapper .banner-childs-wrapper:last-child .banner-deco {
+        height: 24rem;
+        width: 24rem;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    html {
+        font-size: 90%;
+    }
+
+    // mobile device view::begin
+    // banner::begin
+    .cityhub-master-section .banner-section .banner-parent-wrapper {
+        flex-direction: column;
+    }
+
+    .cityhub-master-section .banner-section .banner-social-media-wrapper {
+        display: none;
+    }
+
+    .cityhub-master-section .banner-section .banner-parent-wrapper .banner-childs-wrapper:first-child .cityhub-banner-intro-wrapper .banner-action-btns ul {
+        justify-content: center;
+    }
+
+    .cityhub-master-section .banner-section {
+        padding: 1rem 0rem 1rem 0;
+    }
+
+    // banner::end
+    // search::begin
+    .cityhub-master-section .search-section .search-wrapper .search-deco img {
+        opacity: 0.2;
+    }
+
+    .cityhub-master-section .search-section .search-wrapper .search-categories .search-master-wrapper {
+        padding: 0 0;
+    }
+
+    .cityhub-master-section .search-result-section .search-result-wrapper .search-result-childs-wrapper:nth-child(2) .search-result-search-bar .search-result-search-bar-childs input {
+        width: 70%;
+    }
+
+    .cityhub-master-section .search-result-section .search-result-wrapper {
+        flex-direction: column-reverse;
+    }
+
+    .cityhub-master-section .search-result-section .search-result-wrapper .search-result-childs-wrapper:nth-child(2) .show-results .show-result {
+        flex-direction: column;
+    }
+
+    .cityhub-master-section .search-result-section .search-result-wrapper .search-result-childs-wrapper:nth-child(2) .show-results .show-result .show-result-childs:first-child img {
+        width: 100%;
+    }
+
+    .cityhub-master-section .search-result-section .search-result-wrapper .search-result-childs-wrapper:nth-child(2) .show-results .show-result .show-result-childs:last-child .all-info h3 {
+        margin-top: 1rem;
+    }
+
+    // search::end
+    // map::begin
+    .cityhub-master-section .visit-map-section .map-featured-image img {
+        margin-top: 3rem;
+    }
+
+    // map::end
+    // about us::begin
+    .cityhub-master-section .about-us-section .about-us-info-wrapper .about-us-contact-info {
+        flex-direction: column;
+    }
+
+    .cityhub-master-section .about-us-section .about-us-featured-image-wrapper img {
+        margin-top: 0;
+    }
+
+    .cityhub-master-section .about-us-section .about-us-info-wrapper .become-affilate-btn {
+        text-align: center;
+    }
+
+    .cityhub-master-section .search-section .search-wrapper .slick-slider button::before {
+        font-size: 0.9rem;
+    }
+
+    // about us::end
+    // filter tab::begin
+    .cityhub-master-section .search-by-brand-chain-section .search-by-brand-chain-wrapper .search-by-brand-chain-tabs ul {
+        flex-direction: column;
+    }
+
+    // filter tab::end
+    // why choose us::begin
+    .cityhub-master-section .why-choose-section .why-choose-wrapper .why-choose-icon i {
+        justify-content: center;
+    }
+
+    .cityhub-master-section .why-choose-section .why-choose-wrapper .why-choose-info {
+        text-align: center;
+    }
+
+    // why choose us::end
+    // footer::begin
+    .cityhub-master-section .copy-right-section .copy-right-parent-wrapper {
+        flex-direction: column;
+    }
+
+    .cityhub-master-section .copy-right-section .copy-right-parent-wrapper .copy-right-childs-wrapper p {
+        text-align: center;
+    }
+
+    // footer::end
+    // login form::begin
+    .cityhub-master-section .login-section .login-wrapper {
+        width: 90%;
+    }
+
+    .cityhub-master-section .login-section .login-wrapper .login-form-inner h2 {
+        margin-top: 1.6rem;
+    }
+
+    .cityhub-master-section .registration-section .registration-wrapper .registration-parent-wrapper {
+        flex-direction: column;
+    }
+
+    .cityhub-master-section .registration-section .registration-wrapper .registration-parent-wrapper .registration-childs:first-child {
+        display: none;
+    }
+
+    // login form::end
+    // how to use::begin
+    .cityhub-master-section .how-to-use-section .add-indicator-after::after {
+        display: none;
+    }
+
+    // how to use::end
+    // ----------------------------dashboard----------------------
+    // dashboard responsive::begin
+    .left100 {
+        left: 0 !important;
+    }
+
+    .cityhub-master-section .cityhub-dashboard-section .dashboard-master-wrapper .dashboard-side-nav {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        height: 100%;
+        width: 100%;
+        z-index: 100;
+    }
+
+    .cityhub-master-section .cityhub-dashboard-section .dashboard-master-wrapper .dashboard-side-nav .profile-picture-wrapper .cancel-btn {
+        display: block;
+    }
+
+    .cityhub-master-section .cityhub-dashboard-section .dashboard-master-wrapper .dashboard-view-wrapper {
+        padding-left: 1rem !important;
+    }
+
+    .cityhub-master-section .dash-client-wrapper .client-search-wrapper .client-search-parent .client-search-childs:first-child {
+        display: none;
+    }
+
+    .dashboard-detail-page .details-wrapper-parent .details-wrapper-childs:first-child {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .dashboard-detail-page .details-wrapper-parent {
+        flex-direction: column;
+    }
+
+    .dashboard-detail-page .details-wrapper-parent .details-wrapper-childs:last-child {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .dashboard-detail-page .details-wrapper-parent .details-wrapper-childs:last-child .section-divider {
+        display: none;
+    }
+
+    // dashboard responsive::end
+    // ----------------------------dashboard----------------------
+    // mobile device view::end
+}
+
+@media only screen and (max-width: 468px) {
+    html {
+        font-size: 88%;
+    }
+
+    .cityhub-master-section .banner-section .banner-parent-wrapper .banner-childs-wrapper:last-child .banner-deco {
+        height: 20rem;
+        width: 20rem;
+    }
+
+    .cityhub-master-section .banner-section .banner-parent-wrapper .banner-childs-wrapper:last-child .cityhub-featured-image img {
+        padding-top: 2rem;
+    }
+}
+
+@media only screen and (max-width: 426px) {
+    .cityhub-master-section .search-result-section .search-result-wrapper .search-result-childs-wrapper:nth-child(2) .search-result-search-bar .search-result-search-bar-childs input {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 365px) {
+    .cityhub-master-section .banner-section .banner-parent-wrapper .banner-childs-wrapper:last-child .cityhub-featured-image img {
+        padding-top: 4rem;
+    }
+}
+
+@media only screen and (max-width: 348px) {
+    .cityhub-master-section .banner-section .banner-parent-wrapper .banner-childs-wrapper:last-child .cityhub-featured-image img {
+        padding-top: 4.5rem;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    html {
+        font-size: 70%;
+    }
+}
