@@ -552,6 +552,77 @@ a {
   background-color: #5d5d5d;
 }
 
+.confirmation-modal {
+  height: 100vh;
+  width: 100%;
+  background-color: #000000a1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 12;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.confirmation-modal .confirmation-modal-innner {
+  height: auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 0.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.confirmation-modal .confirmation-modal-innner h3 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.confirmation-modal .confirmation-modal-innner button {
+  border-radius: 2rem;
+  background-color: transparent;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.9rem;
+  color: #5d5d5d;
+  font-weight: 600;
+  color: #fff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin: 0.5rem 0.5rem;
+}
+
+.confirmation-modal .confirmation-modal-innner button:hover {
+  background: #2f2f2f;
+  color: #fff;
+}
+
+.confirmation-modal .confirmation-modal-innner .confirm-btn {
+  background-color: green;
+}
+
+.confirmation-modal .confirmation-modal-innner .cancel-btn {
+  background-color: #bd0000;
+}
+
 .global-calender {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4021,6 +4092,102 @@ a {
   color: #e81c2e;
   font-weight: 700;
   font-size: 1.2rem;
+}
+
+.cityhub-master-section .forgot-section {
+  padding: 1rem 1rem;
+}
+
+.cityhub-master-section .forgot-section .reset-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cityhub-master-section .forgot-section .reset-image img {
+  height: auto;
+  width: 70%;
+  -webkit-filter: drop-shadow(16px 16px 10px rgba(0, 0, 0, 0.15));
+          filter: drop-shadow(16px 16px 10px rgba(0, 0, 0, 0.15));
+}
+
+.cityhub-master-section .forgot-section .reset-wrapper .reset-pass-wrapper {
+  border: 0.15rem dashed #e81c2e;
+  background-color: #f8f8f8;
+  padding: 1rem;
+  position: relative;
+  margin-top: 4rem;
+}
+
+.cityhub-master-section .forgot-section .reset-wrapper .reset-pass-wrapper .key-icon {
+  height: 5rem;
+  width: 5rem;
+  background-color: #e81c2e;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  border-radius: 100%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 0.16rem solid #f8f8f8;
+  -webkit-box-shadow: 0rem 0.1rem 0.4rem 0rem #0000003f;
+          box-shadow: 0rem 0.1rem 0.4rem 0rem #0000003f;
+}
+
+.cityhub-master-section .forgot-section .reset-wrapper .reset-pass-wrapper .key-icon i {
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.cityhub-master-section .forgot-section .reset-wrapper .reset-pass-wrapper h3 {
+  color: #5d5d5d;
+  text-align: start;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 2rem 0 1rem 0;
+}
+
+.cityhub-master-section .forgot-section .reset-wrapper .reset-pass-wrapper form label {
+  font-size: 1rem;
+  color: #2f2f2f;
+  font-weight: 600;
+}
+
+.cityhub-master-section .forgot-section .reset-wrapper .reset-pass-wrapper form button {
+  border-radius: 2rem;
+  background-color: #e81c2e;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.9rem;
+  color: #5d5d5d;
+  font-weight: 600;
+  color: #fff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.cityhub-master-section .forgot-section .reset-wrapper .reset-pass-wrapper form button:hover {
+  background: #2f2f2f;
+  color: #fff;
+}
+
+.cityhub-master-section .forgot-section .reset-wrapper .reset-pass-wrapper form a {
+  color: #2f2f2f;
 }
 
 .cityhub-master-section .auth-bread-crumb-section .auth-bread-crumb-wrapper h3 {

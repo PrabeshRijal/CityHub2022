@@ -59,7 +59,7 @@
                                                         <ol>
                                                             <a href="profile.html">Profile</a>
                                                             <a href="#">Change Password</a>
-                                                            <a href="../../index.html">Logout <i class="fa fa-sign-in-alt"></i></a>
+                                                            <a href="#" onclick="modalfunc()">Logout <i class="fa fa-sign-in-alt"></i></a>
                                                         </ol>
                                                     </ul>
                                                 </div>
@@ -76,6 +76,17 @@
         <!-- main navigation::end -->
         <!-- dashboard::begin -->
         <section class="cityhub-dashboard-section">
+            <!-- modal::begin -->
+            <div class="confirmation-modal d-none" id="logout_modal">
+                <div class="confirmation-modal-innner">
+                    <h3>Do you wany logout!</h3>
+                    <div class="action_btns">
+                        <button class="confirm-btn">Yes</button>
+                        <button class="cancel-btn" onclick="modalfunc()">Cancel</button>
+                    </div>
+                </div>
+            </div>  
+            <!-- modal::end -->
             <div class="dashboard-master-wrapper">
                 <!-- side nav::begin -->
                 <div class="dashboard-side-nav">

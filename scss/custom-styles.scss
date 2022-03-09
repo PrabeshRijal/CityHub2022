@@ -447,6 +447,39 @@ a {
     }
 }
 
+.confirmation-modal {
+    height: 100vh;
+    width: 100%;
+    background-color: #000000a1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 12;
+    @include flexPropertyCentered;
+    .confirmation-modal-innner {
+        height: auto;
+        background: $cityhub-global-white;
+        padding: 2rem;
+        border-radius: 0.4rem;
+        @include flexPropertyCentered;
+        flex-direction: column;
+        h3 {
+            @include globalSmFont;
+            font-weight: $fw-600;
+        }
+        button {
+            @include cityhibSubmitBtn(transparent);
+            margin: 0.5rem 0.5rem;
+        }
+        .confirm-btn {
+            background-color: green
+        }
+        .cancel-btn {
+            background-color: rgb(189, 0, 0);
+        }
+    }
+}
+
 .global-calender {
     @include flexPropertyCentered;
     #calender {
@@ -3439,6 +3472,65 @@ a {
     }
 
     // review-section::end
+    // forgot-section::begin
+    .forgot-section {
+        @include sectionPaddingCustom(1rem 1rem);
+        .reset-image {
+            @include flexPropertyCentered;
+            img {
+                height: auto;
+                width: 70%;
+                filter: drop-shadow(16px 16px 10px rgba(0, 0, 0, 0.15));
+            }
+        }
+        .reset-wrapper {
+            .reset-pass-wrapper {
+                border: 0.15rem dashed $cityhub-global-primary-color;
+                background-color: #f8f8f8;
+                padding: 1rem;
+                position: relative;
+                margin-top: 4rem;
+                .key-icon {
+                    height: 5rem;
+                    width: 5rem;
+                    background-color: $cityhub-global-primary-color;
+                    position: absolute;
+                    top: 0%;
+                    left: 50%;
+                    border-radius: 100%;
+                    transform: translate(-50%, -50%);
+                    @include flexPropertyCentered;
+                    border: 0.16rem solid #f8f8f8;
+                    box-shadow: $global-shadow;
+                    i {
+                        color: $cityhub-global-white;
+                        @include globalMdFont;
+                    }
+                }
+                h3 {
+                    color: $cityhub-global-color-dark;
+                    text-align: start;
+                    @include globalMdFont;
+                    font-weight: $fw-600;
+                    margin: 2rem 0 1rem 0;
+                }
+                form {
+                    label {
+                        @include globalSmFont;
+                        color: $cityhub-global-color-Edark;
+                        font-weight: $fw-600;
+                    }
+                    button {
+                        @include cityhibSubmitBtn($cityhub-global-primary-color);
+                    }
+                    a {
+                        color: $cityhub-global-color-Edark;
+                    }
+                }
+            }
+        }
+    }
+    // forgot-section::end
     // *****----------Sub Pages Css----------*********
     // *****----------dashboard Css----------*********
     .auth-bread-crumb-section {

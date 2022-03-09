@@ -3,9 +3,12 @@ const cityhubFooterSection = document.querySelector(".cityhub-footer-section");
 const dashboardSideNav = document.querySelector(".dashboard-side-nav");
 const dashboardViewWrapper = document.querySelector(".dashboard-view-wrapper");
 const toggleBtn = document.querySelector(".toggle-btn");
-console.log(dashboardSideNav)
-console.log(dashboardViewWrapper)
-console.log(toggleBtn)
+const targetModal = document.getElementById("logout_modal");
+
+function modalfunc(){
+    targetModal.classList.toggle("d-none");
+}
+
 
 findLocation = window.location.href;
 if(findLocation === "http://127.0.0.1:8000/login") {
