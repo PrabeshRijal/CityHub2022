@@ -3,20 +3,30 @@ const catSelected = document.getElementById('catSelected');
 const lookingForTarget = document.getElementById('lookingForTarget');
 const locationForTarget = document.getElementById('locationForTarget');
 catSelected.innerHTML = "Restaurent";
+const restaurentWpTarget = document.getElementById('restaurent-wp');
+const cafeWpTarget = document.getElementById('cafe-wp');
+
 
 const updateStateRestaurant = (catVal) => {
     catSelected.innerHTML = catVal;
     bgtarget.src = "images/restau.png"
+
+    cafeWpTarget.classList.add("d-none");
+    restaurentWpTarget.classList.remove("d-none");
 }
 
 const updateStateHotel = (catVal) => {
     catSelected.innerHTML = catVal;
     bgtarget.src = "images/lhotel.jpg"
+
 }
 
 const updateStateCafe = (catVal) => {
     catSelected.innerHTML = catVal;
     bgtarget.src = "images/cake.jfif"
+
+    cafeWpTarget.classList.remove("d-none");
+    restaurentWpTarget.classList.add("d-none");
 }
 
 const updateStateDentist = (catVal) => {
