@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CityHub - Booling Top</title>
+    <!-- bootstrap::begin -->
+    <link rel="stylesheet" href="../../scss/bootstrap/bootstrap.min.css">
+    <!-- bootstrap::end -->
+    <!-- fontawesome::begin -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+        integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ=="
+        crossorigin="anonymous" />
+    <!-- fontawesome::end -->
+    <!-- global fonts::begin -->
+    <link rel="stylesheet" href="../../scss/fonts/BarlowSemiCondensed-Regular.ttf">
+    <link rel="stylesheet" href="../../scss/fonts/Satisfy-Regular.ttf">
+    <!-- global fonts::end -->
+    <!-- slick css::behin -->
+    <link rel="stylesheet" href="../../scss/slick.css">
+    <link rel="stylesheet" href="../../scss/slick-theme.css">
+    <!-- slick css::end -->
+    <!-- custom css::begin -->
+    <link rel="stylesheet" href="../../scss/custom-styles.css">
+    <!-- custom css::end -->
+</head>
+
+<body>
+    <section class="cityhub-master-section">
+        <!-- main navigation::begin -->
+        <section class="main-navigation-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-xl-12 col-lg-12 col-sm-12">
+                        <div class="main-navigation-parent">
+                            <div class="main-navigation-childs">
+                                <div class="logo">
+                                    <h1>City<span>Hub</span></h1>
+                                </div>
+                            </div>
+                            <div class="main-navigation-childs d-none">
+                                <div class="action-btns">
+                                    <ul>
+                                        <li>
+                                            <a href="register.html">Register</a>
+                                        </li>
+                                        <li>
+                                            <a href="login.html">Sign In</a>
+                                        </li>
+                                        <li class="auth-user-details-wrapper">
+                                            <div class="auth-user-details">
+                                                <img src="../../images/review/saajan.PNG" draggable="false">
+                                                <div class="auth-user-dropdown">
+                                                    <h2>Saajan Paudel</h2>
+                                                    <h5>Super Admin</h5>
+                                                    <ul>
+                                                        <ol>
+                                                            <a href="profile.html">Profile</a>
+                                                            <a href="#">Change Password</a>
+                                                            <a href="#" onclick="modalfunc()">Logout <i
+                                                                    class="fa fa-sign-in-alt"></i></a>
+                                                        </ol>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="main-navigation-childs">
+                                <div class="client-dashboard-header">
+                                    <ul>
+                                        <li><a href="#">View Top Pages</a></li>
+                                        <li><a href="#"><i class="fa fa-bell"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-cog"></i></a></li>
+                                        <li class="auth-user-details-wrapper">
+                                            <div class="auth-user-details">
+                                                <img src="../../images/review/saajan.PNG" draggable="false">
+                                                <div class="auth-user-dropdown">
+                                                    <h2>Saajan Paudel</h2>
+                                                    <h5>Super Admin</h5>
+                                                    <ul>
+                                                        <ol>
+                                                            <a href="profile.html">Profile</a>
+                                                            <a href="#">Change Password</a>
+                                                            <a href="#" onclick="modalfunc()">Logout <i
+                                                                    class="fa fa-sign-in-alt"></i></a>
+                                                        </ol>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- main navigation::end -->
+        <!-- client dashboard nav::begin -->
+        <section class="client-dashboard-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-lg-12 col-xl-12">
+                        <div class="client-dashboard-nav-wrapper">
+                            <div class="client-dashboard-nav-parent">
+                                <div class="client-dashboard-nav-childs">
+                                    <ul>
+                                        <li><a href="bookingTop.html">Home</a></li>
+                                        <li><a href="bookings.html">Bookings</a></li>
+                                        <li><a href="#">Inbox</a></li>
+                                        <li><a href="#">Inquery</a></li>
+                                        <li><a href="manual.html">Manual</a></li>
+                                    </ul>
+                                </div>
+                                <div class="client-dashboard-nav-childs">
+                                    <h3 id="date_here">22 March 2021</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-lg-12 col-xl-12">
+                        <div class="client-dashboard-breadcrumb">
+                            <div class="client-dashboard-breadcrumb-parent">
+                                <div class="client-dashboard-breadcrumb-childs">
+                                    <h3><i class="fa fa-angle-double-right"></i> Home</h3>
+                                </div>
+                                <div class="client-dashboard-breadcrumb-childs">
+                                    <!-- <h3>Home</h3> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- image slider::begin -->
+                <div class="client-dahboard-image-slider-wrapper">
+                    <div class="client-dahboard-image-slider-parent">
+                        <!-- slider::begin -->
+                        <div class="slider-wrapper">
+                            <div class="my-slider mainslider">
+                                <!-- slider-image-one::begin -->
+                                <div class="slider-image">
+                                    <img src="../../images/cake.jfif">
+                                </div>
+                                <!-- slider-image-one::end -->
+                                <!-- slider-image-two::begin -->
+                                <div class="slider-image">
+                                    <img src="../../images/dentist.jpg">
+                                </div>
+                                <!-- slider-image-two::end -->
+                                <!-- slider-image-three::begin -->
+                                <div class="slider-image">
+                                    <img src="../../images/coffee.jpg">
+                                </div>
+                                <!-- slider-image-three::end -->
+                                <!-- slider-image-four::begin -->
+                                <div class="slider-image">
+                                    <img src="../../images/fashion.jpg">
+                                </div>
+                                <!-- slider-image-four::end -->
+                            </div>
+                        </div>
+                        <!-- slider::end -->
+                    </div>
+                </div>
+                <!-- image slider::end -->
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="data-view-table">
+                            <table class="table table-hover">
+                                <tbody>
+                                    <tr>
+                                        <th>Name:</th>
+                                        <td>Prabesh Rijal</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Email:</th>
+                                        <td>prabesh@gmail.com</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Phone:</th>
+                                        <td>985652515</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Address:</th>
+                                        <td>Nayabazar, Pokhara, Nepal</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Occupation:</th>
+                                        <td>Software Developer</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Age:</th>
+                                        <td>22</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Gender:</th>
+                                        <td>Male</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Education:</th>
+                                        <td>BSC.IT</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Note:</th>
+                                        <td>Hello, I am Prabesh Rijal from Pokhara. I am Software Developer.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- client dashboard nav::end -->
+        <!-- footer::begin -->
+        <section class="cityhub-footer-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-lg-3 col-xl-3">
+                        <div class="footer-brand-logo-wrapper">
+                            <div class="footer-brand-logo">
+                                <h1>CityHub</h1>
+                            </div>
+                            <div class="footer-brand-logo-explain">
+                                <p>Cityhub is newly establish platform. Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Officiis illum cum reprehenderit ipsum eum, amet nam quod laborum
+                                    facilis? Praesentium minima ipsam qui iusto optio, consequatur adipisci non ex?
+                                    Excepturi.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-lg-3 col-xl-3">
+                        <div class="footer-headings">
+                            <h2>Quick Links</h2>
+                        </div>
+                        <div class="quick-links-wrapper">
+                            <div class="quick-links">
+                                <a href="index.html">Home</a>
+                            </div>
+                            <div class="quick-links">
+                                <a href="/pricing">Pricing</a>
+                            </div>
+                            <div class="quick-links">
+                                <a href="/review">Reviews</a>
+                            </div>
+                            <div class="quick-links">
+                                <a href="/about">About Us</a>
+                            </div>
+                            <div class="quick-links">
+                                <a href="/contact">Contact Us</a>
+                            </div>
+                            <div class="quick-links">
+                                <a href="/register">Become An Affilated</a>
+                            </div>
+                            <div class="quick-links">
+                                <a href="/login">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-lg-3 col-xl-3">
+                        <div class="footer-headings">
+                            <h2>Accounts</h2>
+                        </div>
+                        <div class="accounts-wrapper">
+                            <ul>
+                                <li>
+                                    <a href="/login">Login</a>
+                                </li>
+                                <li>
+                                    <a href="/register">Register</a>
+                                </li>
+                                <li>
+                                    <a href="/register">Become An Affilate</a>
+                                </li>
+                                <li>
+                                    <a href="/#">Inquiry</a>
+                                </li>
+                                <li>
+                                    <a href="/#">Support</a>
+                                </li>
+                                <li>
+                                    <a href="/#">Report</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-lg-3 col-xl-3">
+                        <div class="footer-headings">
+                            <h2>Subscribe</h2>
+                            <h3>Save Time, Save Money!</h3>
+                            <p>Sign up and we'll send the best deals to you</p>
+                        </div>
+                        <div class="subscribe-wrapper">
+                            <div class="subscribe-inner-wrapper">
+                                <input class="form-control" type="text" placeholder="Email Address" />
+                                <button>Subscribe</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="copy-right-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-xl-12 col-lg-12 col-sm-12">
+                            <div class="copy-right-parent-wrapper">
+                                <div class="copy-right-childs-wrapper">
+                                    <p>Copyright © 2021 CityHub</p>
+                                </div>
+                                <div class="copy-right-childs-wrapper">
+                                    <p>Designed & Develop By <a href="https://naksalabs.com/" target="_blank">Naksa
+                                            Labs</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <!-- footer::end -->
+    </section>
+</body>
+<!-- jquery:begin -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<!-- jquery:end -->
+<!-- slick js::begin -->
+<script src="../../js/slick.js"></script>
+<script src="../../js/sliders.js"></script>
+<script src="../../js/slick.js"></script>
+<!-- slick js::end -->
+<script src="../../js/global.js"></script>
+<script>
+    const dateTarget = document.getElementById("date_here");
+    const date = new Date().toLocaleDateString('en-us', {
+        weekday: "long",
+        year: "numeric",
+        month: "short",
+        day: "numeric"
+    });
+    dateTarget.innerHTML = date;
+</script>
+<script>
+    $(document).ready(function () {
+        $('.mainslider').slick({
+            dots: false,
+            infinite: true,
+            speed: 500,
+            fade: true,
+            cssEase: 'linear',
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000,
+        });
+    });
+</script>
+
+</html>

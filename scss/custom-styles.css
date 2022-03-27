@@ -4722,6 +4722,261 @@ a {
   background: #5d5d5d;
 }
 
+.cityhub-master-section .client-dashboard-header ul li a {
+  background: none !important;
+  color: #5d5d5d !important;
+  border: none !important;
+  font-weight: 600;
+}
+
+.cityhub-master-section .manual-wrapper {
+  margin: 1rem 0;
+  border-bottom: 0.15rem solid #dbdbdb;
+  border-left: 0.5rem solid #b6b6b6;
+}
+
+.cityhub-master-section .manual-wrapper h3 {
+  color: #fff;
+  font-weight: 800;
+  font-size: 1rem;
+  background-color: #e81c2e;
+  padding: 0.4rem 0.5rem;
+  border-radius: 0 0 1rem 0;
+}
+
+.cityhub-master-section .manual-wrapper ul {
+  margin: 0.5rem 0 0.5rem 2rem;
+}
+
+.cityhub-master-section .manual-wrapper ul li {
+  list-style-type: disc;
+}
+
+.cityhub-master-section .manual-wrapper ul li p {
+  font-size: 1rem;
+}
+
+.cityhub-master-section .client-dashboard-table {
+  -webkit-box-shadow: 0rem 0.1rem 0.4rem 0rem #0000003f;
+          box-shadow: 0rem 0.1rem 0.4rem 0rem #0000003f;
+}
+
+.cityhub-master-section .client-dashboard-table .show-status a {
+  color: #fff;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.8rem;
+  border-radius: 0.2rem;
+}
+
+.cityhub-master-section .client-form-wrapper {
+  background-color: #f8f8f8;
+  padding: 1rem;
+  border: 1px solid #dfdfdf;
+  border-radius: 0.3rem;
+  -webkit-box-shadow: 0rem 0.1rem 0.4rem 0rem #0000003f;
+          box-shadow: 0rem 0.1rem 0.4rem 0rem #0000003f;
+}
+
+.cityhub-master-section .client-form-wrapper .client-dashboard-action-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cityhub-master-section .client-form-wrapper .client-dashboard-action-btns .client-dashboard-action-btns-childs a {
+  margin: 0rem 1.2rem 0 0;
+  color: #fff;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.2rem;
+  font-size: 1rem;
+}
+
+.cityhub-master-section .client-form-wrapper .client-dashboard-action-btns .client-dashboard-action-btns-childs a i {
+  font-size: 0.9rem;
+}
+
+.cityhub-master-section .client-form-wrapper .client-dashboard-action-btns .client-dashboard-action-btns-childs .back-btn {
+  background-color: #e81c2e;
+}
+
+.cityhub-master-section .client-form-wrapper .client-dashboard-action-btns .client-dashboard-action-btns-childs .edit-btn {
+  background-color: #008100;
+}
+
+.cityhub-master-section .client-form-wrapper .client-dashboard-action-btns .client-dashboard-action-btns-childs .update-btn {
+  background-color: #008a8a;
+}
+
+.cityhub-master-section .client-dashboard-section .client-dashboard-nav-wrapper .client-dashboard-nav-parent {
+  background: #f8f8f8;
+  padding: 0.7rem 1rem;
+  border: 1px solid #dfdfdf;
+  border-radius: 0.3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cityhub-master-section .client-dashboard-section .client-dashboard-nav-wrapper .client-dashboard-nav-parent .client-dashboard-nav-childs:first-child ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cityhub-master-section .client-dashboard-section .client-dashboard-nav-wrapper .client-dashboard-nav-parent .client-dashboard-nav-childs:first-child ul li {
+  list-style-type: none;
+  margin: 0rem 1rem;
+}
+
+.cityhub-master-section .client-dashboard-section .client-dashboard-nav-wrapper .client-dashboard-nav-parent .client-dashboard-nav-childs:first-child ul li:first-child {
+  margin: 0 1rem 0 0;
+}
+
+.cityhub-master-section .client-dashboard-section .client-dashboard-nav-wrapper .client-dashboard-nav-parent .client-dashboard-nav-childs:first-child ul li a {
+  color: #5d5d5d;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.cityhub-master-section .client-dashboard-section .client-dashboard-nav-wrapper .client-dashboard-nav-parent .client-dashboard-nav-childs:first-child ul li a:hover {
+  color: #e81c2e;
+}
+
+.cityhub-master-section .client-dashboard-section .client-dashboard-nav-wrapper .client-dashboard-nav-parent .client-dashboard-nav-childs:last-child h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #e81c2e;
+}
+
+.cityhub-master-section .client-dashboard-section .client-dashboard-breadcrumb .client-dashboard-breadcrumb-parent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cityhub-master-section .client-dashboard-section .client-dashboard-breadcrumb .client-dashboard-breadcrumb-parent .client-dashboard-breadcrumb-childs {
+  margin: 1rem 0;
+}
+
+.cityhub-master-section .client-dashboard-section .client-dashboard-breadcrumb .client-dashboard-breadcrumb-parent .client-dashboard-breadcrumb-childs:first-child h3 {
+  color: #5d5d5d;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.cityhub-master-section .client-dashboard-section .client-dashboard-breadcrumb .client-dashboard-breadcrumb-parent .client-dashboard-breadcrumb-childs:last-child ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cityhub-master-section .client-dashboard-section .client-dashboard-breadcrumb .client-dashboard-breadcrumb-parent .client-dashboard-breadcrumb-childs:last-child ul li {
+  list-style-type: none;
+  margin: 0rem 0.6rem;
+}
+
+.cityhub-master-section .client-dashboard-section .client-dashboard-breadcrumb .client-dashboard-breadcrumb-parent .client-dashboard-breadcrumb-childs:last-child ul li a {
+  color: #5d5d5d;
+  background-color: #f8f8f8;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid #dfdfdf;
+}
+
+.cityhub-master-section .client-dashboard-section .client-dashboard-breadcrumb .client-dashboard-breadcrumb-parent .client-dashboard-breadcrumb-childs:last-child ul li a:hover {
+  background: #e81c2e;
+  color: #fff;
+}
+
+.cityhub-master-section .client-dashboard-section .client-dahboard-image-slider-wrapper .client-dahboard-image-slider-parent .my-slider {
+  height: 100%;
+  width: 100%;
+  background: #e81c2e;
+  border-radius: 0.4rem;
+  overflow: hidden;
+  -webkit-box-shadow: 0rem 0.1rem 0.4rem 0rem #0000003f;
+          box-shadow: 0rem 0.1rem 0.4rem 0rem #0000003f;
+}
+
+.cityhub-master-section .client-dashboard-section .client-dahboard-image-slider-wrapper .client-dahboard-image-slider-parent .my-slider .slick-prev,
+.cityhub-master-section .client-dashboard-section .client-dahboard-image-slider-wrapper .client-dahboard-image-slider-parent .my-slider .slick-next {
+  opacity: 1 !important;
+  z-index: 5;
+}
+
+.cityhub-master-section .client-dashboard-section .client-dahboard-image-slider-wrapper .client-dahboard-image-slider-parent .my-slider .slick-prev {
+  left: 1rem;
+}
+
+.cityhub-master-section .client-dashboard-section .client-dahboard-image-slider-wrapper .client-dahboard-image-slider-parent .my-slider .slick-next {
+  right: 1.6rem;
+}
+
+.cityhub-master-section .client-dashboard-section .client-dahboard-image-slider-wrapper .client-dahboard-image-slider-parent .my-slider .slick-prev:before {
+  content: "\f104";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  color: #fff;
+  font-size: 1.2rem;
+  -webkit-filter: drop-shadow(0.1rem 0.2rem 0.5rem rgba(0, 0, 0, 0.6));
+          filter: drop-shadow(0.1rem 0.2rem 0.5rem rgba(0, 0, 0, 0.6));
+}
+
+.cityhub-master-section .client-dashboard-section .client-dahboard-image-slider-wrapper .client-dahboard-image-slider-parent .my-slider .slick-next:before {
+  content: "\f105";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  color: #fff;
+  font-size: 1.4rem;
+  -webkit-filter: drop-shadow(0.1rem 0.2rem 0.5rem rgba(185, 113, 113, 0.6));
+          filter: drop-shadow(0.1rem 0.2rem 0.5rem rgba(185, 113, 113, 0.6));
+}
+
+.cityhub-master-section .client-dashboard-section .client-dahboard-image-slider-wrapper .client-dahboard-image-slider-parent .my-slider img {
+  height: 28rem;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.cityhub-master-section .client-dashboard-section .data-view-table {
+  width: 100%;
+  padding: 0rem 2rem 0 0;
+  margin: 1rem 0;
+}
+
+.cityhub-master-section .client-dashboard-section .data-view-table table {
+  border-radius: 1rem !important;
+  overflow: hidden;
+}
+
+.cityhub-master-section .client-dashboard-section .data-view-table table tbody tr:nth-child(odd) {
+  background: #dadada;
+}
+
+.cityhub-master-section .client-dashboard-section .data-view-table table tbody tr th,
+.cityhub-master-section .client-dashboard-section .data-view-table table tbody tr td {
+  font-size: 1rem;
+  padding: 1rem;
+}
+
+.cityhub-master-section .client-dashboard-section .data-view-table table tbody tr th {
+  width: 10rem;
+  color: #5d5d5d;
+}
+
+.cityhub-master-section .client-dashboard-section .data-view-table table tbody tr td {
+  border-top: none;
+}
+
 @media only screen and (max-width: 3000px) {
   html {
     font-size: 100%;
