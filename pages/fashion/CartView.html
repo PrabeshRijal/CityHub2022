@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CityHub - Cart View</title>
+    <!-- bootstrap::begin -->
+    <link rel="stylesheet" href="../../scss/bootstrap/bootstrap.min.css">
+    <!-- bootstrap::end -->
+    <!-- fontawesome::begin -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+        integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ=="
+        crossorigin="anonymous" />
+    <!-- fontawesome::end -->
+    <!-- global fonts::begin -->
+    <link rel="stylesheet" href="../../scss/fonts/BarlowSemiCondensed-Regular.ttf">
+    <link rel="stylesheet" href="../../scss/fonts/Satisfy-Regular.ttf">
+    <!-- global fonts::end -->
+    <!-- slick css::behin -->
+    <link rel="stylesheet" href="../../scss/slick.css">
+    <link rel="stylesheet" href="../../scss/slick-theme.css">
+    <!-- slick css::end -->
+    <!-- custom css::begin -->
+    <link rel="stylesheet" href="../../scss/custom-styles.css">
+    <!-- custom css::end -->
+</head>
+
+<body>
+    <section class="cityhub-master-section">
+        <!-- main navigation::begin -->
+        <section class="main-navigation-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-xl-12 col-lg-12 col-sm-12">
+                        <div class="main-navigation-parent">
+                            <div class="main-navigation-childs">
+                                <div class="logo">
+                                    <img src="../../images/logo.png" alt="brand-logo" draggable="false">
+                                </div>
+                            </div>
+                            <div class="main-navigation-childs">
+                                <div class="action-btns">
+                                    <ul>
+                                        <li>
+                                            <a href="pages/auth/login.html">Signup</a>
+                                        </li>
+                                        <li class="cityhub-hamburger-wrapper">
+                                            <div class="cityhub-hamburger-inner-wrapper">
+                                                <i class="fa fa-bars"></i>
+                                            </div>
+                                            <div class="hamburger-menu-options">
+                                                <div class="hamburger-menu-options-inner">
+                                                    <p><a href="pages/subpages/booking.html">My Pages <i
+                                                                class="fa fa-arrow-right"></i></a></p>
+                                                    <p><a href="#">Logout <i class="fa fa-sign-in-alt"></i></a></p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- main navigation::end -->
+        <div class="fashion-section">
+            <div class="container">
+                <div class="row">
+                    <div class="fashion-search-wrapper">
+                        <div class="fashion-search-childs-wrapper">
+                            <div>
+                                <a href="#">All</a>
+                                <a href="#" style="color: maroon;"><i class="fa fa-male"></i> Men</a>
+                                <a href="#" style="color: rgb(0, 130, 130);"><i class="fa fa-female"></i> Woman</a>
+                                <a href="#" style="color: orangered;"><i class="fa fa-child"></i> Kids</a>
+                            </div>
+                            <div class="fashion-breadcrumb">
+                                <p><a href="#">Men's</a><i class="fa fa-angle-double-right"></i><a href="#">Shirts</a><i
+                                        class="fa fa-angle-double-right"></i><a href="#">Double Brushed Flannel Shirt /
+                                        Button Down</a></p>
+                            </div>
+                        </div>
+                        <div class="fashion-search-childs-wrapper">
+                            <input class="form-control cituhub-global-input" type="text" placeholder="search....">
+                            <button>Search <i class="fa fa-search"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- fashion side nav::begin -->
+                    <div class="col-md-3 fashion-side-nav">
+                        <div class="fashion-cat-lists">
+                            <h3>CATEGORY</h3>
+                            <ul class="category-lists">
+                                <li><a href="#">Shirt</a></li>
+                                <li><a href="#">Jacket Vest</a></li>
+                                <li><a href="#">Parker Blouson</a></li>
+                                <li><a href="#">Cut and sew polo shirt</a></li>
+                                <li><a href="#">Cardigan</a></li>
+                                <li><a href="#">Sweater/Knit</a></li>
+                                <li><a href="#">Down Coat</a></li>
+                                <li><a href="#">Bags/Accessories</a></li>
+                            </ul>
+                        </div>
+                        <div class="fashion-cat-lists">
+                            <h3>SALE</h3>
+                            <ul>
+                                <li><input type="checkbox"><span>XXL</span></li>
+                                <li><input type="checkbox"><span>XS</span></li>
+                                <li><input type="checkbox"><span>S</span></li>
+                                <li><input type="checkbox"><span>M</span></li>
+                                <li><input type="checkbox"><span>L</span></li>
+                                <li><input type="checkbox"><span>XL</span></li>
+                                <li><input type="checkbox"><span>XL</span></li>
+                                <li><input type="checkbox"><span>XXXL</span></li>
+                            </ul>
+                        </div>
+                        <div class="fashion-cat-lists">
+                            <h3>Price <span>Excluding Tax</span></h3>
+                            <ul>
+                                <li><input type="checkbox"><span>XXL</span></li>
+                                <li><input type="checkbox"><span>XS</span></li>
+                                <li><input type="checkbox"><span>S</span></li>
+                                <li><input type="checkbox"><span>M</span></li>
+                                <li><input type="checkbox"><span>L</span></li>
+                                <li><input type="checkbox"><span>XL</span></li>
+                                <li><input type="checkbox"><span>XL</span></li>
+                                <li><input type="checkbox"><span>XXXL</span></li>
+                            </ul>
+                        </div>
+                        <div class="fashion-cat-lists">
+                            <h3>Color</h3>
+                            <ul class="color-wrapper">
+                                <li><input type="radio" value="red" name="colors">
+                                    <div class="color-box" style="background-color: red;"></div><span>Red</span>
+                                </li>
+                                <li><input type="radio" value="green" name="colors">
+                                    <div class="color-box" style="background-color: green;"></div><span>Green</span>
+                                </li>
+                                <li><input type="radio" value="pink" name="colors">
+                                    <div class="color-box" style="background-color: pink;"></div><span>Pink</span>
+                                </li>
+                                <li><input type="radio" value="blue" name="colors">
+                                    <div class="color-box" style="background-color: blue;"></div><span>Blue</span>
+                                </li>
+                                <li><input type="radio" value="yellow" name="colors">
+                                    <div class="color-box" style="background-color: yellow;"></div><span>Yellow</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- fashion side nav::end -->
+                    <!-- fashion product show::begin -->
+                    <div class="col-md-7 col-lg-7 col-xl-7 my-cart-view-page-section">
+                        <div class="my-cart-all-info-wrapper">
+                            <!-- table::begin -->
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Product</th>
+                                        <th>Price</th>
+                                        <th>Quantity</th>
+                                        <th>Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- product-info::begin -->
+                                    <tr>
+                                        <td>
+                                            <div class="product-info-wrapper-parent">
+                                                <div class="product-info-wrapper-child">
+                                                    <a href="#"><i class="fa fa-times-circle"></i></a>
+                                                </div>
+                                                <div class="product-info-wrapper-child">
+                                                    <div class="product-image-showcase">
+                                                        <img src="../../images/fashion/fs1.PNG">
+                                                    </div>
+                                                </div>
+                                                <div class="product-info-wrapper-child">
+                                                    <div class="product-name-wrapper">
+                                                        <p>Product One</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <!-- product-individual-price::begin -->
+                                        <td>
+                                            <div class="my-product-price-list">
+                                                <p><span>Rs</span> 5500</p>
+                                            </div>
+                                        </td>
+                                        <!-- product-individual-price::end -->
+                                        <!-- quantity incri-decri::begin -->
+                                        <td>
+                                            <div class="my-product-quantity-parent">
+                                                <div class="my-product-quantity-child">
+                                                    <span><i class="fa fa-minus-circle"></i></span>
+                                                </div>
+                                                <div class="my-product-quantity-child">
+                                                    <p>5</p>
+                                                </div>
+                                                <div class="my-product-quantity-child">
+                                                    <span><i class="fa fa-plus-circle"></i></span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <!-- quantity incri-decri::end -->
+                                        <!-- product-total::begin -->
+                                        <td>
+                                            <div class="my-product-price-list">
+                                                <p><span>Rs</span> 5500</p>
+                                            </div>
+                                        </td>
+                                        <!-- product-total::end -->
+                                    </tr>
+                                    <!-- product-info::end -->
+                                    <!-- product-info::begin -->
+                                    <tr>
+                                        <td>
+                                            <div class="product-info-wrapper-parent">
+                                                <div class="product-info-wrapper-child">
+                                                    <a href="#"><i class="fa fa-times-circle"></i></a>
+                                                </div>
+                                                <div class="product-info-wrapper-child">
+                                                    <div class="product-image-showcase">
+                                                        <img src="../../images/fashion/fs2.PNG">
+                                                    </div>
+                                                </div>
+                                                <div class="product-info-wrapper-child">
+                                                    <div class="product-name-wrapper">
+                                                        <p>Product Two</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <!-- product-individual-price::begin -->
+                                        <td>
+                                            <div class="my-product-price-list">
+                                                <p><span>Rs</span> 4700</p>
+                                            </div>
+                                        </td>
+                                        <!-- product-individual-price::end -->
+                                        <!-- quantity incri-decri::begin -->
+                                        <td>
+                                            <div class="my-product-quantity-parent">
+                                                <div class="my-product-quantity-child">
+                                                    <span><i class="fa fa-minus-circle"></i></span>
+                                                </div>
+                                                <div class="my-product-quantity-child">
+                                                    <p>8</p>
+                                                </div>
+                                                <div class="my-product-quantity-child">
+                                                    <span><i class="fa fa-plus-circle"></i></span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <!-- quantity incri-decri::end -->
+                                        <!-- product-total::begin -->
+                                        <td>
+                                            <div class="my-product-price-list">
+                                                <p><span>Rs</span> 6000</p>
+                                            </div>
+                                        </td>
+                                        <!-- product-total::end -->
+                                    </tr>
+                                    <!-- product-info::end -->
+                                    <!-- product-info::begin -->
+                                    <tr>
+                                        <td>
+                                            <div class="product-info-wrapper-parent">
+                                                <div class="product-info-wrapper-child">
+                                                    <a href="#"><i class="fa fa-times-circle"></i></a>
+                                                </div>
+                                                <div class="product-info-wrapper-child">
+                                                    <div class="product-image-showcase">
+                                                        <img src="../../images/fashion/fs3.PNG">
+                                                    </div>
+                                                </div>
+                                                <div class="product-info-wrapper-child">
+                                                    <div class="product-name-wrapper">
+                                                        <p>Product Three</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <!-- product-individual-price::begin -->
+                                        <td>
+                                            <div class="my-product-price-list">
+                                                <p><span>Rs</span> 5500</p>
+                                            </div>
+                                        </td>
+                                        <!-- product-individual-price::end -->
+                                        <!-- quantity incri-decri::begin -->
+                                        <td>
+                                            <div class="my-product-quantity-parent">
+                                                <div class="my-product-quantity-child">
+                                                    <span><i class="fa fa-minus-circle"></i></span>
+                                                </div>
+                                                <div class="my-product-quantity-child">
+                                                    <p>12</p>
+                                                </div>
+                                                <div class="my-product-quantity-child">
+                                                    <span><i class="fa fa-plus-circle"></i></span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <!-- quantity incri-decri::end -->
+                                        <!-- product-total::begin -->
+                                        <td>
+                                            <div class="my-product-price-list">
+                                                <p><span>Rs</span> 5500</p>
+                                            </div>
+                                        </td>
+                                        <!-- product-total::end -->
+                                    </tr>
+                                    <!-- product-info::end -->
+                                </tbody>
+                            </table>
+                            <!-- table::end -->
+                            <!-- coupon-code-wrapper::begin -->
+                            <div class="row">
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                </div>
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <div class="proceed-to-checkout-btns">
+                                        <a href="#">Update Cart</a>
+                                        <a href="checkOut.html">Proceed To Checkout</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- coupon-code-wrapper::end -->
+                            <!-- calculate shipping::begin -->
+                            <div class="row">
+                                <div class="col-md-12 col-lg-12 col-xl-12">
+                                    <!-- calculate shipping::begin -->
+                                    <div class="calculate-shipping-info-wrapper">
+                                        <div class="calculate-shipping-heading">
+                                            <h3>Cart Total</h3>
+                                        </div>
+                                        <div class="calculate-total-info-wrapper">
+                                            <table class="table table-hover">
+                                                <tbody>
+                                                    <tr>
+                                                        <th>Subtotal:</th>
+                                                        <td><span>Rs</span>541411</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Shipping:</th>
+                                                        <td>Free Shipping</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Total:</th>
+                                                        <td><span>Rs</span>541411</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <!-- calculate shipping::end -->
+                                </div>
+                            </div>
+                            <!-- calculate shipping::end -->
+                        </div>
+                    </div>
+                    <!-- fashion product show::end -->
+                    <!-- add section::begin -->
+                    <div class="col-md-2">
+                        <div class="add-section">
+                            <h3>Adds</h3>
+                        </div>
+                    </div>
+                    <!-- add section::end -->
+                </div>
+            </div>
+        </div>
+        <!-- footer::begin -->
+        <section class="cityhub-footer-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-lg-4 col-xl-4">
+                        <div class="footer-brand-logo-wrapper">
+                            <div class="footer-brand-logo">
+                                <h1>CityHub</h1>
+                            </div>
+                            <div class="footer-brand-logo-explain">
+                                <p>Cityhub is newly establish platform. Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Officiis illum cum reprehenderit ipsum eum, amet nam quod laborum
+                                    facilis? Praesentium minima ipsam qui iusto optio, consequatur adipisci non ex?
+                                    Excepturi.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-4 col-xl-4">
+                        <div class="footer-headings">
+                            <h2>Contact Us</h2>
+                        </div>
+                        <div class="footer-contact-info">
+                            <div class="footer-contact-us">
+                                <ul>
+                                    <li><i class="fa fa-phone"></i>986587555, 06766655</li>
+                                    <li><i class="fa fa-map-marked-alt"></i>Kathmandu, Nepal</li>
+                                    <li><i class="fa fa-envelope"></i>cityhub@gmail.com</li>
+                                </ul>
+                            </div>
+                            <div class="footer-contact-icon-wrapper">
+                                <a href="#">
+                                    <div class="footer-contact-icon">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="footer-contact-icon">
+                                        <i class="fab fa-instagram"></i>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="footer-contact-icon">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </div>
+                                </a><a href="#">
+                                    <div class="footer-contact-icon">
+                                        <i class="fab fa-youtube"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="copy-right-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-xl-12 col-lg-12 col-sm-12">
+                            <div class="copy-right-parent-wrapper">
+                                <div class="copy-right-childs-wrapper">
+                                    <p>Copyright © 2021 CityHub</p>
+                                </div>
+                                <div class="copy-right-childs-wrapper">
+                                    <p>Designed & Develop By <a href="https://naksalabs.com/" target="_blank">Naksa
+                                            Labs</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <!-- footer::end -->
+    </section>
+</body>
+<!-- jquery:begin -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<!-- jquery:end -->
+<!-- slick js::begin -->
+<script src="../../js/slick.js"></script>
+<script src="../../js/sliders.js"></script>
+<!-- slick js::end -->
+<script src="../../js/bgChange.js"></script>
+
+</html>

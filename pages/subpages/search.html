@@ -29,25 +29,33 @@
 
 <body>
     <section class="cityhub-master-section">
-        <!-- main navigation::begin -->
-        <section class="main-navigation-section">
+         <!-- main navigation::begin -->
+         <section class="main-navigation-section">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 col-xl-12 col-lg-12 col-sm-12">
                         <div class="main-navigation-parent">
                             <div class="main-navigation-childs">
                                 <div class="logo">
-                                    <h1>City<span>Hub</span></h1>
+                                    <img src="../../images/logo.png" alt="brand-logo" draggable="false">
                                 </div>
                             </div>
                             <div class="main-navigation-childs">
                                 <div class="action-btns">
                                     <ul>
                                         <li>
-                                            <a href="register.html">Register</a>
+                                            <a href="pages/auth/login.html">Signup</a>
                                         </li>
-                                        <li>
-                                            <a href="login.html">Sign In</a>
+                                        <li class="cityhub-hamburger-wrapper">
+                                            <div class="cityhub-hamburger-inner-wrapper">
+                                                <i class="fa fa-bars"></i>
+                                            </div>
+                                            <div class="hamburger-menu-options">
+                                                <div class="hamburger-menu-options-inner">
+                                                    <p><a href="pages/subpages/booking.html">My Pages <i class="fa fa-arrow-right"></i></a></p>
+                                                    <p><a href="#">Logout <i class="fa fa-sign-in-alt"></i></a></p>
+                                                </div>
+                                            </div>
                                         </li>
                                     </ul>
                                 </div>
@@ -62,7 +70,8 @@
         <section class="search-result-section">
             <div class="search-result-wrapper">
                 <!-- filter::begin -->
-                <div class="search-result-childs-wrapper">
+                <div class="search-result-childs-wrapper" id="filter-panel">
+                    <i onclick="toggleFilterPanel()" id="filter-panel-close-btn" class="fa fa-times-circle"></i>
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12 col-lg-12 col-xl-12">
@@ -103,9 +112,10 @@
                         <div class="row">
                             <div class="col-md-12 col-lg-12 col-xl-12">
                                 <div class="search-result-search-bar">
-                                    <div class="search-result-search-bar-childs">
+                                    <div class="search-result-search-bar-childs search-search-inputs">
                                         <input type="text" placeholder="Search.....">
                                         <button>SEARCH<i class="fa fa-search"></i></button>
+                                        <button onclick="toggleFilterPanel()" id="filter-btn">Filter<i class="fa fa-filter"></i></button>
                                     </div>
                                 </div>
                                 <div class="search-breadcrumb">
@@ -385,5 +395,15 @@
 <script src="../../js/slick.js"></script>
 <script src="../../js/sliders.js"></script>
 <!-- slick js::end -->
+
+<script>
+    var filterPanelCloseBtn = document.getElementById("filter-panel-close-btn");
+    var filterPanel = document.getElementById("filter-panel");
+
+    function toggleFilterPanel() {
+        filterPanel.classList.toggle("left100");
+    }
+    
+</script>
 
 </html>

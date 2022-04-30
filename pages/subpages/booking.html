@@ -38,17 +38,26 @@
                         <div class="main-navigation-parent">
                             <div class="main-navigation-childs">
                                 <div class="logo">
-                                    <h1>City<span>Hub</span></h1>
+                                    <img src="../../images/logo.png" alt="brand-logo" draggable="false">
                                 </div>
                             </div>
                             <div class="main-navigation-childs">
                                 <div class="action-btns">
                                     <ul>
                                         <li>
-                                            <a href="register.html">Register</a>
+                                            <a href="pages/auth/login.html">Signup</a>
                                         </li>
-                                        <li>
-                                            <a href="login.html">Sign In</a>
+                                        <li class="cityhub-hamburger-wrapper">
+                                            <div class="cityhub-hamburger-inner-wrapper">
+                                                <i class="fa fa-bars"></i>
+                                            </div>
+                                            <div class="hamburger-menu-options">
+                                                <div class="hamburger-menu-options-inner">
+                                                    <p><a href="pages/subpages/booking.html">My Pages <i
+                                                                class="fa fa-arrow-right"></i></a></p>
+                                                    <p><a href="#">Logout <i class="fa fa-sign-in-alt"></i></a></p>
+                                                </div>
+                                            </div>
                                         </li>
                                     </ul>
                                 </div>
@@ -104,7 +113,11 @@
                     </div>
                 </div>
             </div>
-            <div class="slider-menu-wrapper">
+            <div class="view-options-wrapper">
+                <button onclick="toggleFilterPanel()" class="view-options" id="menu-target-btn">Menu <i class="fa fa-book-open"></i></button>
+            </div>
+            <div class="slider-menu-wrapper" id="slider-menu-target">
+                <i onclick="toggleFilterPanel()" class="fa fa-times-circle" id="menu-panel-close-btn"></i>
                 <div class="container">
                     <div class="row">
                         <div class="col">
@@ -356,6 +369,15 @@
         highlighttargetdate: true,
         prevnextbutton: "show"
     });
+</script>
+
+<script>
+    var menuTargetBtn = document.getElementById("menu-target-btn");
+    var sliderMenuTarget = document.getElementById("slider-menu-target");
+
+    function toggleFilterPanel() {
+        sliderMenuTarget.classList.toggle("left100");
+    }
 </script>
 
 </html>

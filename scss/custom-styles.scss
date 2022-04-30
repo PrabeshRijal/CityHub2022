@@ -95,8 +95,14 @@ a {
     display: none !important;
 }
 
+.active-link-red {
+    color: $cityhub-global-primary-color !important;
+    box-shadow: $global-shadow;
+}
+
 .cituhub-global-input {
     @include cityhubInput;
+    box-shadow: $global-shadow;
 }
 
 .left100 {
@@ -674,14 +680,9 @@ a {
                     @include flexPropertyCentered;
 
                     .logo {
-                        h1 {
-                            font-size: 1.8rem;
-                            color: $cityhub-global-color-dark;
-                            font-weight: $fw-700;
-
-                            span {
-                                color: $cityhub-global-primary-color;
-                            }
+                        img {
+                            height: auto;
+                            width: 6rem;
                         }
                     }
                 }
@@ -693,6 +694,54 @@ a {
                         @include noMarginPadding;
                         display: flex;
                         align-items: center;
+
+                        .cityhub-hamburger-wrapper {
+                            position: relative;
+
+                            &:hover .hamburger-menu-options {
+                                visibility: visible;
+                            }
+
+                            .cityhub-hamburger-inner-wrapper {
+                                i {
+                                    font-size: 1.2rem;
+                                    color: $cityhub-global-color-dark;
+                                    font-weight: $fw-700;
+                                    cursor: pointer;
+                                    margin-bottom: 0.2rem;
+
+                                    &:hover {
+                                        color: $cityhub-global-primary-color;
+                                    }
+                                }
+                            }
+
+                            .hamburger-menu-options {
+                                position: absolute;
+                                top: 300%;
+                                left: -300%;
+                                transform: translate(-50%, -50%);
+                                background-color: #e9e9e9;
+                                padding: 1rem;
+                                border-radius: 0.4rem;
+                                border: 1px solid #d4d4d4;
+                                z-index: 20;
+                                visibility: hidden;
+                                transition: 0.3s;
+
+                                .hamburger-menu-options-inner {
+                                    a {
+                                        white-space: nowrap;
+                                        color: $cityhub-global-color-dark;
+                                        font-weight: $fw-600;
+
+                                        &:hover {
+                                            color: $cityhub-global-primary-color;
+                                        }
+                                    }
+                                }
+                            }
+                        }
 
                         li {
                             list-style-type: none;
@@ -715,17 +764,6 @@ a {
                                     border: 0.15rem solid transparent;
                                     background: $cityhub-global-primary-gradient;
                                     color: $cityhub-global-white;
-                                }
-                            }
-
-                            &:nth-child(2) {
-                                &:hover {
-                                    @include onHoverEffectOnBtnTranslate;
-                                }
-
-                                a {
-                                    border: 0.15rem solid $cityhub-global-primary-color;
-                                    color: $cityhub-global-primary-color;
                                 }
                             }
                         }
@@ -1306,6 +1344,17 @@ a {
             .search-result-childs-wrapper {
                 width: 100%;
                 border-top: $soft-border;
+                position: relative;
+
+                #filter-panel-close-btn {
+                    position: absolute;
+                    top: 1rem;
+                    right: 1rem;
+                    color: $cityhub-global-primary-color;
+                    @include globalMdFont;
+                    cursor: pointer;
+                    z-index: 16;
+                }
 
                 &:first-child {
                     flex: 2;
@@ -1356,6 +1405,10 @@ a {
                             input,
                             button {
                                 padding: 0.356rem 0.6rem;
+                            }
+
+                            #filter-btn {
+                                background-color: green;
                             }
 
                             input {
@@ -1891,8 +1944,35 @@ a {
             }
         }
 
+        .view-options-wrapper {
+            padding: 0 2rem;
+        }
+
+        .view-options {
+            background: green;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            width: 100%;
+            padding: 0.2rem 0;
+            margin: 1rem 0;
+            color: $cityhub-global-white;
+            font-weight: $fw-600;
+        }
+
         .slider-menu-wrapper {
             margin: 0.6rem 0;
+            position: relative;
+
+            #menu-panel-close-btn {
+                color: $cityhub-global-primary-color;
+                @include globalMdFont;
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+                z-index: 12;
+                cursor: pointer;
+            }
 
             .container {
                 border-bottom: 0.2rem solid #c3c3c344;
@@ -2468,67 +2548,574 @@ a {
     }
 
     // about-us-section::end
-    // why-choose-section::begin
-    .why-choose-section {
-        background-color: $cityhub-global-color-Edark;
-        background-image: url("../images/carbon_BG.png");
-        @include sectionPaddingCustom(3rem 0 3rem 0);
 
-        .why-choose-wrapper {
-            .why-choose-icon {
-                i {
-                    color: $cityhub-global-white;
-                    font-size: 3rem;
+    // fashion::begin
+
+
+    .my-cart-view-page-section {
+        .my-cart-all-info-wrapper {
+
+            .table td,
+            .table th {
+                vertical-align: baseline;
+            }
+
+            table {
+                border: 0.1rem solid #e0e0e0;
+
+                thead {
+
+                    td,
+                    th {
+                        text-align: start;
+                        @include globalSmFont;
+                        font-weight: $fw-600;
+                        color: $cityhub-global-color-Edark;
+                    }
+                }
+
+                .product-info-wrapper-parent {
                     display: flex;
                     justify-content: flex-start;
-                    align-content: center;
+                    align-items: center;
+
+                    .product-info-wrapper-child {
+                        &:first-child {
+                            a {
+                                i {
+                                    @include globalSmFont;
+                                    color: #e61313;
+                                }
+
+                                &:hover {
+                                    i {
+                                        color: #ad0a0a;
+                                    }
+                                }
+                            }
+                        }
+
+                        &:nth-child(2) {
+                            margin: 0rem 1.6rem;
+
+                            .product-image-showcase {
+                                img {
+                                    height: 4.2rem;
+                                    width: 4.2rem;
+                                    @include objFitProperty(center);
+                                    box-shadow: $global-shadow;
+                                }
+                            }
+                        }
+
+                        &:last-child {
+                            .product-name-wrapper {
+                                p {
+                                    @include noMarginPadding;
+                                    @include globalSmFont;
+                                    color: $cityhub-global-color-dark;
+                                    font-weight: $fw-500;
+                                }
+                            }
+                        }
+                    }
                 }
             }
 
-            .why-choose-info {
-
-                h3,
+            .my-product-price-list {
                 p {
+                    @include globalSmFont;
+                    color: $cityhub-global-color-dark;
+                    font-weight: $fw-500;
+                }
+            }
+
+            .my-product-quantity-parent {
+                background: #f6f6f6;
+                padding: 0.5rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .my-product-quantity-child {
+                    span {
+                        cursor: pointer;
+
+                        i {
+                            @include globalSmFont;
+                            color: $cityhub-global-color-dark;
+                        }
+                    }
+
+                    p {
+                        margin: 0rem 1rem;
+                        @include globalSmFont;
+                    }
+                }
+            }
+
+            // coupon code::begin
+            .coupon-code-wrapper {
+                .form-group {
+                    display: flex;
+
+                    button {
+                        margin-left: 1rem;
+                        white-space: nowrap;
+                        padding: 0.6rem 0.8rem;
+                        text-align: center;
+                        cursor: pointer;
+                        outline: none;
+                        border: none;
+                        background:$cityhub-global-primary-color;
+                        color: $cityhub-global-white;
+                        @include globalSmFont;
+
+                        &:hover {
+                            background: #a8a8a8;
+                        }
+                    }
+                }
+            }
+
+            .proceed-to-checkout-btns {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+
+                a {
+                    padding: 0.6rem 0.8rem;
+                    background: $cityhub-global-primary-color;
                     color: $cityhub-global-white;
+                    @include globalSmFont;
+                    text-decoration: none;
+                    white-space: nowrap;
+
+                    &:last-child {
+                        margin-left: 1rem;
+                    }
+
+                    &:hover {
+                        background: #a8a8a8;
+                    }
+                }
+            }
+
+            // coupon code::end
+
+            .calculate-shipping-info-wrapper {
+                margin-top: 1.2rem;
+
+                .calculate-shipping-heading {
+                    h3 {
+                        @include globalSmFont;
+                        color: $cityhub-global-color-dark;
+                        font-weight: $fw-600;
+                        margin-bottom: 1rem;
+                    }
                 }
 
-                h3 {
-                    @include globalLgFont;
-                    margin: 1rem 0 1rem 0
+                .calculate-shipping-form {
+                    input {
+                        // @include himalayanOnFocus;
+                    }
+
+                    .update-total-btn {
+                        button {
+                            white-space: nowrap;
+                            padding: 0.6rem 0.8rem;
+                            text-align: center;
+                            width: 100%;
+                            cursor: pointer;
+                            outline: none;
+                            border: none;
+                            background: red;
+                            color: $cityhub-global-white;
+                            @include globalSmFont;
+                            display: block;
+
+                            &:hover {
+                                background: #a8a8a8;
+                            }
+                        }
+                    }
+                }
+
+                .calculate-total-info-wrapper {
+                    table {
+                        border-radius: 1rem !important;
+                        overflow: hidden;
+
+                        tbody {
+                            tr {
+                                &:nth-child(odd) {
+                                    background: #dadada;
+                                }
+
+                                th,
+                                td {
+                                    @include globalSmFont;
+                                    padding: 1.2rem;
+                                }
+
+                                th {
+                                    width: 100%;
+                                }
+
+                                td {
+                                    border-top: none;
+                                    white-space: nowrap;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            // calculate shipping::end
+        }
+
+
+        .my-cart-category-wrapper {
+            .my-cart-heading {
+                h2 {
+                    @include globalSmFont;
+                    font-weight: $fw-600;
+                    color: $cityhub-global-color-dark;
                 }
 
                 p {
                     @include globalSmFont;
+                    color: $cityhub-global-color-dark;
+                }
+            }
+
+            ul {
+                li {
+                    margin: 1rem 0;
+                    list-style-type: none;
+                    border-bottom: 0.2rem solid rgb(255, 255, 255);
+
+                    a {
+                        text-decoration: none;
+                        @include globalSmFont;
+                        color: $cityhub-global-color-dark;
+
+                        &:hover {
+                            color: $cityhub-global-color-dark;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    .heading-txt {
+        font-size: 1rem;
+        margin: 1rem 0;
+        margin-bottom: 0;
+        text-align: center;
+        border-bottom: 0.14rem solid rgb(141, 141, 141);
+        font-weight: $fw-600;
+        @include globalSmFont;
+    }
+
+    .single-heading {
+        @include globalSmFont;
+        font-weight: $fw-600;
+        margin: 1rem 0;
+    }
+
+    .know-your-size {
+        ul {
+            display: flex;
+
+            li {
+                margin: 0rem 0.3rem;
+                @include noListStyle;
+                background: $cityhub-global-primary-color;
+                @include flexPropertyCentered;
+                cursor: pointer;
+
+                a {
+                    color: $cityhub-global-white;
+                    font-size: 0.7rem;
+                    font-weight: $fw-600;
+                    padding: 0.5rem 0.8rem;
                 }
             }
         }
     }
 
-    // why-choose-section::end
-    // client-section::begin
-    .client-section {
-        @include sectionPaddingCustom(3rem 0 3rem 0);
-        background: $cityhub-global-color-gray;
+    .single-products {
+        ul {
+            display: flex;
 
-        .clients-wrapper {
-            ul {
+            li {
+                @include noListStyle;
+                height: 1.6rem;
+                width: 1.6rem;
+                margin: 0 0.4rem;
+                border-radius: 100%;
+                border: 1px solid #ffffff;
+                cursor: pointer;
+                box-shadow: $global-shadow;
+            }
+        }
+    }
+
+    .fashion-single-view-info {
+        span {
+            color: $cityhub-global-color-dark;
+            font-size: 0.8rem;
+        }
+
+        h3 {
+            @include globalLgFont;
+        }
+
+        h4 {
+            @include globalSmFont;
+            color: $cityhub-global-primary-color;
+            font-weight: $fw-600;
+            margin: 0.6rem 0;
+        }
+
+        p {
+            @include globalSmFont;
+            color: $cityhub-global-color-dark;
+            margin-bottom: 1rem;
+        }
+
+        .add-to-cart {
+            button {
+                border: none;
+                background: $cityhub-global-primary-color;
+                color: $cityhub-global-white;
+                padding: 0.2rem 0.6rem;
+                border-radius: 0.3rem;
+                cursor: pointer;
+
+                &:hover {
+                    background: #626262;
+                }
+            }
+
+            input {
+                width: 4rem;
+                margin-left: 0.5rem;
+                padding: 0rem 0.3rem;
+                background: #f8f8f8;
+                border: 1px solid #dedede
+            }
+
+            input:focus {
+                outline: 1px solid $cityhub-global-primary-color;
+                background: $cityhub-global-white;
+            }
+        }
+    }
+
+    .fashion-single-view {
+        .fashion-single-view-slider {
+            img {
                 width: 100%;
-                display: grid;
-                grid-template-rows: auto;
-                grid-template-columns: repeat(auto-fit, minmax(132px, 1fr));
+                height: 12rem;
+            }
+        }
+    }
 
-                .our-clients {
-                    @include flexPropertyCentered;
+    .hover-line-generator {
+        color: $cityhub-global-color-Edark;
+    }
+
+    .global-shopping-cart {
+        border-radius: 0.2rem;
+        overflow: hidden;
+        border: none;
+        margin-top: 1rem;
+
+        .card-header {
+            background: none;
+            box-shadow: $global-shadow;
+            padding: 0;
+            border: 1px solid #e8e8e8;
+
+            img {
+                height: 12rem;
+                width: 100%;
+                object-fit: contain;
+                object-position: center;
+            }
+        }
+
+        .card-body {
+            margin: 0;
+            padding: 0;
+
+            h2 {
+                margin-top: 0.4rem;
+            }
+
+            h2,
+            p {
+                font-size: 1.2rem;
+                font-weight: $fw-600;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+
+            p {
+                @include globalSmFont;
+                color: $cityhub-global-primary-color;
+            }
+
+            span {
+                color: #989898;
+                font-weight: $fw-600;
+            }
+        }
+    }
+
+    .fashion-breadcrumb {
+        margin-top: 1rem;
+
+        a {
+            border: none !important;
+            background: none !important;
+
+            &:hover {
+                color: $cityhub-global-primary-color !important;
+            }
+        }
+    }
+
+    .fashion-search-wrapper {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+        margin-bottom: 1rem;
+
+        .fashion-search-childs-wrapper {
+            &:first-child {
+                flex: 1;
+
+                a {
+                    color: $cityhub-global-color-Edark;
+                    background: #f8f8f8;
+                    border: 1px solid #e8e8e8;
+                    padding: 0.3rem 0.6rem;
+                    margin: 0rem 0.3rem;
+                    border-radius: 0.5rem;
+                }
+            }
+
+            &:last-child {
+                flex: 1;
+                display: flex;
+
+                input,
+                button {
+                    padding: 0.356rem 0.6rem;
+                }
+
+                input {
+                    width: 100%;
+                    height: 2.2rem;
+                    outline: none;
+                    border: 1px solid #f8f8f8f8;
+                    background-color: #fcfcfc;
+                }
+
+                button {
+                    background-color: $cityhub-global-primary-color;
+                    outline: none;
+                    border: none;
+                    color: $cityhub-global-white;
+                    cursor: pointer;
+                    white-space: nowrap;
+                    height: 2.2rem;
+
+                    &:hover {
+                        background-color: $cityhub-global-color-dark;
+                    }
+
+                    i {
+                        margin-left: 0.6rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .show-product-cart-wrapper {
+        padding: 0rem 1rem;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    }
+
+    .fashion-section {
+        .fashion-side-nav {
+            background: #f8f8f8;
+            border: 1px solid #e2e2e2;
+
+        }
+
+        .fashion-cat-lists {
+            margin-top: 1rem;
+
+            h3 {
+                @include globalSmFont;
+                font-weight: $fw-400;
+                color: $cityhub-global-color-dark;
+                margin-bottom: 0.5rem
+            }
+
+            .color-wrapper {
+                li {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+
+                    .color-box {
+                        height: 1.6rem;
+                        width: 1.6rem;
+                        background: $cityhub-global-primary-color;
+                        border-radius: 100%;
+                        margin: 0 0.6rem;
+                        box-shadow: $global-shadow;
+                        border: 1px solid #f8f8f8;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .category-lists {
+                li {
+                    border-bottom: 0.15rem solid #dfdfdf;
+                    padding: 0 0 0.3rem 0;
+                }
+            }
+
+            ul {
+                padding-left: 1rem;
+
+                input[type="checkbox"] {
+                    margin-right: 1rem;
+                }
+
+                li {
+                    @include noListStyle;
+                    margin: 0.6rem 0;
 
                     a {
-                        img {
-                            height: auto;
-                            width: auto;
-                            transition: $global-transition;
+                        color: $cityhub-global-color-Edark;
+                        font-size: 1rem;
+                        font-weight: $fw-600;
 
-                            &:hover {
-                                transform: scale(1.05);
-                            }
+                        &:hover {
+                            color: $cityhub-global-primary-color;
                         }
                     }
                 }
@@ -2536,7 +3123,8 @@ a {
         }
     }
 
-    // client-section::end
+    // fashion::end
+
     // cityhub-footer-section::begin
     .cityhub-footer-section {
         background-color: $cityhub-global-color-Edark;
@@ -2554,6 +3142,24 @@ a {
             width: 80%;
             background: $cityhub-global-primary-gradient;
             border-radius: 2rem;
+        }
+
+        .footer-contact-us {
+            ul {
+                margin: 1rem 0;
+
+                li {
+                    color: $cityhub-global-white;
+                    font-weight: $fw-500;
+                    @include noListStyle;
+                    margin: 1rem 0;
+
+                    i {
+                        width: 1rem;
+                        margin-right: 1rem;
+                    }
+                }
+            }
         }
 
         .footer-brand-logo-wrapper {
@@ -2593,81 +3199,30 @@ a {
             }
         }
 
-        .quick-links-wrapper {
-            .quick-links {
-                display: inline-flex;
-
-                a {
-                    @include globalESmFont;
-                    padding: 0.1rem 0.6rem;
-                    border-radius: 2rem;
-                    background: $cityhub-global-primary-gradient;
-                    border: 0.15rem solid transparent;
-                    white-space: nowrap;
-                    margin: 0.4rem 0.2rem;
-                    color: $cityhub-global-white;
-
-                    &:hover {
-                        border: 0.15rem solid $cityhub-global-white;
-                        background: transparent;
-                    }
-                }
-            }
-        }
-
-        .accounts-wrapper {
-            ul {
-                li {
-                    margin: 0.4rem 0rem;
-                    list-style-type: none;
-
-                    a {
-                        @include globalSmFont;
-                        color: $cityhub-global-white;
-
-                        &:hover {
-                            color: $cityhub-global-primary-color;
-                        }
-                    }
-                }
-            }
-        }
-
-        .subscribe-wrapper {
-            .subscribe-inner-wrapper {
-                margin: 1rem 0;
+        .footer-contact-info {
+            .footer-contact-icon-wrapper {
                 display: flex;
 
-                input,
-                button {
-                    height: 1.8rem;
-                }
+                a {
+                    .footer-contact-icon {
+                        margin-right: 1rem;
+                        background-color: $cityhub-global-white;
+                        height: 2.2rem;
+                        width: 2.2rem;
+                        @include flexPropertyCentered;
+                        border-radius: 0.2rem;
 
-                input {
-                    border: none;
-                    padding: 0rem 0rem 0rem 1rem;
-                    outline: none;
-                    border-radius: 0;
+                        &:hover {
+                            background: $cityhub-global-primary-color;
 
-                    &:focus {
-                        box-shadow: 0 0 0.5rem 0 #000000;
-                    }
-                }
+                            i {
+                                color: $cityhub-global-white;
+                            }
+                        }
 
-                button {
-                    border: none;
-                    outline: none;
-                    background: $cityhub-global-primary-gradient;
-                    padding: 0rem 0.6rem;
-                    @include globalSmFont;
-                    color: $cityhub-global-white;
-                    font-weight: $fw-500;
-                    transition: $global-transition;
-
-                    &:hover {
-                        background: $cityhub-global-color-gray;
-                        color: $cityhub-global-primary-color;
-                        transition: $global-transition;
+                        i {
+                            color: $cityhub-global-color-dark;
+                        }
                     }
                 }
             }
@@ -4303,6 +4858,22 @@ a {
     .cityhub-master-section .cityhub-dashboard-section .dashboard-master-wrapper .dashboard-side-nav .profile-picture-wrapper .cancel-btn {
         display: none;
     }
+
+    #filter-panel-close-btn {
+        display: none;
+    }
+
+    #filter-btn {
+        display: none;
+    }
+
+    #menu-panel-close-btn {
+        display: none;
+    }
+
+    #menu-target-btn {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 1452px) {
@@ -4335,6 +4906,7 @@ a {
         width: 24rem;
     }
 }
+
 
 @media only screen and (max-width: 767px) {
     html {
@@ -4369,8 +4941,15 @@ a {
         padding: 0 0;
     }
 
-    .cityhub-master-section .search-result-section .search-result-wrapper .search-result-childs-wrapper:nth-child(2) .search-result-search-bar .search-result-search-bar-childs input {
-        width: 70%;
+    .cityhub-master-section .search-result-section .search-result-wrapper .search-result-childs-wrapper:nth-child(2) .search-result-search-bar .search-result-search-bar-childs {
+        input {
+            width: 100%;
+        }
+
+        button {
+            width: 100%;
+            margin: 0.4rem 0;
+        }
     }
 
     .cityhub-master-section .search-result-section .search-result-wrapper {
@@ -4387,6 +4966,24 @@ a {
 
     .cityhub-master-section .search-result-section .search-result-wrapper .search-result-childs-wrapper:nth-child(2) .show-results .show-result .show-result-childs:last-child .all-info h3 {
         margin-top: 1rem;
+    }
+
+    #filter-panel-close-btn {
+        display: block;
+    }
+
+    #filter-btn {
+        display: block;
+    }
+
+    .cityhub-master-section .search-result-section .search-result-wrapper .search-result-childs-wrapper:first-child {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        z-index: 12;
+        height: 100%;
+        width: 100%;
+        transition: $global-transition;
     }
 
     // search::end
@@ -4430,6 +5027,39 @@ a {
     }
 
     // why choose us::end
+    // booking::begin
+    .cityhub-master-section .booking-section .slider-menu-wrapper {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        background-color: #f8f8f8;
+        height: 100%;
+        width: 100%;
+        z-index: 12;
+        margin: 0;
+    }
+
+    .cityhub-master-section .booking-section .client-profile-slider-parent {
+        flex-direction: column;
+    }
+
+    .cityhub-master-section .booking-section .slider-menu-wrapper .container {
+        border-bottom: none;
+
+        .row {
+            display: block;
+        }
+    }
+
+    #menu-target-btn {
+        display: block;
+    }
+
+    #menu-panel-close-btn {
+        display: block;
+    }
+
+    // booking::end
     // footer::begin
     .cityhub-master-section .copy-right-section .copy-right-parent-wrapper {
         flex-direction: column;
@@ -4464,6 +5094,17 @@ a {
     }
 
     // how to use::end
+    // fashion::begin
+    .cityhub-master-section .fashion-search-wrapper {
+        flex-direction: column;
+        padding: 0rem 1rem;
+    }
+
+    .cityhub-master-section .fashion-search-wrapper .fashion-search-childs-wrapper:first-child {
+        margin-bottom: 1rem;
+    }
+
+    // fashion::end
     // ----------------------------dashboard----------------------
     // dashboard responsive::begin
     .left100 {
@@ -4534,8 +5175,17 @@ a {
 }
 
 @media only screen and (max-width: 426px) {
+    .search-search-inputs {
+        display: flex;
+        flex-direction: column;
+
+        button {
+            margin: 0.4rem 0;
+        }
+    }
+
     .cityhub-master-section .search-result-section .search-result-wrapper .search-result-childs-wrapper:nth-child(2) .search-result-search-bar .search-result-search-bar-childs input {
-        width: 50%;
+        width: 100%;
     }
 }
 

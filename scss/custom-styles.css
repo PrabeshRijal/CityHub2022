@@ -100,9 +100,17 @@ a {
   display: none !important;
 }
 
+.active-link-red {
+  color: #e81c2e !important;
+  -webkit-box-shadow: 0rem 0.1rem 0.4rem 0rem #0000003f;
+          box-shadow: 0rem 0.1rem 0.4rem 0rem #0000003f;
+}
+
 .cituhub-global-input {
   padding: 0.2rem 0.4rem !important;
   border-radius: 0 !important;
+  -webkit-box-shadow: 0rem 0.1rem 0.4rem 0rem #0000003f;
+          box-shadow: 0rem 0.1rem 0.4rem 0rem #0000003f;
 }
 
 .left100 {
@@ -798,14 +806,9 @@ a {
           align-items: center;
 }
 
-.cityhub-master-section .main-navigation-section .main-navigation-parent .main-navigation-childs:first-child .logo h1 {
-  font-size: 1.8rem;
-  color: #5d5d5d;
-  font-weight: 700;
-}
-
-.cityhub-master-section .main-navigation-section .main-navigation-parent .main-navigation-childs:first-child .logo h1 span {
-  color: #e81c2e;
+.cityhub-master-section .main-navigation-section .main-navigation-parent .main-navigation-childs:first-child .logo img {
+  height: auto;
+  width: 6rem;
 }
 
 .cityhub-master-section .main-navigation-section .main-navigation-parent .main-navigation-childs:last-child {
@@ -829,6 +832,52 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.cityhub-master-section .main-navigation-section .main-navigation-parent .main-navigation-childs:last-child ul .cityhub-hamburger-wrapper {
+  position: relative;
+}
+
+.cityhub-master-section .main-navigation-section .main-navigation-parent .main-navigation-childs:last-child ul .cityhub-hamburger-wrapper:hover .hamburger-menu-options {
+  visibility: visible;
+}
+
+.cityhub-master-section .main-navigation-section .main-navigation-parent .main-navigation-childs:last-child ul .cityhub-hamburger-wrapper .cityhub-hamburger-inner-wrapper i {
+  font-size: 1.2rem;
+  color: #5d5d5d;
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 0.2rem;
+}
+
+.cityhub-master-section .main-navigation-section .main-navigation-parent .main-navigation-childs:last-child ul .cityhub-hamburger-wrapper .cityhub-hamburger-inner-wrapper i:hover {
+  color: #e81c2e;
+}
+
+.cityhub-master-section .main-navigation-section .main-navigation-parent .main-navigation-childs:last-child ul .cityhub-hamburger-wrapper .hamburger-menu-options {
+  position: absolute;
+  top: 300%;
+  left: -300%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #e9e9e9;
+  padding: 1rem;
+  border-radius: 0.4rem;
+  border: 1px solid #d4d4d4;
+  z-index: 20;
+  visibility: hidden;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.cityhub-master-section .main-navigation-section .main-navigation-parent .main-navigation-childs:last-child ul .cityhub-hamburger-wrapper .hamburger-menu-options .hamburger-menu-options-inner a {
+  white-space: nowrap;
+  color: #5d5d5d;
+  font-weight: 600;
+}
+
+.cityhub-master-section .main-navigation-section .main-navigation-parent .main-navigation-childs:last-child ul .cityhub-hamburger-wrapper .hamburger-menu-options .hamburger-menu-options-inner a:hover {
+  color: #e81c2e;
 }
 
 .cityhub-master-section .main-navigation-section .main-navigation-parent .main-navigation-childs:last-child ul li {
@@ -856,16 +905,6 @@ a {
   border: 0.15rem solid transparent;
   background: radial-gradient(#eb182a, #da1424);
   color: #fff;
-}
-
-.cityhub-master-section .main-navigation-section .main-navigation-parent .main-navigation-childs:last-child ul li:nth-child(2):hover {
-  -webkit-transform: translateY(-0.2rem);
-          transform: translateY(-0.2rem);
-}
-
-.cityhub-master-section .main-navigation-section .main-navigation-parent .main-navigation-childs:last-child ul li:nth-child(2) a {
-  border: 0.15rem solid #e81c2e;
-  color: #e81c2e;
 }
 
 .cityhub-master-section .main-navigation-section .main-navigation-parent .main-navigation-childs .auth-user-details-wrapper {
@@ -1572,6 +1611,17 @@ a {
 .cityhub-master-section .search-result-section .search-result-wrapper .search-result-childs-wrapper {
   width: 100%;
   border-top: 2px solid #ececec;
+  position: relative;
+}
+
+.cityhub-master-section .search-result-section .search-result-wrapper .search-result-childs-wrapper #filter-panel-close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: #e81c2e;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 16;
 }
 
 .cityhub-master-section .search-result-section .search-result-wrapper .search-result-childs-wrapper:first-child {
@@ -1624,6 +1674,10 @@ a {
 .cityhub-master-section .search-result-section .search-result-wrapper .search-result-childs-wrapper:nth-child(2) .search-result-search-bar .search-result-search-bar-childs input,
 .cityhub-master-section .search-result-section .search-result-wrapper .search-result-childs-wrapper:nth-child(2) .search-result-search-bar .search-result-search-bar-childs button {
   padding: 0.356rem 0.6rem;
+}
+
+.cityhub-master-section .search-result-section .search-result-wrapper .search-result-childs-wrapper:nth-child(2) .search-result-search-bar .search-result-search-bar-childs #filter-btn {
+  background-color: green;
 }
 
 .cityhub-master-section .search-result-section .search-result-wrapper .search-result-childs-wrapper:nth-child(2) .search-result-search-bar .search-result-search-bar-childs input {
@@ -2193,8 +2247,35 @@ a {
   margin-top: -0.2rem;
 }
 
+.cityhub-master-section .booking-section .view-options-wrapper {
+  padding: 0 2rem;
+}
+
+.cityhub-master-section .booking-section .view-options {
+  background: green;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+  padding: 0.2rem 0;
+  margin: 1rem 0;
+  color: #fff;
+  font-weight: 600;
+}
+
 .cityhub-master-section .booking-section .slider-menu-wrapper {
   margin: 0.6rem 0;
+  position: relative;
+}
+
+.cityhub-master-section .booking-section .slider-menu-wrapper #menu-panel-close-btn {
+  color: #e81c2e;
+  font-size: 1.2rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 12;
+  cursor: pointer;
 }
 
 .cityhub-master-section .booking-section .slider-menu-wrapper .container {
@@ -2988,55 +3069,76 @@ a {
   margin-top: -3rem;
 }
 
-.cityhub-master-section .why-choose-section {
-  background-color: #2f2f2f;
-  background-image: url("../images/carbon_BG.png");
-  padding: 3rem 0 3rem 0;
+.cityhub-master-section .my-cart-view-page-section .my-cart-all-info-wrapper .table td,
+.cityhub-master-section .my-cart-view-page-section .my-cart-all-info-wrapper .table th {
+  vertical-align: baseline;
 }
 
-.cityhub-master-section .why-choose-section .why-choose-wrapper .why-choose-icon i {
-  color: #fff;
-  font-size: 3rem;
+.cityhub-master-section .my-cart-view-page-section .my-cart-all-info-wrapper table {
+  border: 0.1rem solid #e0e0e0;
+}
+
+.cityhub-master-section .my-cart-view-page-section .my-cart-all-info-wrapper table thead td,
+.cityhub-master-section .my-cart-view-page-section .my-cart-all-info-wrapper table thead th {
+  text-align: start;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2f2f2f;
+}
+
+.cityhub-master-section .my-cart-view-page-section .my-cart-all-info-wrapper table .product-info-wrapper-parent {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.cityhub-master-section .why-choose-section .why-choose-wrapper .why-choose-info h3,
-.cityhub-master-section .why-choose-section .why-choose-wrapper .why-choose-info p {
-  color: #fff;
-}
-
-.cityhub-master-section .why-choose-section .why-choose-wrapper .why-choose-info h3 {
-  font-size: 1.4rem;
-  margin: 1rem 0 1rem 0;
-}
-
-.cityhub-master-section .why-choose-section .why-choose-wrapper .why-choose-info p {
+.cityhub-master-section .my-cart-view-page-section .my-cart-all-info-wrapper table .product-info-wrapper-parent .product-info-wrapper-child:first-child a i {
   font-size: 1rem;
+  color: #e61313;
 }
 
-.cityhub-master-section .client-section {
-  padding: 3rem 0 3rem 0;
-  background: #f8f8f8;
+.cityhub-master-section .my-cart-view-page-section .my-cart-all-info-wrapper table .product-info-wrapper-parent .product-info-wrapper-child:first-child a:hover i {
+  color: #ad0a0a;
 }
 
-.cityhub-master-section .client-section .clients-wrapper ul {
-  width: 100%;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: auto;
-      grid-template-rows: auto;
-  -ms-grid-columns: (minmax(132px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(132px, 1fr));
+.cityhub-master-section .my-cart-view-page-section .my-cart-all-info-wrapper table .product-info-wrapper-parent .product-info-wrapper-child:nth-child(2) {
+  margin: 0rem 1.6rem;
 }
 
-.cityhub-master-section .client-section .clients-wrapper ul .our-clients {
+.cityhub-master-section .my-cart-view-page-section .my-cart-all-info-wrapper table .product-info-wrapper-parent .product-info-wrapper-child:nth-child(2) .product-image-showcase img {
+  height: 4.2rem;
+  width: 4.2rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  -webkit-box-shadow: 0rem 0.1rem 0.4rem 0rem #0000003f;
+          box-shadow: 0rem 0.1rem 0.4rem 0rem #0000003f;
+}
+
+.cityhub-master-section .my-cart-view-page-section .my-cart-all-info-wrapper table .product-info-wrapper-parent .product-info-wrapper-child:last-child .product-name-wrapper p {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  color: #5d5d5d;
+  font-weight: 500;
+}
+
+.cityhub-master-section .my-cart-view-page-section .my-cart-all-info-wrapper .my-product-price-list p {
+  font-size: 1rem;
+  color: #5d5d5d;
+  font-weight: 500;
+}
+
+.cityhub-master-section .my-cart-view-page-section .my-cart-all-info-wrapper .my-product-quantity-parent {
+  background: #f6f6f6;
+  padding: 0.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3048,16 +3150,475 @@ a {
           align-items: center;
 }
 
-.cityhub-master-section .client-section .clients-wrapper ul .our-clients a img {
-  height: auto;
-  width: auto;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
+.cityhub-master-section .my-cart-view-page-section .my-cart-all-info-wrapper .my-product-quantity-parent .my-product-quantity-child span {
+  cursor: pointer;
 }
 
-.cityhub-master-section .client-section .clients-wrapper ul .our-clients a img:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+.cityhub-master-section .my-cart-view-page-section .my-cart-all-info-wrapper .my-product-quantity-parent .my-product-quantity-child span i {
+  font-size: 1rem;
+  color: #5d5d5d;
+}
+
+.cityhub-master-section .my-cart-view-page-section .my-cart-all-info-wrapper .my-product-quantity-parent .my-product-quantity-child p {
+  margin: 0rem 1rem;
+  font-size: 1rem;
+}
+
+.cityhub-master-section .my-cart-view-page-section .my-cart-all-info-wrapper .coupon-code-wrapper .form-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cityhub-master-section .my-cart-view-page-section .my-cart-all-info-wrapper .coupon-code-wrapper .form-group button {
+  margin-left: 1rem;
+  white-space: nowrap;
+  padding: 0.6rem 0.8rem;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: #e81c2e;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.cityhub-master-section .my-cart-view-page-section .my-cart-all-info-wrapper .coupon-code-wrapper .form-group button:hover {
+  background: #a8a8a8;
+}
+
+.cityhub-master-section .my-cart-view-page-section .my-cart-all-info-wrapper .proceed-to-checkout-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cityhub-master-section .my-cart-view-page-section .my-cart-all-info-wrapper .proceed-to-checkout-btns a {
+  padding: 0.6rem 0.8rem;
+  background: #e81c2e;
+  color: #fff;
+  font-size: 1rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.cityhub-master-section .my-cart-view-page-section .my-cart-all-info-wrapper .proceed-to-checkout-btns a:last-child {
+  margin-left: 1rem;
+}
+
+.cityhub-master-section .my-cart-view-page-section .my-cart-all-info-wrapper .proceed-to-checkout-btns a:hover {
+  background: #a8a8a8;
+}
+
+.cityhub-master-section .my-cart-view-page-section .my-cart-all-info-wrapper .calculate-shipping-info-wrapper {
+  margin-top: 1.2rem;
+}
+
+.cityhub-master-section .my-cart-view-page-section .my-cart-all-info-wrapper .calculate-shipping-info-wrapper .calculate-shipping-heading h3 {
+  font-size: 1rem;
+  color: #5d5d5d;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.cityhub-master-section .my-cart-view-page-section .my-cart-all-info-wrapper .calculate-shipping-info-wrapper .calculate-shipping-form .update-total-btn button {
+  white-space: nowrap;
+  padding: 0.6rem 0.8rem;
+  text-align: center;
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: red;
+  color: #fff;
+  font-size: 1rem;
+  display: block;
+}
+
+.cityhub-master-section .my-cart-view-page-section .my-cart-all-info-wrapper .calculate-shipping-info-wrapper .calculate-shipping-form .update-total-btn button:hover {
+  background: #a8a8a8;
+}
+
+.cityhub-master-section .my-cart-view-page-section .my-cart-all-info-wrapper .calculate-shipping-info-wrapper .calculate-total-info-wrapper table {
+  border-radius: 1rem !important;
+  overflow: hidden;
+}
+
+.cityhub-master-section .my-cart-view-page-section .my-cart-all-info-wrapper .calculate-shipping-info-wrapper .calculate-total-info-wrapper table tbody tr:nth-child(odd) {
+  background: #dadada;
+}
+
+.cityhub-master-section .my-cart-view-page-section .my-cart-all-info-wrapper .calculate-shipping-info-wrapper .calculate-total-info-wrapper table tbody tr th,
+.cityhub-master-section .my-cart-view-page-section .my-cart-all-info-wrapper .calculate-shipping-info-wrapper .calculate-total-info-wrapper table tbody tr td {
+  font-size: 1rem;
+  padding: 1.2rem;
+}
+
+.cityhub-master-section .my-cart-view-page-section .my-cart-all-info-wrapper .calculate-shipping-info-wrapper .calculate-total-info-wrapper table tbody tr th {
+  width: 100%;
+}
+
+.cityhub-master-section .my-cart-view-page-section .my-cart-all-info-wrapper .calculate-shipping-info-wrapper .calculate-total-info-wrapper table tbody tr td {
+  border-top: none;
+  white-space: nowrap;
+}
+
+.cityhub-master-section .my-cart-view-page-section .my-cart-category-wrapper .my-cart-heading h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #5d5d5d;
+}
+
+.cityhub-master-section .my-cart-view-page-section .my-cart-category-wrapper .my-cart-heading p {
+  font-size: 1rem;
+  color: #5d5d5d;
+}
+
+.cityhub-master-section .my-cart-view-page-section .my-cart-category-wrapper ul li {
+  margin: 1rem 0;
+  list-style-type: none;
+  border-bottom: 0.2rem solid white;
+}
+
+.cityhub-master-section .my-cart-view-page-section .my-cart-category-wrapper ul li a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #5d5d5d;
+}
+
+.cityhub-master-section .my-cart-view-page-section .my-cart-category-wrapper ul li a:hover {
+  color: #5d5d5d;
+}
+
+.cityhub-master-section .heading-txt {
+  font-size: 1rem;
+  margin: 1rem 0;
+  margin-bottom: 0;
+  text-align: center;
+  border-bottom: 0.14rem solid #8d8d8d;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.cityhub-master-section .single-heading {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 1rem 0;
+}
+
+.cityhub-master-section .know-your-size ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cityhub-master-section .know-your-size ul li {
+  margin: 0rem 0.3rem;
+  list-style-type: none;
+  background: #e81c2e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.cityhub-master-section .know-your-size ul li a {
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.5rem 0.8rem;
+}
+
+.cityhub-master-section .single-products ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cityhub-master-section .single-products ul li {
+  list-style-type: none;
+  height: 1.6rem;
+  width: 1.6rem;
+  margin: 0 0.4rem;
+  border-radius: 100%;
+  border: 1px solid #ffffff;
+  cursor: pointer;
+  -webkit-box-shadow: 0rem 0.1rem 0.4rem 0rem #0000003f;
+          box-shadow: 0rem 0.1rem 0.4rem 0rem #0000003f;
+}
+
+.cityhub-master-section .fashion-single-view-info span {
+  color: #5d5d5d;
+  font-size: 0.8rem;
+}
+
+.cityhub-master-section .fashion-single-view-info h3 {
+  font-size: 1.4rem;
+}
+
+.cityhub-master-section .fashion-single-view-info h4 {
+  font-size: 1rem;
+  color: #e81c2e;
+  font-weight: 600;
+  margin: 0.6rem 0;
+}
+
+.cityhub-master-section .fashion-single-view-info p {
+  font-size: 1rem;
+  color: #5d5d5d;
+  margin-bottom: 1rem;
+}
+
+.cityhub-master-section .fashion-single-view-info .add-to-cart button {
+  border: none;
+  background: #e81c2e;
+  color: #fff;
+  padding: 0.2rem 0.6rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+.cityhub-master-section .fashion-single-view-info .add-to-cart button:hover {
+  background: #626262;
+}
+
+.cityhub-master-section .fashion-single-view-info .add-to-cart input {
+  width: 4rem;
+  margin-left: 0.5rem;
+  padding: 0rem 0.3rem;
+  background: #f8f8f8;
+  border: 1px solid #dedede;
+}
+
+.cityhub-master-section .fashion-single-view-info .add-to-cart input:focus {
+  outline: 1px solid #e81c2e;
+  background: #fff;
+}
+
+.cityhub-master-section .fashion-single-view .fashion-single-view-slider img {
+  width: 100%;
+  height: 12rem;
+}
+
+.cityhub-master-section .hover-line-generator {
+  color: #2f2f2f;
+}
+
+.cityhub-master-section .global-shopping-cart {
+  border-radius: 0.2rem;
+  overflow: hidden;
+  border: none;
+  margin-top: 1rem;
+}
+
+.cityhub-master-section .global-shopping-cart .card-header {
+  background: none;
+  -webkit-box-shadow: 0rem 0.1rem 0.4rem 0rem #0000003f;
+          box-shadow: 0rem 0.1rem 0.4rem 0rem #0000003f;
+  padding: 0;
+  border: 1px solid #e8e8e8;
+}
+
+.cityhub-master-section .global-shopping-cart .card-header img {
+  height: 12rem;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.cityhub-master-section .global-shopping-cart .card-body {
+  margin: 0;
+  padding: 0;
+}
+
+.cityhub-master-section .global-shopping-cart .card-body h2 {
+  margin-top: 0.4rem;
+}
+
+.cityhub-master-section .global-shopping-cart .card-body h2,
+.cityhub-master-section .global-shopping-cart .card-body p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.cityhub-master-section .global-shopping-cart .card-body p {
+  font-size: 1rem;
+  color: #e81c2e;
+}
+
+.cityhub-master-section .global-shopping-cart .card-body span {
+  color: #989898;
+  font-weight: 600;
+}
+
+.cityhub-master-section .fashion-breadcrumb {
+  margin-top: 1rem;
+}
+
+.cityhub-master-section .fashion-breadcrumb a {
+  border: none !important;
+  background: none !important;
+}
+
+.cityhub-master-section .fashion-breadcrumb a:hover {
+  color: #e81c2e !important;
+}
+
+.cityhub-master-section .fashion-search-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.cityhub-master-section .fashion-search-wrapper .fashion-search-childs-wrapper:first-child {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.cityhub-master-section .fashion-search-wrapper .fashion-search-childs-wrapper:first-child a {
+  color: #2f2f2f;
+  background: #f8f8f8;
+  border: 1px solid #e8e8e8;
+  padding: 0.3rem 0.6rem;
+  margin: 0rem 0.3rem;
+  border-radius: 0.5rem;
+}
+
+.cityhub-master-section .fashion-search-wrapper .fashion-search-childs-wrapper:last-child {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cityhub-master-section .fashion-search-wrapper .fashion-search-childs-wrapper:last-child input,
+.cityhub-master-section .fashion-search-wrapper .fashion-search-childs-wrapper:last-child button {
+  padding: 0.356rem 0.6rem;
+}
+
+.cityhub-master-section .fashion-search-wrapper .fashion-search-childs-wrapper:last-child input {
+  width: 100%;
+  height: 2.2rem;
+  outline: none;
+  border: 1px solid #f8f8f8f8;
+  background-color: #fcfcfc;
+}
+
+.cityhub-master-section .fashion-search-wrapper .fashion-search-childs-wrapper:last-child button {
+  background-color: #e81c2e;
+  outline: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  white-space: nowrap;
+  height: 2.2rem;
+}
+
+.cityhub-master-section .fashion-search-wrapper .fashion-search-childs-wrapper:last-child button:hover {
+  background-color: #5d5d5d;
+}
+
+.cityhub-master-section .fashion-search-wrapper .fashion-search-childs-wrapper:last-child button i {
+  margin-left: 0.6rem;
+}
+
+.cityhub-master-section .show-product-cart-wrapper {
+  padding: 0rem 1rem;
+  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.cityhub-master-section .fashion-section .fashion-side-nav {
+  background: #f8f8f8;
+  border: 1px solid #e2e2e2;
+}
+
+.cityhub-master-section .fashion-section .fashion-cat-lists {
+  margin-top: 1rem;
+}
+
+.cityhub-master-section .fashion-section .fashion-cat-lists h3 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #5d5d5d;
+  margin-bottom: 0.5rem;
+}
+
+.cityhub-master-section .fashion-section .fashion-cat-lists .color-wrapper li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cityhub-master-section .fashion-section .fashion-cat-lists .color-wrapper li .color-box {
+  height: 1.6rem;
+  width: 1.6rem;
+  background: #e81c2e;
+  border-radius: 100%;
+  margin: 0 0.6rem;
+  -webkit-box-shadow: 0rem 0.1rem 0.4rem 0rem #0000003f;
+          box-shadow: 0rem 0.1rem 0.4rem 0rem #0000003f;
+  border: 1px solid #f8f8f8;
+  cursor: pointer;
+}
+
+.cityhub-master-section .fashion-section .fashion-cat-lists .category-lists li {
+  border-bottom: 0.15rem solid #dfdfdf;
+  padding: 0 0 0.3rem 0;
+}
+
+.cityhub-master-section .fashion-section .fashion-cat-lists ul {
+  padding-left: 1rem;
+}
+
+.cityhub-master-section .fashion-section .fashion-cat-lists ul input[type="checkbox"] {
+  margin-right: 1rem;
+}
+
+.cityhub-master-section .fashion-section .fashion-cat-lists ul li {
+  list-style-type: none;
+  margin: 0.6rem 0;
+}
+
+.cityhub-master-section .fashion-section .fashion-cat-lists ul li a {
+  color: #2f2f2f;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.cityhub-master-section .fashion-section .fashion-cat-lists ul li a:hover {
+  color: #e81c2e;
 }
 
 .cityhub-master-section .cityhub-footer-section {
@@ -3079,6 +3640,22 @@ a {
   width: 80%;
   background: radial-gradient(#eb182a, #da1424);
   border-radius: 2rem;
+}
+
+.cityhub-master-section .cityhub-footer-section .footer-contact-us ul {
+  margin: 1rem 0;
+}
+
+.cityhub-master-section .cityhub-footer-section .footer-contact-us ul li {
+  color: #fff;
+  font-weight: 500;
+  list-style-type: none;
+  margin: 1rem 0;
+}
+
+.cityhub-master-section .cityhub-footer-section .footer-contact-us ul li i {
+  width: 1rem;
+  margin-right: 1rem;
 }
 
 .cityhub-master-section .cityhub-footer-section .footer-brand-logo-wrapper .footer-brand-logo h1 {
@@ -3112,83 +3689,39 @@ a {
   color: #fff;
 }
 
-.cityhub-master-section .cityhub-footer-section .quick-links-wrapper .quick-links {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-}
-
-.cityhub-master-section .cityhub-footer-section .quick-links-wrapper .quick-links a {
-  font-size: 0.9rem;
-  padding: 0.1rem 0.6rem;
-  border-radius: 2rem;
-  background: radial-gradient(#eb182a, #da1424);
-  border: 0.15rem solid transparent;
-  white-space: nowrap;
-  margin: 0.4rem 0.2rem;
-  color: #fff;
-}
-
-.cityhub-master-section .cityhub-footer-section .quick-links-wrapper .quick-links a:hover {
-  border: 0.15rem solid #fff;
-  background: transparent;
-}
-
-.cityhub-master-section .cityhub-footer-section .accounts-wrapper ul li {
-  margin: 0.4rem 0rem;
-  list-style-type: none;
-}
-
-.cityhub-master-section .cityhub-footer-section .accounts-wrapper ul li a {
-  font-size: 1rem;
-  color: #fff;
-}
-
-.cityhub-master-section .cityhub-footer-section .accounts-wrapper ul li a:hover {
-  color: #e81c2e;
-}
-
-.cityhub-master-section .cityhub-footer-section .subscribe-wrapper .subscribe-inner-wrapper {
-  margin: 1rem 0;
+.cityhub-master-section .cityhub-footer-section .footer-contact-info .footer-contact-icon-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.cityhub-master-section .cityhub-footer-section .subscribe-wrapper .subscribe-inner-wrapper input,
-.cityhub-master-section .cityhub-footer-section .subscribe-wrapper .subscribe-inner-wrapper button {
-  height: 1.8rem;
+.cityhub-master-section .cityhub-footer-section .footer-contact-info .footer-contact-icon-wrapper a .footer-contact-icon {
+  margin-right: 1rem;
+  background-color: #fff;
+  height: 2.2rem;
+  width: 2.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 0.2rem;
 }
 
-.cityhub-master-section .cityhub-footer-section .subscribe-wrapper .subscribe-inner-wrapper input {
-  border: none;
-  padding: 0rem 0rem 0rem 1rem;
-  outline: none;
-  border-radius: 0;
+.cityhub-master-section .cityhub-footer-section .footer-contact-info .footer-contact-icon-wrapper a .footer-contact-icon:hover {
+  background: #e81c2e;
 }
 
-.cityhub-master-section .cityhub-footer-section .subscribe-wrapper .subscribe-inner-wrapper input:focus {
-  -webkit-box-shadow: 0 0 0.5rem 0 #000000;
-          box-shadow: 0 0 0.5rem 0 #000000;
-}
-
-.cityhub-master-section .cityhub-footer-section .subscribe-wrapper .subscribe-inner-wrapper button {
-  border: none;
-  outline: none;
-  background: radial-gradient(#eb182a, #da1424);
-  padding: 0rem 0.6rem;
-  font-size: 1rem;
+.cityhub-master-section .cityhub-footer-section .footer-contact-info .footer-contact-icon-wrapper a .footer-contact-icon:hover i {
   color: #fff;
-  font-weight: 500;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
 }
 
-.cityhub-master-section .cityhub-footer-section .subscribe-wrapper .subscribe-inner-wrapper button:hover {
-  background: #f8f8f8;
-  color: #e81c2e;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
+.cityhub-master-section .cityhub-footer-section .footer-contact-info .footer-contact-icon-wrapper a .footer-contact-icon i {
+  color: #5d5d5d;
 }
 
 .cityhub-master-section .copy-right-section {
@@ -4987,6 +5520,18 @@ a {
   .cityhub-master-section .cityhub-dashboard-section .dashboard-master-wrapper .dashboard-side-nav .profile-picture-wrapper .cancel-btn {
     display: none;
   }
+  #filter-panel-close-btn {
+    display: none;
+  }
+  #filter-btn {
+    display: none;
+  }
+  #menu-panel-close-btn {
+    display: none;
+  }
+  #menu-target-btn {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 1452px) {
@@ -5048,7 +5593,11 @@ a {
     padding: 0 0;
   }
   .cityhub-master-section .search-result-section .search-result-wrapper .search-result-childs-wrapper:nth-child(2) .search-result-search-bar .search-result-search-bar-childs input {
-    width: 70%;
+    width: 100%;
+  }
+  .cityhub-master-section .search-result-section .search-result-wrapper .search-result-childs-wrapper:nth-child(2) .search-result-search-bar .search-result-search-bar-childs button {
+    width: 100%;
+    margin: 0.4rem 0;
   }
   .cityhub-master-section .search-result-section .search-result-wrapper {
     -webkit-box-orient: vertical;
@@ -5067,6 +5616,22 @@ a {
   }
   .cityhub-master-section .search-result-section .search-result-wrapper .search-result-childs-wrapper:nth-child(2) .show-results .show-result .show-result-childs:last-child .all-info h3 {
     margin-top: 1rem;
+  }
+  #filter-panel-close-btn {
+    display: block;
+  }
+  #filter-btn {
+    display: block;
+  }
+  .cityhub-master-section .search-result-section .search-result-wrapper .search-result-childs-wrapper:first-child {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    z-index: 12;
+    height: 100%;
+    width: 100%;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
   }
   .cityhub-master-section .visit-map-section .map-featured-image img {
     margin-top: 3rem;
@@ -5100,6 +5665,34 @@ a {
   .cityhub-master-section .why-choose-section .why-choose-wrapper .why-choose-info {
     text-align: center;
   }
+  .cityhub-master-section .booking-section .slider-menu-wrapper {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    background-color: #f8f8f8;
+    height: 100%;
+    width: 100%;
+    z-index: 12;
+    margin: 0;
+  }
+  .cityhub-master-section .booking-section .client-profile-slider-parent {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .cityhub-master-section .booking-section .slider-menu-wrapper .container {
+    border-bottom: none;
+  }
+  .cityhub-master-section .booking-section .slider-menu-wrapper .container .row {
+    display: block;
+  }
+  #menu-target-btn {
+    display: block;
+  }
+  #menu-panel-close-btn {
+    display: block;
+  }
   .cityhub-master-section .copy-right-section .copy-right-parent-wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -5126,6 +5719,16 @@ a {
   }
   .cityhub-master-section .how-to-use-section .add-indicator-after::after {
     display: none;
+  }
+  .cityhub-master-section .fashion-search-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0rem 1rem;
+  }
+  .cityhub-master-section .fashion-search-wrapper .fashion-search-childs-wrapper:first-child {
+    margin-bottom: 1rem;
   }
   .left100 {
     left: 0 !important;
@@ -5202,8 +5805,20 @@ a {
 }
 
 @media only screen and (max-width: 426px) {
+  .search-search-inputs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .search-search-inputs button {
+    margin: 0.4rem 0;
+  }
   .cityhub-master-section .search-result-section .search-result-wrapper .search-result-childs-wrapper:nth-child(2) .search-result-search-bar .search-result-search-bar-childs input {
-    width: 50%;
+    width: 100%;
   }
 }
 

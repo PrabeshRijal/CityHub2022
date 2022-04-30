@@ -37,17 +37,25 @@
                         <div class="main-navigation-parent">
                             <div class="main-navigation-childs">
                                 <div class="logo">
-                                    <h1>City<span>Hub</span></h1>
+                                    <img src="images/logo.png" alt="brand-logo" draggable="false">
                                 </div>
                             </div>
                             <div class="main-navigation-childs">
                                 <div class="action-btns">
                                     <ul>
                                         <li>
-                                            <a href="pages/auth/register.html">Register</a>
+                                            <a href="pages/auth/login.html">Signup</a>
                                         </li>
-                                        <li>
-                                            <a href="pages/auth/login.html">Sign In</a>
+                                        <li class="cityhub-hamburger-wrapper">
+                                            <div class="cityhub-hamburger-inner-wrapper">
+                                                <i class="fa fa-bars"></i>
+                                            </div>
+                                            <div class="hamburger-menu-options">
+                                                <div class="hamburger-menu-options-inner">
+                                                    <p><a href="pages/subpages/booking.html">My Pages <i class="fa fa-arrow-right"></i></a></p>
+                                                    <p><a href="#">Logout <i class="fa fa-sign-in-alt"></i></a></p>
+                                                </div>
+                                            </div>
                                         </li>
                                     </ul>
                                 </div>
@@ -130,37 +138,37 @@
                             <div class="search-categories">
                                 <ul class="search-slider">
                                     <div class="search-category">
-                                        <button onclick="updateStateRestaurant('Restaurant')">
+                                        <button class="searchTabBtn active-link-red" onclick="updateStateRestaurant('Restaurant')">
                                             <span><i class="fa fa-pizza-slice"></i></span>
                                             <p>Restaurant</p>
                                         </button>
                                     </div>
                                     <div class="search-category">
-                                        <button onclick="updateStateCafe('Cafe')">
+                                        <button class="searchTabBtn" onclick="updateStateCafe('Cafe')">
                                             <span><i class="fa fa-mug-hot"></i></span>
                                             <p>Cafe</p>
                                         </button>
                                     </div>
                                     <div class="search-category">
-                                        <button onclick="updateStateHotel('Hotel')">
+                                        <button class="searchTabBtn" onclick="updateStateHotel('Hotel')">
                                             <span><i class="fa fa-hotel"></i></span>
                                             <p>Hotel</p>
                                         </button>
                                     </div>
                                     <div class="search-category">
-                                        <button onclick="updateStateParlour('Parlour')">
+                                        <button class="searchTabBtn" onclick="updateStateParlour('Parlour')">
                                             <span><i class="fa fa-shopping-bag"></i></span>
                                             <p>Parlour</p>
                                         </button>
                                     </div>
                                     <div class="search-category">
-                                        <button onclick="updateStateDentist('Dentist')">
+                                        <button class="searchTabBtn" onclick="updateStateDentist('Dentist')">
                                             <span><i class="fa fa-tooth"></i></span>
                                             <p>Dentist</p>
                                         </button>
                                     </div>
                                     <div class="search-category">
-                                        <button onclick="updateStateFashoin('Fashion')">
+                                        <button class="searchTabBtn" onclick="updateStateFashoin('Fashion')">
                                             <span><i class="fa fa-tshirt"></i></span>
                                             <p>Fashion</p>
                                         </button>
@@ -255,19 +263,24 @@
                                             <div class="suggestion-childs-wrapper">
                                                 <ul>
                                                     <li>
-                                                        <button onclick="changeLookingVal('Pizza')">Pizza changed</button>
+                                                        <button onclick="changeLookingVal('Pizza')">Pizza
+                                                            changed</button>
                                                     </li>
                                                     <li>
-                                                        <button onclick="changeLookingVal('Mo:Mo')">Mo:Mo changed</button>
+                                                        <button onclick="changeLookingVal('Mo:Mo')">Mo:Mo
+                                                            changed</button>
                                                     </li>
                                                     <li>
-                                                        <button onclick="changeLookingVal('Chowmin')">Chowmin changed</button>
+                                                        <button onclick="changeLookingVal('Chowmin')">Chowmin
+                                                            changed</button>
                                                     </li>
                                                     <li>
-                                                        <button onclick="changeLookingVal('Ramen')">Ramen changed</button>
+                                                        <button onclick="changeLookingVal('Ramen')">Ramen
+                                                            changed</button>
                                                     </li>
                                                     <li>
-                                                        <button onclick="changeLookingVal('Thuppa')">Thuppa changed</button>
+                                                        <button onclick="changeLookingVal('Thuppa')">Thuppa
+                                                            changed</button>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -279,14 +292,16 @@
                                             <div class="suggestion-childs-wrapper">
                                                 <ul>
                                                     <li>
-                                                        <button onclick="changeLocationVal('Thamel')">Thamel changed</button>
+                                                        <button onclick="changeLocationVal('Thamel')">Thamel
+                                                            changed</button>
                                                     </li>
                                                     <li>
-                                                        <button onclick="changeLocationVal('Balaju')">Balaju changed</button>
+                                                        <button onclick="changeLocationVal('Balaju')">Balaju
+                                                            changed</button>
                                                     </li>
                                                     <li>
-                                                        <button
-                                                            onclick="changeLocationVal('Baneshwor')">Baneshwor changed</button>
+                                                        <button onclick="changeLocationVal('Baneshwor')">Baneshwor
+                                                            changed</button>
                                                     </li>
                                                     <li>
                                                         <button onclick="changeLocationVal('Thankot')">Thankot</button>
@@ -317,8 +332,6 @@
                 <!-- section heading::begin -->
                 <div class="section-heading">
                     <h4>What is your location</h4>
-                    <h2>Are You Visiting From?</h2>
-                    <p>Please select the location so that we can help you to get nearest check points arround you.</p>
                 </div>
                 <!-- section heading::end -->
                 <div class="row">
@@ -349,8 +362,6 @@
                 <!-- section heading::begin  -->
                 <div class="section-heading">
                     <h4>Find Via Brand Chain</h4>
-                    <h2>Search By Brand Chain</h2>
-                    <p>With the help of this section, you are able to search the different places via brand chains.</p>
                 </div>
                 <!-- section heading::end  -->
                 <div class="row">
@@ -358,12 +369,12 @@
                         <div class="search-by-brand-chain-wrapper">
                             <div class="search-by-brand-chain-tabs">
                                 <ul>
-                                    <li><button>Recommended</button></li>
-                                    <li><button>Gourmet</button></li>
-                                    <li><button>The Mall</button></li>
-                                    <li><button>Pharmecy</button></li>
-                                    <li><button>Living</button></li>
-                                    <li><button>Cake</button></li>
+                                    <li><button>Restaurant</button></li>
+                                    <li><button>Cafe</button></li>
+                                    <li><button>Hotel</button></li>
+                                    <li><button>Parlour</button></li>
+                                    <li><button>Dentist</button></li>
+                                    <li><button>Fashion</button></li>
                                 </ul>
                             </div>
                             <div class="search-by-brand-chain-view-wrapper">
@@ -460,7 +471,6 @@
                 <!-- section heading::begin  -->
                 <div class="section-heading">
                     <h4>Top Hotels</h4>
-                    <h2>Here are some Mile Merchant, New Hotel etc</h2>
                 </div>
                 <!-- section heading::end  -->
                 <div class="row">
@@ -737,107 +747,11 @@
             </div>
         </section>
         <!-- about us::end -->
-        <!-- why choose us::begin -->
-        <section class="why-choose-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3 col-lg-3 col-xl-3">
-                        <div class="why-choose-wrapper">
-                            <div class="why-choose-icon">
-                                <i class="fa fa-headphones"></i>
-                            </div>
-                            <div class="why-choose-info">
-                                <h3>Customer Support</h3>
-                                <p>Vestibulum tortor risus, rutrum at congue sed ultricies finibus.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-lg-3 col-xl-3">
-                        <div class="why-choose-wrapper">
-                            <div class="why-choose-icon">
-                                <i class="fa fa-lock"></i>
-                            </div>
-                            <div class="why-choose-info">
-                                <h3>Reliable System</h3>
-                                <p>Vestibulum tortor risus, rutrum at congue sed ultricies finibus.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-lg-3 col-xl-3">
-                        <div class="why-choose-wrapper">
-                            <div class="why-choose-icon">
-                                <i class="fa fa-user-shield"></i>
-                            </div>
-                            <div class="why-choose-info">
-                                <h3>Security</h3>
-                                <p>Vestibulum tortor risus, rutrum at congue sed ultricies finibus.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-lg-3 col-xl-3">
-                        <div class="why-choose-wrapper">
-                            <div class="why-choose-icon">
-                                <i class="fa fa-handshake"></i>
-                            </div>
-                            <div class="why-choose-info">
-                                <h3>Easy To Use</h3>
-                                <p>Vestibulum tortor risus, rutrum at congue sed ultricies finibus.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- why choose us::end -->
-        <!-- clients::begin -->
-        <div class="client-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 col-lg-12 col-xl-12 col-sm-12">
-                        <div class="clients-wrapper">
-                            <ul>
-                                <div class="our-clients">
-                                    <a href="/#">
-                                        <img src="images/clients/cl1.png" alt="client" draggable="false" />
-                                    </a>
-                                </div>
-                                <div class="our-clients">
-                                    <a href="/#">
-                                        <img src="images/clients/cl2.png" alt="client" draggable="false" />
-                                    </a>
-                                </div>
-                                <div class="our-clients">
-                                    <a href="/#">
-                                        <img src="images/clients/cl3.png" alt="client" draggable="false" />
-                                    </a>
-                                </div>
-                                <div class="our-clients">
-                                    <a href="/#">
-                                        <img src="images/clients/cl4.png" alt="client" draggable="false" />
-                                    </a>
-                                </div>
-                                <div class="our-clients">
-                                    <a href="/#">
-                                        <img src="images/clients/cl5.png" alt="client" draggable="false" />
-                                    </a>
-                                </div>
-                                <div class="our-clients">
-                                    <a href="/#">
-                                        <img src="images/clients/cl6.png" alt="client" draggable="false" />
-                                    </a>
-                                </div>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- clients::end -->
         <!-- footer::begin -->
         <section class="cityhub-footer-section">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-3 col-lg-3 col-xl-3">
+                    <div class="col-md-4 col-lg-4 col-xl-4">
                         <div class="footer-brand-logo-wrapper">
                             <div class="footer-brand-logo">
                                 <h1>CityHub</h1>
@@ -850,71 +764,38 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 col-lg-3 col-xl-3">
+                    <div class="col-md-4 col-lg-4 col-xl-4">
                         <div class="footer-headings">
-                            <h2>Quick Links</h2>
+                            <h2>Contact Us</h2>
                         </div>
-                        <div class="quick-links-wrapper">
-                            <div class="quick-links">
-                                <a href="index.html">Home</a>
+                        <div class="footer-contact-info">
+                            <div class="footer-contact-us">
+                                <ul>
+                                    <li><i class="fa fa-phone"></i>986587555, 06766655</li>
+                                    <li><i class="fa fa-map-marked-alt"></i>Kathmandu, Nepal</li>
+                                    <li><i class="fa fa-envelope"></i>cityhub@gmail.com</li>
+                                </ul>
                             </div>
-                            <div class="quick-links">
-                                <a href="pages/subpages/pricing.html">Pricing</a>
-                            </div>
-                            <div class="quick-links">
-                                <a href="pages/subpages/review.html">Reviews</a>
-                            </div>
-                            <div class="quick-links">
-                                <a href="pages/subpages/aboutUs.html">About Us</a>
-                            </div>
-                            <div class="quick-links">
-                                <a href="pages/subpages/contactUs.html">Contact Us</a>
-                            </div>
-                            <div class="quick-links">
-                                <a href="/register">Become An Affilated</a>
-                            </div>
-                            <div class="quick-links">
-                                <a href="/login">Get Started</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-lg-3 col-xl-3">
-                        <div class="footer-headings">
-                            <h2>Accounts</h2>
-                        </div>
-                        <div class="accounts-wrapper">
-                            <ul>
-                                <li>
-                                    <a href="/login">Login</a>
-                                </li>
-                                <li>
-                                    <a href="/register">Register</a>
-                                </li>
-                                <li>
-                                    <a href="/register">Become An Affilate</a>
-                                </li>
-                                <li>
-                                    <a href="/#">Inquiry</a>
-                                </li>
-                                <li>
-                                    <a href="/#">Support</a>
-                                </li>
-                                <li>
-                                    <a href="/#">Report</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-lg-3 col-xl-3">
-                        <div class="footer-headings">
-                            <h2>Subscribe</h2>
-                            <h3>Save Time, Save Money!</h3>
-                            <p>Sign up and we'll send the best deals to you</p>
-                        </div>
-                        <div class="subscribe-wrapper">
-                            <div class="subscribe-inner-wrapper">
-                                <input class="form-control" type="text" placeholder="Email Address" />
-                                <button>Subscribe</button>
+                            <div class="footer-contact-icon-wrapper">
+                                <a href="#">
+                                    <div class="footer-contact-icon">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="footer-contact-icon">
+                                        <i class="fab fa-instagram"></i>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="footer-contact-icon">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </div>
+                                </a><a href="#">
+                                    <div class="footer-contact-icon">
+                                        <i class="fab fa-youtube"></i>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>

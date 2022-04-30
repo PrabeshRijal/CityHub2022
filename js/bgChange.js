@@ -5,6 +5,7 @@ const locationForTarget = document.getElementById('locationForTarget');
 catSelected.innerHTML = "Restaurent";
 const restaurentWpTarget = document.getElementById('restaurent-wp');
 const cafeWpTarget = document.getElementById('cafe-wp');
+const searchTabBtn = document.getElementsByClassName("search-tab-btn");
 
 
 const updateStateRestaurant = (catVal) => {
@@ -50,6 +51,16 @@ const changeLookingVal = (btnVal) => {
 
 const changeLocationVal = (btnVal) => {
     locationForTarget.value = btnVal;
+}
+
+// Add active class to the current button (highlight it)
+var btns = document.getElementsByClassName("searchTabBtn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("active-link-red");
+  current[0].className = current[0].className.replace(" active-link-red", "");
+  this.className += " active-link-red";
+  });
 }
 
 

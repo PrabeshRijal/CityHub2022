@@ -87,17 +87,23 @@
                                     <div class="tab-btns">
                                         <ul>
                                             <li>
-                                                <button class="tablinks active" onclick="openCity(event, 'user-one')">User One</button>
+                                                <button class="tablinks active" onclick="openCity(event, 'user-client')">Client</button>
                                             </li>
                                             <li>
-                                                <button class="tablinks" onclick="openCity(event, 'user-two')">User One</button>
+                                                <button class="tablinks" onclick="openCity(event, 'user-admin')">Admin</button>
+                                            </li>
+                                            <li>
+                                                <button class="tablinks" onclick="openCity(event, 'user-client-user')">Client-User</button>
+                                            </li>
+                                            <li>
+                                                <button class="tablinks" onclick="openCity(event, 'user-business-owner')">Business Owner</button>
                                             </li>
                                         </ul>
                                     </div>
-                                    <div id="user-one" class="tabcontent">
+                                    <div id="user-client" class="tabcontent">
                                         <div class="registration-heading">
-                                            <h3>Signup As</h3>
-                                            <h1>User One</h1>
+                                            <h3>Signup</h3>
+                                            <h1>Client Registration</h1>
                                         </div>
                                         <div class="section-divider"></div>
                                         <div class="registration-form">
@@ -157,10 +163,136 @@
                                             </form>
                                         </div>
                                     </div>
-                                    <div id="user-two" class="tabcontent" style="display: none;">
+                                    <div id="user-admin" class="tabcontent" style="display: none;">
                                         <div class="registration-heading">
-                                            <h3>Signup As</h3>
-                                            <h1>User Two</h1>
+                                            <h3>Signup</h3>
+                                            <h1>Admin Registration</h1>
+                                        </div>
+                                        <div class="section-divider"></div>
+                                        <div class="registration-form">
+                                            <form action="">
+                                                <div class="row">
+                                                    <div class="col-md-6 col-xl-6 col-lg-6">
+                                                        <div class="form-group">
+                                                            <label><i class="fa fa-user"></i>Enter Full Name</label>
+                                                            <input type="email"
+                                                                class="form-control cituhub-global-input"
+                                                                placeholder="Enter Your Email Address" required />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-xl-6 col-lg-6">
+                                                        <div class="form-group">
+                                                            <label><i class="fa fa-envelope"></i>Enter Email</label>
+                                                            <input type="email"
+                                                                class="form-control cituhub-global-input"
+                                                                placeholder="Enter Your Email Address" required />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6 col-xl-6 col-lg-6">
+                                                        <div class="form-group">
+                                                            <label><i class="fa fa-phone"></i>Enter Phone</label>
+                                                            <input type="email"
+                                                                class="form-control cituhub-global-input"
+                                                                placeholder="Enter Your Email Address" required />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-xl-6 col-lg-6">
+                                                        <div class="form-group">
+                                                            <label><i class="fa fa-map-marker-alt"></i>Enter
+                                                                Address</label>
+                                                            <input type="email"
+                                                                class="form-control cituhub-global-input"
+                                                                placeholder="Enter Your Email Address" required />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12 col-xl-12 col-lg-12">
+                                                        <div class="form-group">
+                                                            <label><i class="fa fa-server"></i>Registration Type</label>
+                                                            <input type="email"
+                                                                class="form-control cituhub-global-input"
+                                                                placeholder="Enter Your Email Address" required />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 col-xl-12 col-lg-12">
+                                                        <div class="login-submit-btn">
+                                                            <button>Register</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div id="user-client-user" class="tabcontent" style="display: none;">
+                                        <div class="registration-heading">
+                                            <h3>Signup</h3>
+                                            <h1>Client-User Registration</h1>
+                                        </div>
+                                        <div class="section-divider"></div>
+                                        <div class="registration-form">
+                                            <form action="">
+                                                <div class="row">
+                                                    <div class="col-md-6 col-xl-6 col-lg-6">
+                                                        <div class="form-group">
+                                                            <label><i class="fa fa-user"></i>Enter Full Name</label>
+                                                            <input type="email"
+                                                                class="form-control cituhub-global-input"
+                                                                placeholder="Enter Your Email Address" required />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-xl-6 col-lg-6">
+                                                        <div class="form-group">
+                                                            <label><i class="fa fa-envelope"></i>Enter Email</label>
+                                                            <input type="email"
+                                                                class="form-control cituhub-global-input"
+                                                                placeholder="Enter Your Email Address" required />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6 col-xl-6 col-lg-6">
+                                                        <div class="form-group">
+                                                            <label><i class="fa fa-phone"></i>Enter Phone</label>
+                                                            <input type="email"
+                                                                class="form-control cituhub-global-input"
+                                                                placeholder="Enter Your Email Address" required />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-xl-6 col-lg-6">
+                                                        <div class="form-group">
+                                                            <label><i class="fa fa-map-marker-alt"></i>Enter
+                                                                Address</label>
+                                                            <input type="email"
+                                                                class="form-control cituhub-global-input"
+                                                                placeholder="Enter Your Email Address" required />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12 col-xl-12 col-lg-12">
+                                                        <div class="form-group">
+                                                            <label><i class="fa fa-server"></i>Registration Type</label>
+                                                            <input type="email"
+                                                                class="form-control cituhub-global-input"
+                                                                placeholder="Enter Your Email Address" required />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 col-xl-12 col-lg-12">
+                                                        <div class="login-submit-btn">
+                                                            <button>Register</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div id="user-business-owner" class="tabcontent" style="display: none;">
+                                        <div class="registration-heading">
+                                            <h3>Signup</h3>
+                                            <h1>Business Owner</h1>
                                         </div>
                                         <div class="section-divider"></div>
                                         <div class="registration-form">
